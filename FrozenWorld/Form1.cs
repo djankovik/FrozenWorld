@@ -15,7 +15,8 @@ namespace FrozenWorld
         public Form1()
         {
             InitializeComponent();
-            
+            this.DoubleBuffered = true;
+
         }
     }
 }
