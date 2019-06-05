@@ -27,13 +27,16 @@ namespace FrozenWorld
             Image = Resources.Snowflake;
         }
 
-        public void Collect(Player player)
+        public bool Collect(Player player)
         {
-            if (player.getRectagle().IntersectsWith(this.getRectagle()))
+            if (this.isCollected) return true;
+            else if (player.getRectagle().IntersectsWith(this.getRectagle()))
             {
                 this.isCollected = true;
+                return true;
                 //Image = null;
             }
+            return false;
         }
 
         public Rectangle getRectagle()

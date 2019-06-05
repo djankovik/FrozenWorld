@@ -56,7 +56,7 @@ namespace FrozenWorld
             g.DrawImage(Image, X, Y, Width, Height);
         }
 
-        public void Freeze(Player player)
+        public bool Freeze(Player player)
         {
             if (!isFrozen)
             {
@@ -69,6 +69,9 @@ namespace FrozenWorld
                     Image = Resources.enemyFrozen;
                 }
             }
+
+            if (isFrozen) return true;
+            return false;
         }
 
         public void timerTick()
