@@ -19,20 +19,22 @@ namespace FrozenWorld
             InitializeComponent();
             this.DoubleBuffered = true;
 
-            game = new Game(0,600,800,0);
-            
+            game = DummyData.getLevel1();
+            this.Width = game.maxRight;
+            this.Height = game.maxDown;
+
             timer1.Start();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            
+            game.timerTick();
+            Invalidate(true);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
-
+            game.Draw(e.Graphics);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -57,6 +59,8 @@ namespace FrozenWorld
             {
                 game.Player.isJumping = true;
             }
+
+            Invalidate(true);
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -77,10 +81,11 @@ namespace FrozenWorld
             {
                 game.Player.isGoingDown = false;
             }
-            if (game.Player.isJumping)  //NOT SURE WHY IT DOESN'T CHECK THE SPACE
+            if (e.KeyCode == Keys.Space) 
             {
                 game.Player.isJumping = false;
             }
+            Invalidate(true);
         }
     }
 }

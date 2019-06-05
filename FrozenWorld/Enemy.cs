@@ -24,7 +24,7 @@ namespace FrozenWorld
         public static int Velocity = 20;
         public bool isFrozen { get; set; }
 
-        public static int TOTALFREEZETIME = 20;
+        public static int TOTALFREEZETIME = 50;
         public int freezeTimeLeft { get; set; }
 
         public Image Image { get; set; }
@@ -56,11 +56,11 @@ namespace FrozenWorld
             g.DrawImage(Image, X, Y, Width, Height);
         }
 
-        public bool Freeze(Player player)
+        public void Freeze(Player player)
         {
             if (!isFrozen)
             {
-                if (Math.Abs(player.Y+Player.Height-this.Y) <= 2        //if the player is on top of the enemy
+                if (Math.Abs(player.Y+Player.Height-this.Y) <= 5        //if the player is on top of the enemy
                     && ((player.X <= this.X && player.X+Player.Width >= this.X) //if the player is on the left side of enemy
                     || (this.X+Enemy.Width >= player.X && this.X<=player.X))) //if the player is on the right side of enemy
                 {
@@ -69,9 +69,6 @@ namespace FrozenWorld
                     Image = Resources.enemyFrozen;
                 }
             }
-
-            if (isFrozen) return true;
-            return false;
         }
 
         public void timerTick()

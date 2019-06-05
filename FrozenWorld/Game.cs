@@ -65,72 +65,82 @@ namespace FrozenWorld
             {
                 sn.Draw(g);
             }
-
+            
             Player.Draw(g);
         }
-
-        public void timerTick()
+        public void MovePlayerLeft()
         {
-            bool before = false;
-            bool after = false;
+            Player.X -= Player.VELOCITY;
 
-            Player.timerTick();
-
-            foreach (Enemy e in Enemies)
+            if (Player.isOnStairs)
             {
-                before = e.isFrozen;
-                if (e.Freeze(Player))
+                foreach (Stairs stair in Stairs)
                 {
-                    if(Player.isJumping == false)
+                    if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
                     {
-                        Player.GRAVITY = 8;
-                        Player.X = e.X + Player.Height;
+                        Player.isOnStairs = true; break;
+                    }
+                    else
+                    {
+                        Player.isOnStairs = false;
                     }
                 }
-                e.timerTick();
-                after = e.isFrozen;
-
-                if (before != after)
-                {
-                    frozenBlocks++;
-                }
             }
-            foreach (Platform p in Platforms)
+        }
+        public void MovePlayerRight()
+        {
+            Player.X += Player.VELOCITY;
+            if (Player.isOnStairs)
             {
-                before = p.isFrozen;
-                if (p.Freeze(Player))
+                foreach (Stairs stair in Stairs)
                 {
-                    if (Player.isJumping == false)
+                    if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
                     {
-                        Player.GRAVITY = 8;
-                        Player.X = p.X + Player.Height;
+                        Player.isOnStairs = true; break;
+                    }
+                    else
+                    {
+                        Player.isOnStairs = false;
                     }
                 }
-                after = p.isFrozen;
-                if (before != after)
+            }
+        }
+        public void MovePlayerUp()
+        {
+            foreach (Stairs stair in Stairs)
+            {
+                if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
                 {
-                    frozenBlocks++;
+                    Player.Y -= Player.VELOCITY;
+                    Player.isOnStairs = true; break;
+                }
+                else
+                {
+                    Player.isOnStairs = false;
                 }
             }
-            foreach (Stairs st in Stairs)
+        }
+        public void MovePlayerDown()
+        {
+            foreach (Stairs stair in Stairs)
             {
-                before = st.isFrozen;
-
-                st.Freeze(Player);
-                if (Player.getRectagleWithPadding(0,2,0,0).IntersectsWith(st.getRectagle()))
+                if ((Player.getRectagle().IntersectsWith(stair.getRectagle()) && Player.Y + Player.Height < stair.Y + stair.getHeight() + 1) || Player.Y + Player.Height == stair.Y)
                 {
-                    Player.isOnStairs = true;
+                    Player.Y += Player.VELOCITY;
+                    Player.isOnStairs = true; break;
                 }
-                after = st.isFrozen;
-                if (before != after)
+                else
                 {
-                    frozenBlocks++;
+                    Player.isOnStairs = false;
                 }
             }
-
-            for(int i=0;i<Snowflakes.Count;i++)
+        }
+        public void collectSnowflakes()
+        {
+            for (int i = 0; i < Snowflakes.Count; i++)
             {
-                if (Snowflakes[i].Collect(Player)){
+                if (Snowflakes[i].Collect(Player))
+                {
                     collectedSnowflakes++;
                     Snowflakes.RemoveAt(i);
                     i--;
@@ -138,5 +148,132 @@ namespace FrozenWorld
             }
         }
 
+        public void interactWithEnemies()
+        {
+            foreach (Enemy e in Enemies)
+            {
+                e.Freeze(Player);
+            }
+        }
+        public void MoveEnemies()
+        {
+            foreach (Enemy e in Enemies)
+            {
+                e.timerTick();
+            }
+        }
+        public void FreezeFreezableBlocks()
+        {
+            foreach (Platform p in Platforms)
+            {
+
+                p.Freeze(Player);
+            }
+            foreach (Stairs st in Stairs)
+            {
+                st.Freeze(Player);
+
+            }
+        }
+        public bool isPlayerOnJumpablePlatform()
+        {
+           foreach (Platform p in Platforms)
+            {
+                if (Player.getRectagleWithPadding(-30,5,0,0).IntersectsWith(p.getRectagle())) return true;
+            }
+            foreach (Stairs s in Stairs)
+            {
+                if (Player.getRectagleWithPadding(-30, 5, 0, 0).IntersectsWith(s.getRectagle())) return true;
+            }
+            foreach(Enemy e in Enemies)
+            {
+                if (e.isFrozen) {
+                    if (Math.Abs(Player.Y + Player.Height - e.Y) <= 5        //if the player is on top of the enemy
+                        && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
+                        || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        public void timerTick()
+        {
+            MoveEnemies();
+            FreezeFreezableBlocks();
+
+            
+            if (!Player.isOnStairs)
+            {
+                Player.Y += Player.JUMPSPEED;
+            }
+
+            if (Player.isJumping && Player.GRAVITY < 0)
+            {
+                Player.isJumping = false;
+            }
+
+            if (Player.isGoingLeft && Player.X > 1)
+            {
+                MovePlayerLeft();
+            }
+
+            if (Player.isGoingRight && Player.X+ Player.Width+Player.VELOCITY < this.maxRight)
+            {
+                MovePlayerRight();
+            }
+
+            if (Player.isGoingUp)
+            {
+                MovePlayerUp();
+            }
+
+            if (Player.isGoingDown)
+            {
+                MovePlayerDown();
+            }
+
+            if (Player.isJumping && !Player.isOnStairs)
+            {
+                Player.JUMPSPEED = -12;
+                Player.GRAVITY -= 1;
+            }
+            else if (Player.isOnStairs)
+            {
+                Player.JUMPSPEED = 12;
+                Player.GRAVITY -= 1;
+            }
+            else
+            {
+                Player.JUMPSPEED = 12;
+                foreach (Platform p in Platforms)
+                {
+                    if (Player.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player.isJumping)
+                    {
+                        Player.GRAVITY = 10;
+                        Player.Y = p.Y - Player.Height;
+                        break;
+                    }
+                }
+                foreach (Enemy e in Enemies)
+                {
+                    if (e.isFrozen)
+                    {
+                        if (Math.Abs(Player.Y + Player.Height - e.Y) <= 5        //if the player is on top of the enemy
+                            && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
+                            || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                        {
+                            Player.GRAVITY = 10;
+                            Player.Y = e.Y - Player.Height;
+                            break;
+                        }
+                    }
+                }
+            }
+            collectSnowflakes();
+            interactWithEnemies();
+        }
     }
+
 }

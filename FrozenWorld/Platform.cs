@@ -43,15 +43,13 @@ namespace FrozenWorld
         {
            g.DrawImage(Image, X, Y,Width,Height);
         }
-        public bool Freeze(Player p)
+        public void Freeze(Player p)
         {
             if (p.getRectagleWithPadding(0, 1, 0, 0).IntersectsWith(this.getRectagle()))
             {
                 this.isFrozen = true;
                 freezeImage();
-            }
-            if (isFrozen) return true;
-            return false;
+            }            
         }
     }
 }
