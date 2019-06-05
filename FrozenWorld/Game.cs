@@ -4,17 +4,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FrozenWorld
 {
     [Serializable]
     public class Game
     {
-        public enum Direction
-        {
-            STILL, UP, DOWN, LEFT, RIGHT, JUMPING
-        }
-
+        public int TOTALITEMSTOFREEZE { get; set; }
+        public int TOTALSNOWFLAKES { get; set; }
         public List<Enemy> Enemies { get; set; }
         public List<Platform> Platforms { get; set; }
         public List<Stairs> Stairs { get; set; }
@@ -29,8 +27,7 @@ namespace FrozenWorld
         public int maxRight { get; set; }
 
         public int collectedSnowflakes { get; set; }
-        public int frozenBlocks { get; set; }
-
+        
         public Game(int maxUp,int maxDown, int maxRight, int maxLeft)
         {
             Enemies = new List<Enemy>();
@@ -39,8 +36,7 @@ namespace FrozenWorld
             Snowflakes = new List<Snowflake>();
 
             collectedSnowflakes = 0;
-            frozenBlocks = 0;
-
+           
             this.maxUp = maxUp;
             this.maxDown = maxDown;
             this.maxLeft = maxLeft;
@@ -49,7 +45,8 @@ namespace FrozenWorld
 
         public void Draw(Graphics g)
         {
-            foreach(Enemy e in Enemies)
+            Player.Draw(g);
+            foreach (Enemy e in Enemies)
             {
                 e.Draw(g);
             }
@@ -64,9 +61,35 @@ namespace FrozenWorld
             foreach (Snowflake sn in Snowflakes)
             {
                 sn.Draw(g);
+            }           
+        }
+        public bool isPlayerOutOfBounds()
+        {
+            if (Player.Y > maxDown + 10) return true;
+            return false;
+        }
+        public bool isGameWon()
+        {            
+            if (getFrozenBlockNumber() == TOTALITEMSTOFREEZE) return true;
+            return false;
+        }
+        public bool isGameLost()
+        {
+            if (Player.LivesLeft <= 0) return true;
+            return false;
+        }
+        public int getFrozenBlockNumber()
+        {
+            int frozenBlocks = 0;
+            foreach (Platform p in Platforms)
+            {
+                if (p.isFrozen) frozenBlocks++;
             }
-            
-            Player.Draw(g);
+            foreach (Stairs s in Stairs)
+            {
+                if (s.isFrozen) frozenBlocks++;
+            }
+            return frozenBlocks;
         }
         public void MovePlayerLeft()
         {
@@ -153,6 +176,9 @@ namespace FrozenWorld
             foreach (Enemy e in Enemies)
             {
                 e.Freeze(Player);
+                if(!e.isFrozen && e.getRectagle().IntersectsWith(Player.getRectagleWithPadding(0, -10, 0, 0))){
+                    Player.reduceLives();
+                }
             }
         }
         public void MoveEnemies()
@@ -179,16 +205,16 @@ namespace FrozenWorld
         {
            foreach (Platform p in Platforms)
             {
-                if (Player.getRectagleWithPadding(-30,5,0,0).IntersectsWith(p.getRectagle())) return true;
+                if (Player.getRectagleWithPadding(-30,3,0,0).IntersectsWith(p.getRectagle())) return true;
             }
             foreach (Stairs s in Stairs)
             {
-                if (Player.getRectagleWithPadding(-30, 5, 0, 0).IntersectsWith(s.getRectagle())) return true;
+                if (Player.getRectagleWithPadding(-30, 3, 0, 0).IntersectsWith(s.getRectagle())) return true;
             }
             foreach(Enemy e in Enemies)
             {
                 if (e.isFrozen) {
-                    if (Math.Abs(Player.Y + Player.Height - e.Y) <= 5        //if the player is on top of the enemy
+                    if (Math.Abs(Player.Y + Player.Height - e.Y) <= 3        //if the player is on top of the enemy
                         && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
                         || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
                     {
@@ -236,36 +262,55 @@ namespace FrozenWorld
 
             if (Player.isJumping && !Player.isOnStairs)
             {
-                Player.JUMPSPEED = -12;
-                Player.GRAVITY -= 1;
+                Player.JUMPSPEED = -22;
+                Player.GRAVITY -= 3;
             }
             else if (Player.isOnStairs)
             {
-                Player.JUMPSPEED = 12;
-                Player.GRAVITY -= 1;
+                Player.JUMPSPEED = 22;
+                Player.GRAVITY -= 3;
             }
             else
             {
-                Player.JUMPSPEED = 12;
+                bool flag = false;
+                Player.JUMPSPEED = 22;
+            
                 foreach (Platform p in Platforms)
                 {
                     if (Player.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player.isJumping)
                     {
-                        Player.GRAVITY = 10;
+                        Player.GRAVITY = 12;
                         Player.Y = p.Y - Player.Height;
+                        flag = true;
                         break;
                     }
                 }
-                foreach (Enemy e in Enemies)
+                if (!flag)
                 {
-                    if (e.isFrozen)
+                    foreach (Enemy e in Enemies)
                     {
-                        if (Math.Abs(Player.Y + Player.Height - e.Y) <= 5        //if the player is on top of the enemy
-                            && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
-                            || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                        if (e.isFrozen)
                         {
-                            Player.GRAVITY = 10;
-                            Player.Y = e.Y - Player.Height;
+                            if (Math.Abs(Player.Y + Player.Height - e.Y) <= 15        //if the player is on top of the enemy
+                                && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
+                                || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                            {
+                                Player.GRAVITY = 12;
+                                Player.Y = e.Y - Player.Height;
+                                flag = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (!flag)
+                {
+                    foreach (Stairs s in Stairs)
+                    {
+                        if (Player.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(s.getRectagle()) && !Player.isJumping)
+                        {
+                            Player.GRAVITY = 12;
+                            Player.Y = s.Y - Player.Height;
                             break;
                         }
                     }
@@ -273,6 +318,7 @@ namespace FrozenWorld
             }
             collectSnowflakes();
             interactWithEnemies();
+            Player.RehabTimeLeft--;
         }
     }
 

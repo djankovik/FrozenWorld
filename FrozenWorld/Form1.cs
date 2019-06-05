@@ -18,18 +18,41 @@ namespace FrozenWorld
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            newGame();
 
-            game = DummyData.getLevel1();
-            this.Width = game.maxRight;
-            this.Height = game.maxDown;
-
+            this.BackgroundImage = Resources.DarkForest;
             timer1.Start();
         }
 
+        public void newGame()
+        {
+            game = DummyData.getLevel1();
+            this.Width = game.maxRight;
+            this.Height = game.maxDown;
+            tsspbFreezables.Maximum = game.TOTALITEMSTOFREEZE;
+            tsspbFreezables.Value = 0;
+            
+        }
         private void Timer1_Tick(object sender, EventArgs e)
         {
             game.timerTick();
-            Invalidate(true);
+            if (game.isPlayerOutOfBounds())
+            {
+                timer1.Stop();
+                MessageBox.Show("Player out of bounds");
+            }
+                       Invalidate(true);
+            if (game.isGameWon())
+            {
+                timer1.Stop();
+                MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
+            }
+            if (game.isGameLost())
+            {
+                timer1.Stop();
+                MessageBox.Show("Game LOST!");
+            }
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -55,7 +78,7 @@ namespace FrozenWorld
             {
                 game.Player.isGoingDown = true;
             }
-            if (e.KeyCode == Keys.Space && !game.Player.isJumping)
+            if (e.KeyCode == Keys.Space && !game.Player.isJumping && game.isPlayerOnJumpablePlatform())
             {
                 game.Player.isJumping = true;
             }
@@ -86,6 +109,13 @@ namespace FrozenWorld
                 game.Player.isJumping = false;
             }
             Invalidate(true);
+        }
+
+        private void StatusStrip1_Paint(object sender, PaintEventArgs e)
+        {
+            tsslSnowflakes.Text = string.Format("Snowflakes: {0}/{1}",game.collectedSnowflakes,game.TOTALSNOWFLAKES);
+            tsspbFreezables.Value = game.getFrozenBlockNumber();
+            tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft, 5);
         }
     }
 }

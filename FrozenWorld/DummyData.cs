@@ -25,6 +25,13 @@ namespace FrozenWorld
             platforms.Add(new Platform(450, 400));
             platforms.Add(new Platform(500, 400));
 
+            platforms.Add(new Platform(0, 375));
+            platforms.Add(new Platform(50, 375));
+            platforms.Add(new Platform(100, 375));
+            platforms.Add(new Platform(150, 375));
+            platforms.Add(new Platform(200, 375));
+           
+
             g.Platforms = platforms;
 
             g.Player = new Player(200, 200);
@@ -37,6 +44,13 @@ namespace FrozenWorld
             g.Stairs.Add(new Stairs(20, 440));
             g.Stairs.Add(new Stairs(20, 410));
             g.Stairs.Add(new Stairs(20, 380));
+
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+            g.Snowflakes.Add(new Snowflake(20,250));
+            g.Snowflakes.Add(new Snowflake(50, 230));
+            g.Snowflakes.Add(new Snowflake(70, 550));
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+
             return g;
         }
     }
