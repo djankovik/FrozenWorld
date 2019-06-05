@@ -13,11 +13,11 @@ namespace FrozenWorld
     {
         public int X { get; set; }
         public int Y { get; set; }
+
         public static int Width = 50;
         public static int Height = 30;
 
         public bool isFrozen { get; set; }
-
         public Image Image { get; set; }
 
         public Stairs(int x, int y)
@@ -31,14 +31,17 @@ namespace FrozenWorld
         {
             Image = Image = Resources.stairBlockFrozen;
         }
+
         public Rectangle getRectagle()
         {
             return new Rectangle(X, Y, Width, Height);
         }
+
         public Rectangle getRectagleWithPadding(int top, int bottom, int left, int right)
         {
             return new Rectangle(X - left, Y - top, Width + right + left, Height + bottom + top);
         }
+
         public void Draw(Graphics g)
         {
             g.DrawImage(Image, X, Y, Width, Height);

@@ -113,6 +113,16 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Snowflake {
+            get {
+                object obj = ResourceManager.GetObject("Snowflake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stairBlock {
             get {
                 object obj = ResourceManager.GetObject("stairBlock", resourceCulture);

@@ -58,6 +58,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snowflake.cs" />
     <Compile Include="Stairs.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -105,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\enemyFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
