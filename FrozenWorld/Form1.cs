@@ -19,9 +19,10 @@ namespace FrozenWorld
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
             newGame();
 
-            this.BackgroundImage = Resources.DarkForest;
+           this.BackgroundImage = Resources.DarkForest6;
             timer1.Start();
         }
 
@@ -42,7 +43,7 @@ namespace FrozenWorld
                 timer1.Stop();
                 MessageBox.Show("Player out of bounds");
             }
-                       Invalidate(true);
+            Invalidate(true);
             if (game.isGameWon())
             {
                 timer1.Stop();
@@ -53,6 +54,7 @@ namespace FrozenWorld
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
             }
+            Invalidate(true);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -113,6 +115,7 @@ namespace FrozenWorld
 
         private void StatusStrip1_Paint(object sender, PaintEventArgs e)
         {
+            statusStrip1.ForeColor = Color.White;
             tsslSnowflakes.Text = string.Format("Snowflakes: {0}/{1}",game.collectedSnowflakes,game.TOTALSNOWFLAKES);
             tsspbFreezables.Value = game.getFrozenBlockNumber();
             tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft, 5);

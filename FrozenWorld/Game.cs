@@ -45,6 +45,10 @@ namespace FrozenWorld
 
         public void Draw(Graphics g)
         {
+            foreach (Stairs st in Stairs)
+            {
+                st.Draw(g);
+            }
             Player.Draw(g);
             foreach (Enemy e in Enemies)
             {
@@ -54,10 +58,7 @@ namespace FrozenWorld
             {
                 p.Draw(g);
             }
-            foreach (Stairs st in Stairs)
-            {
-                st.Draw(g);
-            }
+            
             foreach (Snowflake sn in Snowflakes)
             {
                 sn.Draw(g);

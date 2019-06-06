@@ -14,8 +14,8 @@ namespace FrozenWorld
         public int X { get; set; }
         public int Y { get; set; }
 
-        public static int Width = 50;
-        public static int Height = 70;
+        public static int Width = 40;
+        public static int Height = 60;
 
         public int GRAVITY { get; set; }
         public int JUMPSPEED { get; set; }

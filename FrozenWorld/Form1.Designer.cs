@@ -34,6 +34,7 @@
             this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,14 +45,18 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Black;
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslSnowflakes,
+            this.toolStripStatusLabel1,
             this.tsspbFreezables,
             this.tsslLivesLeft});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 425);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 469);
+            this.statusStrip1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(831, 33);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.Paint += new System.Windows.Forms.PaintEventHandler(this.StatusStrip1_Paint);
@@ -64,24 +69,37 @@
             // 
             // tsspbFreezables
             // 
+            this.tsspbFreezables.BackColor = System.Drawing.Color.DarkBlue;
+            this.tsspbFreezables.Margin = new System.Windows.Forms.Padding(3);
             this.tsspbFreezables.Name = "tsspbFreezables";
-            this.tsspbFreezables.Size = new System.Drawing.Size(100, 19);
+            this.tsspbFreezables.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.tsspbFreezables.Size = new System.Drawing.Size(160, 27);
             // 
             // tsslLivesLeft
             // 
+            this.tsslLivesLeft.ActiveLinkColor = System.Drawing.Color.Red;
+            this.tsslLivesLeft.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
             this.tsslLivesLeft.Name = "tsslLivesLeft";
-            this.tsslLivesLeft.Size = new System.Drawing.Size(151, 20);
+            this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);
             this.tsslLivesLeft.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(125, 28);
+            this.toolStripStatusLabel1.Text = "FreezeMeter";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(831, 502);
             this.Controls.Add(this.statusStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Frozen World";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -99,6 +117,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslSnowflakes;
         private System.Windows.Forms.ToolStripProgressBar tsspbFreezables;
         private System.Windows.Forms.ToolStripStatusLabel tsslLivesLeft;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

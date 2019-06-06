@@ -145,4 +145,22 @@
   <data name="DarkForest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DarkForrest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DarkForestGIF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkForestGIF.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snowflake2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snowflake2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Frozen_Snowflake_Transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frozen-Snowflake-Transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteSnowflakeTransparent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteSnowflakeTransparent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteSnowflakeTransparent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteSnowflakeTransparent2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DarkForest6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkForest6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -21,8 +21,8 @@ namespace FrozenWorld
         public int leftLimit { get; set; }
         public int rightLimit { get; set; }
 
-        public static int Width = 50;
-        public static int Height = 70;
+        public static int Width = 40;
+        public static int Height = 50;
 
         public Enemy.DIRECTION Direction { get; set; }
 

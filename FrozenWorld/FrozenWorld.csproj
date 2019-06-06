@@ -114,5 +114,29 @@
   <ItemGroup>
     <None Include="Resources\DarkForrest.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkForest3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkForest2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkForestGIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frozen-Snowflake-Transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteSnowflakeTransparent1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteSnowflakeTransparent2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkForest6.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

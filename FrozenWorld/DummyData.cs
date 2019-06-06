@@ -36,7 +36,7 @@ namespace FrozenWorld
 
             g.Player = new Player(200, 200);
 
-            g.Enemies.Add(new Enemy(400, 330, 400, 550));
+            g.Enemies.Add(new Enemy(400, 350, 400, 560));
 
             g.Stairs.Add(new Stairs(20,530));
             g.Stairs.Add(new Stairs(20, 500));

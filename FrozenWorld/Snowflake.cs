@@ -24,7 +24,7 @@ namespace FrozenWorld
             X = x;
             Y = y;
             isCollected = false;
-            Image = Resources.Snowflake;
+            Image = Resources.whiteSnowflakeTransparent1;
         }
 
         public bool Collect(Player player)
