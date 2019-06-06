@@ -11,6 +11,7 @@ namespace FrozenWorld
     [Serializable]
     public class Game
     {
+        public Image BACKGROUNDIMAGE { get; set; }
         public int TOTALITEMSTOFREEZE { get; set; }
         public int TOTALSNOWFLAKES { get; set; }
         public List<Enemy> Enemies { get; set; }
@@ -177,7 +178,8 @@ namespace FrozenWorld
             foreach (Enemy e in Enemies)
             {
                 e.Freeze(Player);
-                if(!e.isFrozen && e.getRectagle().IntersectsWith(Player.getRectagleWithPadding(0, -10, 0, 0))){
+
+                if(!e.isFrozen && e.getRectagle().IntersectsWith(Player.getRectagleWithPadding(0, -3, 0, 0))){
                     Player.reduceLives();
                 }
             }
@@ -229,8 +231,8 @@ namespace FrozenWorld
         {
             MoveEnemies();
             FreezeFreezableBlocks();
+            interactWithEnemies();
 
-            
             if (!Player.isOnStairs)
             {
                 Player.Y += Player.JUMPSPEED;

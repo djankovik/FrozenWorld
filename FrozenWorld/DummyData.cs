@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrozenWorld.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace FrozenWorld
     {
         public static Game getLevel1()
         {
-            Game g = new Game(0,700,800,0);
+            Game g = new Game(0,640,800,0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+
 
             List<Platform> platforms = new List<Platform>();
             platforms.Add(new Platform(0, 560));
@@ -30,7 +33,17 @@ namespace FrozenWorld
             platforms.Add(new Platform(100, 375));
             platforms.Add(new Platform(150, 375));
             platforms.Add(new Platform(200, 375));
-           
+
+
+            platforms.Add(new Platform(400, 200));
+            platforms.Add(new Platform(450, 200));
+            platforms.Add(new Platform(500, 200));
+            platforms.Add(new Platform(550, 200));
+            platforms.Add(new Platform(600, 200));
+            platforms.Add(new Platform(650, 200));
+            platforms.Add(new Platform(700, 200));
+
+            g.Enemies.Add(new Enemy(400, 150, 400, 750));
 
             g.Platforms = platforms;
 
@@ -38,7 +51,14 @@ namespace FrozenWorld
 
             g.Enemies.Add(new Enemy(400, 350, 400, 560));
 
-            g.Stairs.Add(new Stairs(20,530));
+            g.Stairs.Add(new Stairs(500, 400));
+            g.Stairs.Add(new Stairs(500, 370));
+            g.Stairs.Add(new Stairs(500, 340));
+            g.Stairs.Add(new Stairs(500, 310));
+            g.Stairs.Add(new Stairs(500, 280));
+            g.Stairs.Add(new Stairs(500, 250));
+
+            g.Stairs.Add(new Stairs(20, 530));
             g.Stairs.Add(new Stairs(20, 500));
             g.Stairs.Add(new Stairs(20, 470));
             g.Stairs.Add(new Stairs(20, 440));
@@ -49,6 +69,7 @@ namespace FrozenWorld
             g.Snowflakes.Add(new Snowflake(20,250));
             g.Snowflakes.Add(new Snowflake(50, 230));
             g.Snowflakes.Add(new Snowflake(70, 550));
+
             g.TOTALSNOWFLAKES = g.Snowflakes.Count;
 
             return g;

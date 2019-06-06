@@ -45,7 +45,7 @@ namespace FrozenWorld
         }
         public void Freeze(Player p)
         {
-            if (p.getRectagleWithPadding(0, 1, 0, 0).IntersectsWith(this.getRectagle()))
+            if (p.getRectagleWithPadding(0, 3, 0, 0).IntersectsWith(this.getRectagle()))
             {
                 this.isFrozen = true;
                 freezeImage();

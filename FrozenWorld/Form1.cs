@@ -22,7 +22,6 @@ namespace FrozenWorld
             
             newGame();
 
-           this.BackgroundImage = Resources.DarkForest6;
             timer1.Start();
         }
 
@@ -33,6 +32,8 @@ namespace FrozenWorld
             this.Height = game.maxDown;
             tsspbFreezables.Maximum = game.TOTALITEMSTOFREEZE;
             tsspbFreezables.Value = 0;
+
+            this.BackgroundImage = game.BACKGROUNDIMAGE;
             
         }
         private void Timer1_Tick(object sender, EventArgs e)
