@@ -55,15 +55,36 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="LevelChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelChooserForm.Designer.cs">
+      <DependentUpon>LevelChooserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Platform.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoreboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreboardForm.Designer.cs">
+      <DependentUpon>ScoreboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Snowflake.cs" />
     <Compile Include="Stairs.cs" />
+    <Compile Include="StartLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartLoginPage.Designer.cs">
+      <DependentUpon>StartLoginPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelChooserForm.resx">
+      <DependentUpon>LevelChooserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +96,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScoreboardForm.resx">
+      <DependentUpon>ScoreboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartLoginPage.resx">
+      <DependentUpon>StartLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,6 +165,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DarkForest6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockedLevel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockedLevel.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockedLevel.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

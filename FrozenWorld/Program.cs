@@ -16,7 +16,9 @@ namespace FrozenWorld
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var startpage = new StartLoginPage();
+            startpage.Show();
+            Application.Run();
         }
     }
 }

@@ -123,6 +123,26 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LockedLevel {
+            get {
+                object obj = ResourceManager.GetObject("LockedLevel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LockedLevel1 {
+            get {
+                object obj = ResourceManager.GetObject("LockedLevel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap platformBrick {
             get {
                 object obj = ResourceManager.GetObject("platformBrick", resourceCulture);
@@ -186,6 +206,16 @@ namespace FrozenWorld.Properties {
         internal static System.Drawing.Bitmap stairBlockFrozen {
             get {
                 object obj = ResourceManager.GetObject("stairBlockFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UnlockedLevel {
+            get {
+                object obj = ResourceManager.GetObject("UnlockedLevel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
