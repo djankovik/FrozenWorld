@@ -21,7 +21,7 @@ namespace FrozenWorld
         {
             Game g = new Game(0,640,800,0);
             g.BACKGROUNDIMAGE = Resources.DarkForest6;
-
+            g.LEVELID = 1;
 
             List<Platform> platforms = new List<Platform>();
             platforms.Add(new Platform(0, 560));
