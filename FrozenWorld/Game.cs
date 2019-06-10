@@ -84,7 +84,7 @@ namespace FrozenWorld
         
         public int calculateScore()
         {
-            return collectedSnowflakes * 5 + TOTALITEMSTOFREEZE;
+            return collectedSnowflakes * 100 + TOTALITEMSTOFREEZE;
         }
         public bool isGameLost()
         {

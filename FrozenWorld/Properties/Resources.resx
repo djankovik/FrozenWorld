@@ -178,6 +178,9 @@
   <data name="ScoreBoardBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScoreBoardBG2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="winterImageNightBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\winterImageNightBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="winterImageStartPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winterImageStartPage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
