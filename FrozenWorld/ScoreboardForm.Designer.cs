@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 526);
+            this.ClientSize = new System.Drawing.Size(482, 453);
             this.Name = "ScoreboardForm";
             this.Text = "ScoreboardForm";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ScoreboardForm_Paint);

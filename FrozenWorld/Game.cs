@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +13,6 @@ namespace FrozenWorld
     [Serializable]
     public class Game
     {
-        public User UserPlayingThisGame { get; set; }
         public int LEVELID { get; set; }
         public Image BACKGROUNDIMAGE { get; set; }
         public int TOTALITEMSTOFREEZE { get; set; }
@@ -76,13 +77,11 @@ namespace FrozenWorld
         {
             if (getFrozenBlockNumber() == TOTALITEMSTOFREEZE)
             {
-                if(LEVELID >0 && UserPlayingThisGame != null){
-                    UserPlayingThisGame.addLevelScore(LEVELID,this.calculateScore());
-                }
                 return true;
             }
             return false;
         }
+        
         public int calculateScore()
         {
             return collectedSnowflakes * 5 + TOTALITEMSTOFREEZE;

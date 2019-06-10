@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,7 +30,7 @@ namespace FrozenWorld
             return total;
         }
 
-        public void addLevelScore(int level,int score)
+        public void addLevelScore(int level, int score)
         {
             if (LevelScores.ContainsKey(level))
             {
@@ -37,7 +39,9 @@ namespace FrozenWorld
 
                 return;
             }
-                LevelScores.Add(level, score);
+            LevelScores.Add(level, score);
         }
+        
+
     }
 }

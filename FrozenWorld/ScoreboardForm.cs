@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrozenWorld.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,24 +18,35 @@ namespace FrozenWorld
         {
             InitializeComponent();
             userPoints = allUsers.OrderByDescending(o => o.getTotalPoints()).ThenByDescending(o => o.LevelScores.Keys.Count).ToList();
-            this.Height =400;
-            this.Width = 600;
+            this.Height =600;
+            this.Width = 500;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-        }
+            this.BackgroundImage = Resources.ScoreBoardBG2;
+         }
 
         private void ScoreboardForm_Paint(object sender, PaintEventArgs e)
         {
-            Font drawFont = new System.Drawing.Font("Arial", 16);
-            SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
-            int tableTop = 100;
-            int yOffset = 150;
-            int xOffset = 50;
+            Font drawFont = new System.Drawing.Font("Sans Serif", 16);
+            SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            int tableTop = 150;
+            int yOffset = 40;
+            int xOffset = 180;
 
-            for(int i=0;i<userPoints.Count;i++)
+            e.Graphics.DrawString("SCOREBOARD", new Font("Sans Serif", 25,FontStyle.Bold),drawBrush,110,30);
+
+            e.Graphics.DrawString("UserName", drawFont, drawBrush, 30, tableTop -50);
+            e.Graphics.DrawString("Points", drawFont, drawBrush, 30 + xOffset, tableTop - 50);
+            e.Graphics.DrawString("Levels", drawFont, drawBrush, 30 + xOffset * 2, tableTop - 50);
+
+            Pen p = new Pen(Color.Black,3);
+            e.Graphics.DrawLine(p,new Point(0, tableTop - 15),new Point(this.Width, tableTop-15));
+
+            for (int i=0;i<userPoints.Count;i++)
             {
-                e.Graphics.DrawString(userPoints[i].UserName, drawFont, drawBrush, 0, tableTop +i*xOffset);
-                e.Graphics.DrawString(userPoints[i].getTotalPoints().ToString(), drawFont, drawBrush, yOffset, tableTop + i * xOffset);
-                e.Graphics.DrawString(userPoints[i].LevelScores.Keys.Count.ToString(), drawFont, drawBrush, yOffset*2, tableTop + i * xOffset);
+                e.Graphics.DrawString((i+1).ToString(), drawFont, drawBrush, 5, tableTop + i * yOffset);
+                e.Graphics.DrawString(userPoints[i].UserName, drawFont, drawBrush, 40, tableTop +i*yOffset);
+                e.Graphics.DrawString(userPoints[i].getTotalPoints().ToString(), drawFont, drawBrush, 40+xOffset, tableTop + i * yOffset);
+                e.Graphics.DrawString(userPoints[i].LevelScores.Keys.Count.ToString(), drawFont, drawBrush, 40+xOffset*2, tableTop + i * yOffset);
 
             }
             drawFont.Dispose();

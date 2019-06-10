@@ -84,6 +84,13 @@ namespace FrozenWorld
             using (FileStream file = File.Create($@"{PATH}\{fileName}.fwuser"))
                 formatter.Serialize(file, User);
         }
+        public void SaveFile(User userToBeSaved)
+        {
+            string fileName = userToBeSaved.UserName;
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream file = File.Create($@"{PATH}\{fileName}.fwuser"))
+                formatter.Serialize(file, userToBeSaved);
+        }
 
         private void BtnViewScoreboard_Click(object sender, EventArgs e)
         {

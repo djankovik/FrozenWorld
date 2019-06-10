@@ -172,4 +172,10 @@
   <data name="UnlockedLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnlockedLevel.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ScoreBoardBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScoreBoardBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScoreBoardBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScoreBoardBG2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

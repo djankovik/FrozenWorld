@@ -15,7 +15,7 @@ namespace FrozenWorld
 {
     public partial class Form1 : Form
     {
-        public readonly string PATH = @"%USERPROFILE%\Documents\FrozenWorldUserData";
+        public User UserPlayingThisGame { get; set; }
 
         Game game;
         public Form1(Game Game)
@@ -52,6 +52,8 @@ namespace FrozenWorld
             if (game.isGameWon())
             {
                 timer1.Stop();
+                UserPlayingThisGame.addLevelScore(game.LEVELID,game.calculateScore());
+                SaveFile();
                 MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
                 this.Close();
             }
@@ -125,6 +127,12 @@ namespace FrozenWorld
             tsslSnowflakes.Text = string.Format("Snowflakes: {0}/{1}",game.collectedSnowflakes,game.TOTALSNOWFLAKES);
             tsspbFreezables.Value = game.getFrozenBlockNumber();
             tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft, 5);
+        }
+        public void SaveFile()
+        {
+            StartLoginPage slp = new StartLoginPage();
+            slp.SaveFile(UserPlayingThisGame);
+            slp.Dispose();
         }
     }
 }

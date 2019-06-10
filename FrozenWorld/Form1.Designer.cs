@@ -32,9 +32,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,8 +64,15 @@
             // tsslSnowflakes
             // 
             this.tsslSnowflakes.Name = "tsslSnowflakes";
-            this.tsslSnowflakes.Size = new System.Drawing.Size(151, 20);
+            this.tsslSnowflakes.Size = new System.Drawing.Size(200, 28);
             this.tsslSnowflakes.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(125, 28);
+            this.toolStripStatusLabel1.Text = "FreezeMeter";
             // 
             // tsspbFreezables
             // 
@@ -82,13 +89,6 @@
             this.tsslLivesLeft.Name = "tsslLivesLeft";
             this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);
             this.tsslLivesLeft.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(125, 28);
-            this.toolStripStatusLabel1.Text = "FreezeMeter";
             // 
             // Form1
             // 

@@ -79,7 +79,7 @@ namespace FrozenWorld
             {
                 Game g = DummyData.getLevel(level);
                 Form1 formGame = new Form1(g);
-                g.UserPlayingThisGame = this.currentUser;
+                formGame.UserPlayingThisGame= this.currentUser;
                 g.LEVELID = level;
                 formGame.ShowDialog();
                 this.Close();
