@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrozenWorld.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,9 @@ namespace FrozenWorld
         public StartLoginPage()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.BackgroundImage = Resources.winterImageStartPage2;
             PATH = Environment.ExpandEnvironmentVariables(PATH);
             Directory.CreateDirectory(PATH);    //If a folder does not exist, create it
             var files = Directory.GetFiles(PATH);
@@ -53,7 +57,11 @@ namespace FrozenWorld
         
         private void TbUsername_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(tbUsername.Text)) return;
+            if (String.IsNullOrWhiteSpace(tbUsername.Text))
+            {
+                lblWelcomingMessage.Text = "Welcome";
+                return;
+            }
             var files = Directory.GetFiles(PATH).Select(f => System.IO.Path.GetFileNameWithoutExtension(f)).ToArray();
 
             if (files.Contains(tbUsername.Text))

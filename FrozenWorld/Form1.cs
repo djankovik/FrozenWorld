@@ -25,8 +25,6 @@ namespace FrozenWorld
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             
             newGame(Game);
-
-            timer1.Start();
         }
 
         public void newGame(Game Game)
@@ -36,9 +34,10 @@ namespace FrozenWorld
             this.Height = game.maxDown;
             tsspbFreezables.Maximum = game.TOTALITEMSTOFREEZE;
             tsspbFreezables.Value = 0;
-
+            this.Text = "Level " +(game.LEVELID);
             this.BackgroundImage = game.BACKGROUNDIMAGE;
-            
+            timer1.Start();
+
         }
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -47,6 +46,7 @@ namespace FrozenWorld
             {
                 timer1.Stop();
                 MessageBox.Show("Player out of bounds");
+                resetGame();
             }
             Invalidate(true);
             if (game.isGameWon())
@@ -55,12 +55,13 @@ namespace FrozenWorld
                 UserPlayingThisGame.addLevelScore(game.LEVELID,game.calculateScore());
                 SaveFile();
                 MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
-                this.Close();
+                nextLevel();
             }
             if (game.isGameLost())
             {
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
+                resetGame();
             }
             Invalidate(true);
         }
@@ -133,6 +134,16 @@ namespace FrozenWorld
             StartLoginPage slp = new StartLoginPage();
             slp.SaveFile(UserPlayingThisGame);
             slp.Dispose();
+        }
+        public void resetGame()
+        {
+            Game g= DummyData.getLevel(this.game.LEVELID);
+            newGame(g);
+        }
+        public void nextLevel()
+        {
+            Game g = DummyData.getLevel(this.game.LEVELID+1);
+            newGame(g);
         }
     }
 }
