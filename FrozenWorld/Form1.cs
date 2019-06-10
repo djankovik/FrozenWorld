@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,21 +15,23 @@ namespace FrozenWorld
 {
     public partial class Form1 : Form
     {
+        public readonly string PATH = @"%USERPROFILE%\Documents\FrozenWorldUserData";
+
         Game game;
-        public Form1()
+        public Form1(Game Game)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             
-            newGame();
+            newGame(Game);
 
             timer1.Start();
         }
 
-        public void newGame()
+        public void newGame(Game Game)
         {
-            game = DummyData.getLevel1();
+            this.game = Game;
             this.Width = game.maxRight;
             this.Height = game.maxDown;
             tsspbFreezables.Maximum = game.TOTALITEMSTOFREEZE;
@@ -49,6 +53,7 @@ namespace FrozenWorld
             {
                 timer1.Stop();
                 MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
+                this.Close();
             }
             if (game.isGameLost())
             {
@@ -57,7 +62,7 @@ namespace FrozenWorld
             }
             Invalidate(true);
         }
-
+        
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             game.Draw(e.Graphics);

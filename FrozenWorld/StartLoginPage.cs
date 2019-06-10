@@ -47,6 +47,7 @@ namespace FrozenWorld
 
             var levelChooserForm = new LevelChooserForm(User);
             levelChooserForm.Show();
+            SaveFile();
             //Close();
         }
         

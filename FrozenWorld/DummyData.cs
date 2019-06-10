@@ -9,6 +9,14 @@ namespace FrozenWorld
 {
     public static class DummyData
     {
+        public static Game getLevel(int level)
+        {
+            switch (level)
+            {
+                case 1: return getLevel1();
+                default: return getLevel1();
+            }
+        }
         public static Game getLevel1()
         {
             Game g = new Game(0,640,800,0);

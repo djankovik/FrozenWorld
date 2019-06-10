@@ -11,6 +11,8 @@ namespace FrozenWorld
     [Serializable]
     public class Game
     {
+        public User UserPlayingThisGame { get; set; }
+        public int LEVELID { get; set; }
         public Image BACKGROUNDIMAGE { get; set; }
         public int TOTALITEMSTOFREEZE { get; set; }
         public int TOTALSNOWFLAKES { get; set; }
@@ -71,9 +73,19 @@ namespace FrozenWorld
             return false;
         }
         public bool isGameWon()
-        {            
-            if (getFrozenBlockNumber() == TOTALITEMSTOFREEZE) return true;
+        {
+            if (getFrozenBlockNumber() == TOTALITEMSTOFREEZE)
+            {
+                if(LEVELID >0 && UserPlayingThisGame != null){
+                    UserPlayingThisGame.addLevelScore(LEVELID,this.calculateScore());
+                }
+                return true;
+            }
             return false;
+        }
+        public int calculateScore()
+        {
+            return collectedSnowflakes * 5 + TOTALITEMSTOFREEZE;
         }
         public bool isGameLost()
         {
