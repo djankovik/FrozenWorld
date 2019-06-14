@@ -21,13 +21,13 @@ namespace FrozenWorld
             this.Height =600;
             this.Width = 500;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.BackgroundImage = Resources.ScoreBoardBG2;
+            this.BackgroundImage = Resources.iceStartpage2;
          }
 
         private void ScoreboardForm_Paint(object sender, PaintEventArgs e)
         {
             Font drawFont = new System.Drawing.Font("Sans Serif", 16);
-            SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
             int tableTop = 150;
             int yOffset = 40;
             int xOffset = 180;

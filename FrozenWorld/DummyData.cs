@@ -85,15 +85,89 @@ namespace FrozenWorld
         }
         public static Game getLevel2()
         {
+            Game g = new Game(0, 700, 1000, 0);
+            g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
+            g.LEVELID = 2;
+
+            //PLATFORMS
+           for (int i=0;i<=g.maxRight-Platform.Width;i+= Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown-100));
+            }
+
+            for (int i = 12*Platform.Width; i <= g.maxRight -2*Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 300));
+            }
+
+            for (int i = Platform.Width; i <= 8 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxUp +100));
+            }
+
+            for (int i = 3*Platform.Width; i < 5*Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 250));
+                g.Platforms.Add(new Platform(i+150, g.maxDown - 350));
+                g.Platforms.Add(new Platform(i+300, g.maxDown - 450));
+            }
+            for (int i = 15*Platform.Width; i <= g.maxRight - Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 530));
+            }
+
+            //STAIRS
+            for (int i = g.maxUp + 100; i <= g.maxDown - 100; i += Stairs.Height)
+            {
+                g.Stairs.Add(new Stairs(1 * Platform.Width, i));
+            }
+
+            for (int i = g.maxUp + 400; i <= g.maxDown - 100; i += Stairs.Height)
+            {
+                g.Stairs.Add(new Stairs(17* Platform.Width, i));
+            }
+
+            //ENEMIES
+            g.Enemies.Add(new Enemy(5, g.maxDown - 100-Enemy.Height, 0, g.maxRight));
+            g.Enemies.Add(new Enemy(4 * Platform.Width, g.maxUp + 100 - Enemy.Height, Platform.Width, 9 * Platform.Width));
+            g.Enemies.Add(new Enemy(17 * Platform.Width, g.maxDown - 530 - Enemy.Height, 15 * Platform.Width, g.maxRight));
+            g.Enemies.Add(new Enemy(14 * Platform.Width, g.maxDown - 300-Enemy.Height, 12 * Platform.Width, g.maxRight - Platform.Width));
+
+            //SNOWFLAKES
+            for (int i = g.maxUp + 100; i <= g.maxDown - 150; i += Snowflake.Height+30)
+            {
+                g.Snowflakes.Add(new Snowflake(5,i ));
+            }
+            for (int i = 3 * Platform.Width-10; i <= 5 * Platform.Width+10; i += Snowflake.Width+15)
+            {
+                g.Snowflakes.Add(new Snowflake(i, g.maxDown - 300));
+                g.Snowflakes.Add(new Snowflake(i + 150, g.maxDown - 400));
+                g.Snowflakes.Add(new Snowflake(i + 300, g.maxDown - 500));
+            }
+            for (int i = g.maxDown-600; i < g.maxDown - 300; i += Snowflake.Height+20)
+            {
+                g.Snowflakes.Add(new Snowflake(14* Platform.Width, i));
+            }
+
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            g.Player = new Player(200, g.maxDown - 200);
+
+            return g;
+        }
+        public static Game getLevel3()
+        {
             Game g = new Game(0, 800, 1200, 0);
             g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
             g.LEVELID = 2;
 
-           for (int i=0;i<g.maxRight-Platform.Width;i+= Platform.Width)
+            for (int i = 0; i <= g.maxRight - Platform.Width; i += Platform.Width)
             {
-                g.Platforms.Add(new Platform(i, g.maxDown-100));
+                g.Platforms.Add(new Platform(i, g.maxDown - 100));
             }
-            for (int i = 3*Platform.Width; i < 10*Platform.Width; i += Platform.Width)
+            for (int i = 3 * Platform.Width; i < 10 * Platform.Width; i += Platform.Width)
             {
                 g.Platforms.Add(new Platform(i, g.maxDown - 300));
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
@@ -116,16 +190,16 @@ namespace FrozenWorld
 
             }
 
-            
-            for (int i = g.maxUp + 40; i < g.maxDown - 200;i+=Snowflake.Height+50)
+
+            for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 50)
             {
-                g.Snowflakes.Add(new Snowflake(11*Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(11 * Platform.Width, i));
                 g.Snowflakes.Add(new Snowflake(14 * Platform.Width, i));
             }
 
             for (int i = g.maxDown - 700; i <= g.maxDown - 500; i += Stairs.Height)
             {
-                g.Stairs.Add(new Stairs(7*Platform.Width, i));
+                g.Stairs.Add(new Stairs(7 * Platform.Width, i));
                 g.Stairs.Add(new Stairs(17 * Platform.Width, i));
             }
             for (int i = g.maxDown - 500; i <= g.maxDown - 300; i += Stairs.Height)
