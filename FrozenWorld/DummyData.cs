@@ -15,6 +15,7 @@ namespace FrozenWorld
             {
                 case 1: return getLevel1();
                 case 2: return getLevel2();
+                case 3: return getLevel3();
                 default: return getLevel1();
             }
         }
