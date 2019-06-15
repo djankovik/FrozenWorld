@@ -190,7 +190,11 @@ namespace FrozenWorld
             aboutPage.ShowDialog();
         }
 
-       
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            SettingsPage settings = new SettingsPage();
+            settings.ShowDialog();
+        }
     }
 
 }

@@ -84,6 +84,12 @@
     <Compile Include="ScoreboardForm.Designer.cs">
       <DependentUpon>ScoreboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Snowflake.cs" />
     <Compile Include="Stairs.cs" />
     <Compile Include="StartLoginPage.cs">
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="ScoreboardForm.resx">
       <DependentUpon>ScoreboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartLoginPage.resx">
       <DependentUpon>StartLoginPage.cs</DependentUpon>
