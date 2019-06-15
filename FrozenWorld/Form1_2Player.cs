@@ -96,11 +96,11 @@ namespace FrozenWorld
         {
             statusStrip1.ForeColor = Color.White;
             tsslPlayer1Snowflakes.Text = string.Format("Snowflakes: {0}/{1}", game.collectedSnowflakesPlayer1, game.TOTALSNOWFLAKES);
-            tsspbPlayer1FrozenMeter.Value = game.frozenItemsPlayer1;
+            tsspbPlayer1FrozenMeter.Value = game.frozenItemsPlayer1 <= tsspbPlayer1FrozenMeter.Maximum? game.frozenItemsPlayer1: tsspbPlayer1FrozenMeter.Maximum;
             tsslPlayer1Lives.Text = string.Format("Lives left: {0}/{1}", game.Player1.LivesLeft, 5);
 
             tsslPlayer2Snowflakes.Text = string.Format("Snowflakes: {0}/{1}", game.collectedSnowflakesPlayer2, game.TOTALSNOWFLAKES);
-            tsspbPlayer2FrozenMeter.Value = game.frozenItemsPlayer2;
+            tsspbPlayer2FrozenMeter.Value = game.frozenItemsPlayer2 <= tsspbPlayer2FrozenMeter.Maximum ? game.frozenItemsPlayer2 : tsspbPlayer2FrozenMeter.Maximum;
             tsslPlayer2Lives.Text = string.Format("Lives left: {0}/{1}", game.Player2.LivesLeft, 5);
         }
 

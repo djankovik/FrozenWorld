@@ -80,9 +80,10 @@ namespace FrozenWorld
 
             g.Player1 = new Player(200, 200);
             g.Player2 = new Player(260, 200);
-            g.Player2.Image = Resources.player2;
+            g.Player2.Image = Resources.avatar1Boy;
 
-            g.Enemies.Add(new Enemy(400, 350, 400, 560));
+            Enemy e = new Enemy(400, 350, 400, 560); e.makeAdvancedEnemy();
+            g.Enemies.Add(e);
 
             g.Enemies.Add(new Enemy(850, g.maxDown - 80 - Enemy.Height, 600, 900));
 
@@ -185,7 +186,8 @@ namespace FrozenWorld
 
             g.Player = new Player(200, 200);
 
-            g.Enemies.Add(new Enemy(400, 350, 400, 560));
+            Enemy e = new Enemy(400, 350, 400, 560); e.makeAdvancedEnemy();
+            g.Enemies.Add(e);
 
             g.Enemies.Add(new Enemy(850, g.maxDown-80-Enemy.Height, 600, 900));
 
@@ -335,15 +337,15 @@ namespace FrozenWorld
             {
                 g.Platforms.Add(new Platform(i, g.maxDown - 300));
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
-                g.Platforms.Add(new Platform(i, g.maxDown - 700));
-
-                g.Enemies.Add(new Enemy(16 * Platform.Width, g.maxDown - 300 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
-                g.Enemies.Add(new Enemy(18 * Platform.Width, g.maxDown - 500 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
-                g.Enemies.Add(new Enemy(20 * Platform.Width, g.maxDown - 700 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
-
+                g.Platforms.Add(new Platform(i, g.maxDown - 700));               
                 
             }
-            g.Enemies[0].makeAdvancedEnemy();
+            Enemy e = new Enemy(16 * Platform.Width, g.maxDown - 300 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width);
+            e.makeAdvancedEnemy();
+            g.Enemies.Add(e);
+            g.Enemies.Add(new Enemy(18 * Platform.Width, g.maxDown - 500 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
+            g.Enemies.Add(new Enemy(20 * Platform.Width, g.maxDown - 700 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
+            
 
             for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 30)
             {

@@ -75,7 +75,7 @@
             // 
             this.btnViewScoreboard.BackColor = System.Drawing.Color.Lavender;
             this.btnViewScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewScoreboard.Location = new System.Drawing.Point(21, 250);
+            this.btnViewScoreboard.Location = new System.Drawing.Point(21, 345);
             this.btnViewScoreboard.Name = "btnViewScoreboard";
             this.btnViewScoreboard.Size = new System.Drawing.Size(278, 46);
             this.btnViewScoreboard.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.btnAbout.BackColor = System.Drawing.Color.Lavender;
             this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Location = new System.Drawing.Point(21, 302);
+            this.btnAbout.Location = new System.Drawing.Point(21, 300);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(278, 39);
             this.btnAbout.TabIndex = 4;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 353);
+            this.ClientSize = new System.Drawing.Size(712, 403);
             this.Controls.Add(this.btnOK2Player);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAbout);

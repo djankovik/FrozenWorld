@@ -219,10 +219,52 @@
     <None Include="Resources\iceStartpage2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\player2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar1Girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar1Boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemySimple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemySimple1Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemySimple1Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemySimple1LeftFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemySimple1RightFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemyAdvancedAngry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemyAdvancedFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\enemyAdvanced.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\player2.png" />
+    <None Include="Resources\platformSimple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platformSimpleFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairsSimple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairsSimpleFrozen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

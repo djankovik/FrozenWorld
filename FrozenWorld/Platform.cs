@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace FrozenWorld
 {
-    [Serializable]
+  
     public class Platform
     {
+        public static Image PlatformImage = Resources.platformSimple;
+        public static Image PlatformImageFrozen = Resources.platformSimpleFrozen;
         public int X { get; set; }
         public int Y { get; set; }
         public static int Width = 50;
@@ -25,11 +27,11 @@ namespace FrozenWorld
             X = x;
             Y = y;
             isFrozen = false;
-            Image = Resources.platformBrick;
+            Image = PlatformImage;
         }
         public void freezeImage()
         {
-            Image = Resources.platformBrickFrozen;
+            Image = PlatformImageFrozen;
         }
         public Rectangle getRectagle()
         {
@@ -54,7 +56,7 @@ namespace FrozenWorld
         public void unfreeze()
         {
             this.isFrozen = false;
-            this.Image = Resources.platformBrick;
+            this.Image = PlatformImage;
         }
     }
 }

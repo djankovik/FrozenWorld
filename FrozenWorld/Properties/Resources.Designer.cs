@@ -63,6 +63,26 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatar1Boy {
+            get {
+                object obj = ResourceManager.GetObject("avatar1Boy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avatar1Girl {
+            get {
+                object obj = ResourceManager.GetObject("avatar1Girl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DarkForest {
             get {
                 object obj = ResourceManager.GetObject("DarkForest", resourceCulture);
@@ -103,6 +123,16 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemy2 {
+            get {
+                object obj = ResourceManager.GetObject("enemy2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enemyAdvanced {
             get {
                 object obj = ResourceManager.GetObject("enemyAdvanced", resourceCulture);
@@ -113,9 +143,79 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemyAdvancedAngry {
+            get {
+                object obj = ResourceManager.GetObject("enemyAdvancedAngry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemyAdvancedFrozen {
+            get {
+                object obj = ResourceManager.GetObject("enemyAdvancedFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enemyFrozen {
             get {
                 object obj = ResourceManager.GetObject("enemyFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple1 {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple1Left {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple1Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple1LeftFrozen {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple1LeftFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple1Right {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple1Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple1RightFrozen {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple1RightFrozen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +286,26 @@ namespace FrozenWorld.Properties {
         internal static System.Drawing.Bitmap platformBrickFrozen {
             get {
                 object obj = ResourceManager.GetObject("platformBrickFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap platformSimple {
+            get {
+                object obj = ResourceManager.GetObject("platformSimple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap platformSimpleFrozen {
+            get {
+                object obj = ResourceManager.GetObject("platformSimpleFrozen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +386,26 @@ namespace FrozenWorld.Properties {
         internal static System.Drawing.Bitmap stairBlockFrozen {
             get {
                 object obj = ResourceManager.GetObject("stairBlockFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stairsSimple {
+            get {
+                object obj = ResourceManager.GetObject("stairsSimple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stairsSimpleFrozen {
+            get {
+                object obj = ResourceManager.GetObject("stairsSimpleFrozen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

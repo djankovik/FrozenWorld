@@ -202,4 +202,46 @@
   <data name="player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="enemyAdvancedFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemyAdvancedFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar1Girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar1Girl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar1Boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar1Boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemy2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemySimple1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemySimple1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemySimple1Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemySimple1Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemySimple1LeftFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemySimple1LeftFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemySimple1Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemySimple1Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemySimple1RightFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemySimple1RightFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemyAdvancedAngry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemyAdvancedAngry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="platformSimple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platformSimple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="platformSimpleFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platformSimpleFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stairsSimple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stairsSimple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stairsSimpleFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stairsSimpleFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

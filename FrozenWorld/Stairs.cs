@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace FrozenWorld
 {
-    [Serializable]
     public class Stairs
     {
+        public static Image StairsImage = Resources.stairsSimple;
+        public static Image StairsImageFrozen = Resources.stairsSimpleFrozen;
+
         public int X { get; set; }
         public int Y { get; set; }
 
@@ -25,11 +27,11 @@ namespace FrozenWorld
             X = x;
             Y = y;
             isFrozen = false;
-            Image = Resources.stairBlock;
+            Image = StairsImage;
         }
         public void freezeImage()
         {
-            Image = Image = Resources.stairBlockFrozen;
+            Image = StairsImageFrozen;
         }
 
         public Rectangle getRectagle()
@@ -57,7 +59,7 @@ namespace FrozenWorld
         public void unfreeze()
         {
             this.isFrozen = false;
-            this.Image = Resources.stairBlock;
+            this.Image = StairsImage;
         }
 
         public int getHeight() { return Height; }

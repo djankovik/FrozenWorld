@@ -126,6 +126,8 @@ namespace FrozenWorld
                 lblWelcomingMessage.Text = "Welcome " + tbUsername.Text;
                 btnOK.Text = "Start New Game";
                 btnOK2Player.Text = "Start New 2 Player Game";
+                btnOK.Font = new Font(btnOK.Font, FontStyle.Regular);
+                btnOK2Player.Font = new Font(btnOK2Player.Font, FontStyle.Regular);
 
                 btnOK.Enabled = true;
                 btnOK2Player.Enabled = true;

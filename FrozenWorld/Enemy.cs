@@ -8,13 +8,19 @@ using System.Threading.Tasks;
 
 namespace FrozenWorld
 {
-    [Serializable]
     public class Enemy
     {
         public enum DIRECTION
         {
             LEFT, RIGHT
         }
+        public static Image EnemyLeft = Resources.enemySimple1Left;
+        public static Image EnemyRight = Resources.enemySimple1Right;
+        public static Image EnemyLeftFrozen = Resources.enemySimple1LeftFrozen;
+        public static Image EnemyRightFrozen = Resources.enemySimple1RightFrozen;
+        public static Image EnemyAdvanced = Resources.enemyAdvanced;
+        public static Image EnemyAdvancedFrozen = Resources.enemyAdvancedFrozen;
+        public static Image EnemyAdvancedAngry = Resources.enemyAdvancedAngry;
 
         public int X { get; set; }
         public int Y { get; set; }
@@ -46,7 +52,7 @@ namespace FrozenWorld
             isAdvancedEnemy = false;
             isAngry = false;
 
-            Image = Resources.enemy;
+            Image = EnemyRight;
             Direction = Enemy.DIRECTION.RIGHT;
             this.freezeTimeLeft = 0;
         }
@@ -54,7 +60,61 @@ namespace FrozenWorld
         {
             isAdvancedEnemy = true;
             isAngry = false;
-            Image = Resources.enemyAdvanced;
+            Image = EnemyAdvanced;
+        }
+        public void FreezeImage()
+        {
+            if (isAdvancedEnemy)
+            {
+                if(Direction == Enemy.DIRECTION.RIGHT)
+                {
+                    Image = EnemyAdvancedFrozen;
+                }
+                else
+                {
+                    Image = EnemyAdvancedFrozen;
+                }               
+            }
+            else
+            {
+                if (Direction == Enemy.DIRECTION.RIGHT)
+                {
+                    Image = EnemyRightFrozen;
+                }
+                else
+                {
+                    Image = EnemyLeftFrozen;
+                }
+            }
+        }
+        public void UnfreezeImage()
+        {
+            if (isAdvancedEnemy)
+            {
+                if (Direction == Enemy.DIRECTION.RIGHT)
+                {
+                    Image = EnemyAdvanced;
+                }
+                else
+                {
+                    Image = EnemyAdvanced;
+                }
+                if (this.isAngry)
+                {
+                    Image = EnemyAdvancedAngry;
+                }
+            }
+            else
+            {
+                if (Direction == Enemy.DIRECTION.RIGHT)
+                {
+                    Image = EnemyRight;
+                }
+                else
+                {
+                    Image = EnemyLeft;
+                }
+            }
         }
         public Rectangle getRectagle()
         {
@@ -80,7 +140,7 @@ namespace FrozenWorld
                 {
                     this.isFrozen = true;
                     freezeTimeLeft = TOTALFREEZETIME;
-                    Image = Resources.enemyFrozen;
+                    FreezeImage();
                 }
             }
         }
@@ -97,11 +157,8 @@ namespace FrozenWorld
                     if (isAdvancedEnemy)
                     {
                         isAngry = true;
-                        Image = Resources.enemyAdvanced;
-                        return;
                     }
-                    else
-                        Image = Resources.enemy; //change the image to unfrozen
+                    UnfreezeImage();
                 }
             }
 
@@ -122,6 +179,7 @@ namespace FrozenWorld
                     if (this.X <= this.leftLimit)           //if near EDGE, change direction
                         this.Direction = Enemy.DIRECTION.RIGHT; 
                 }
+                UnfreezeImage();
             }
         }
     }

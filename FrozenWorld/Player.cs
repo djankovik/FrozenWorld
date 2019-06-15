@@ -38,7 +38,7 @@ namespace FrozenWorld
         {
             this.X = x;
             this.Y = y;
-            Image = Resources.player;
+            Image = Resources.avatar1Girl;
 
             GRAVITY = 12;
             JUMPSPEED = 22;
