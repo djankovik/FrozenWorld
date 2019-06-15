@@ -127,7 +127,7 @@ namespace FrozenWorld
             statusStrip1.ForeColor = Color.White;
             tsslSnowflakes.Text = string.Format("Snowflakes: {0}/{1}",game.collectedSnowflakes,game.TOTALSNOWFLAKES);
             tsspbFreezables.Value = game.getFrozenBlockNumber();
-            tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft, 5);
+            tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft>=0? game.Player.LivesLeft:0, 5);
         }
         public void SaveFile()
         {
