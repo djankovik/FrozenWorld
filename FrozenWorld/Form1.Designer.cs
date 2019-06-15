@@ -63,12 +63,16 @@
             // 
             // tsslSnowflakes
             // 
+            this.tsslSnowflakes.ForeColor = System.Drawing.Color.White;
+            this.tsslSnowflakes.Image = global::FrozenWorld.Properties.Resources.player;
+            this.tsslSnowflakes.Margin = new System.Windows.Forms.Padding(4, 3, 20, 2);
             this.tsslSnowflakes.Name = "tsslSnowflakes";
-            this.tsslSnowflakes.Size = new System.Drawing.Size(200, 28);
+            this.tsslSnowflakes.Size = new System.Drawing.Size(220, 28);
             this.tsslSnowflakes.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(125, 28);
@@ -85,6 +89,7 @@
             // tsslLivesLeft
             // 
             this.tsslLivesLeft.ActiveLinkColor = System.Drawing.Color.Red;
+            this.tsslLivesLeft.ForeColor = System.Drawing.Color.White;
             this.tsslLivesLeft.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
             this.tsslLivesLeft.Name = "tsslLivesLeft";
             this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);

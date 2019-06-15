@@ -19,6 +19,118 @@ namespace FrozenWorld
                 default: return getLevel1();
             }
         }
+        public static Game2Player getLevel2Player(int level)
+        {
+            switch (level)
+            {
+                case 1: return getLevel12Player();
+                default: return getLevel12Player();
+            }           
+        }
+        public static Game2Player getLevel12Player()
+        {
+            Game2Player g = new Game2Player(0, 640, 900, 0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+            g.LEVELID = 1;
+
+            List<Platform> platforms = new List<Platform>();
+            platforms.Add(new Platform(0, 560));
+            platforms.Add(new Platform(50, 560));
+            platforms.Add(new Platform(100, 560));
+            platforms.Add(new Platform(150, 560));
+            platforms.Add(new Platform(200, 560));
+            platforms.Add(new Platform(250, 560));
+            platforms.Add(new Platform(300, 560));
+            platforms.Add(new Platform(350, 560));
+
+            platforms.Add(new Platform(400, 400));
+            platforms.Add(new Platform(450, 400));
+            platforms.Add(new Platform(500, 400));
+
+            platforms.Add(new Platform(0, 375));
+            platforms.Add(new Platform(50, 375));
+            platforms.Add(new Platform(100, 375));
+            platforms.Add(new Platform(150, 375));
+            platforms.Add(new Platform(200, 375));
+
+            platforms.Add(new Platform(400, 200));
+            platforms.Add(new Platform(450, 200));
+            platforms.Add(new Platform(500, 200));
+            platforms.Add(new Platform(550, 200));
+            platforms.Add(new Platform(600, 200));
+            platforms.Add(new Platform(650, 200));
+            platforms.Add(new Platform(700, 200));
+
+            platforms.Add(new Platform(0, 120));
+            platforms.Add(new Platform(50, 120));
+            platforms.Add(new Platform(100, 120));
+            platforms.Add(new Platform(150, 120));
+            platforms.Add(new Platform(200, 120));
+
+            platforms.Add(new Platform(600, 560));
+            platforms.Add(new Platform(650, 560));
+            platforms.Add(new Platform(700, 560));
+            platforms.Add(new Platform(750, 560));
+            platforms.Add(new Platform(800, 560));
+            platforms.Add(new Platform(850, 560));
+
+            g.Enemies.Add(new Enemy(400, 150, 400, 750));
+
+            g.Platforms = platforms;
+
+            g.Player1 = new Player(200, 200);
+            g.Player2 = new Player(260, 200);
+            g.Player2.Image = Resources.player2;
+
+            g.Enemies.Add(new Enemy(400, 350, 400, 560));
+
+            g.Enemies.Add(new Enemy(850, g.maxDown - 80 - Enemy.Height, 600, 900));
+
+            g.Stairs.Add(new Stairs(500, 400));
+            g.Stairs.Add(new Stairs(500, 370));
+            g.Stairs.Add(new Stairs(500, 340));
+            g.Stairs.Add(new Stairs(500, 310));
+            g.Stairs.Add(new Stairs(500, 280));
+            g.Stairs.Add(new Stairs(500, 250));
+            g.Stairs.Add(new Stairs(500, 220));
+
+            g.Stairs.Add(new Stairs(20, 530));
+            g.Stairs.Add(new Stairs(20, 500));
+            g.Stairs.Add(new Stairs(20, 470));
+            g.Stairs.Add(new Stairs(20, 440));
+            g.Stairs.Add(new Stairs(20, 410));
+            g.Stairs.Add(new Stairs(20, 380));
+
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            g.Snowflakes.Add(new Snowflake(20, 250));
+            g.Snowflakes.Add(new Snowflake(50, 230));
+            g.Snowflakes.Add(new Snowflake(70, 550));
+
+            g.Snowflakes.Add(new Snowflake(0, 70));
+            g.Snowflakes.Add(new Snowflake(50, 70));
+            g.Snowflakes.Add(new Snowflake(100, 70));
+            g.Snowflakes.Add(new Snowflake(150, 70));
+            g.Snowflakes.Add(new Snowflake(200, 70));
+
+            g.Snowflakes.Add(new Snowflake(350, 200));
+            g.Snowflakes.Add(new Snowflake(350, 250));
+            g.Snowflakes.Add(new Snowflake(350, 300));
+            g.Snowflakes.Add(new Snowflake(350, 350));
+            g.Snowflakes.Add(new Snowflake(350, 400));
+            g.Snowflakes.Add(new Snowflake(350, 450));
+            g.Snowflakes.Add(new Snowflake(350, 500));
+            g.Snowflakes.Add(new Snowflake(350, 650));
+
+            for (int i = g.maxUp + 200; i <= g.maxDown - 100; i += 50)
+            {
+                g.Snowflakes.Add(new Snowflake(850, i));
+            }
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+
+            return g;
+        }
         public static Game getLevel1()
         {
             Game g = new Game(0,640,900,0);

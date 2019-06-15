@@ -79,11 +79,22 @@ namespace FrozenWorld
         {
             if(levels.Contains(level) || levels.Contains(level-1) || level == 1)
             {
-                Game g = DummyData.getLevel(level);
-                Form1 formGame = new Form1(g);
-                formGame.UserPlayingThisGame= this.currentUser;
-                formGame.ShowDialog();
-                this.Close();
+                if (currentUser.TwoPlayer)
+                {
+                    Game2Player g = DummyData.getLevel2Player(level);
+                    Form1_2Player formGame = new Form1_2Player(g);
+                    formGame.UserPlayingThisGame = this.currentUser;
+                    formGame.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    Game g = DummyData.getLevel(level);
+                    Form1 formGame = new Form1(g);
+                    formGame.UserPlayingThisGame = this.currentUser;
+                    formGame.ShowDialog();
+                    this.Close();
+                }
             }
         }
         private void Lbl1_Click(object sender, EventArgs e)

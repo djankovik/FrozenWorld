@@ -54,7 +54,30 @@ namespace FrozenWorld
             SaveFile();
             //Close();
         }
-        
+        private void BtnOK2Player_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(tbUsername.Text))
+                return;
+
+            string userFile = tbUsername.Text;
+
+            if (btnOK2Player.Text == "Continue 2 Player Game")
+            {
+                if (User == null)
+                    OpenFile(userFile);
+            }
+            else
+            {
+                User = new User(userFile);
+                User.make2Player();
+                SaveFile();
+            }
+
+            var levelChooserForm = new LevelChooserForm(User);
+            levelChooserForm.Show();
+            SaveFile();
+            //Close();
+        }
         private void TbUsername_TextChanged(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(tbUsername.Text))
@@ -66,14 +89,49 @@ namespace FrozenWorld
 
             if (files.Contains(tbUsername.Text))
             {
-                btnOK.Text = "Continue Game";
-                lblWelcomingMessage.Text = "Welcome back " + tbUsername.Text;
+                User checkUser;
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream file = File.OpenRead($@"{PATH}\{tbUsername.Text}.fwuser"))
+                      checkUser = (User)formatter.Deserialize(file);
+                
+                if (checkUser.TwoPlayer == false)
+                {
+                    //ENABLE 1
+                    btnOK.Text = "Continue Game";
+                    btnOK.Enabled = true;
+                    lblWelcomingMessage.Text = "Welcome back " + tbUsername.Text;
+                    btnOK.Font = new Font(btnOK.Font, FontStyle.Bold);
+
+                    //DISABLE 2
+                    btnOK2Player.Text = "Start New 2 Player Game";
+                    btnOK2Player.Enabled = false;
+                    btnOK2Player.Font = new Font(btnOK2Player.Font, FontStyle.Regular);
+                }
+                else
+                {
+                    //ENABLE 2
+                    btnOK2Player.Text = "Continue 2 Player Game";
+                    lblWelcomingMessage.Text = "Welcome back " + tbUsername.Text;
+                    btnOK2Player.Enabled = true;
+                    btnOK2Player.Font = new Font(btnOK2Player.Font, FontStyle.Bold);
+
+                    //DISABLE 1
+                    btnOK.Text = "Start New Game";
+                    btnOK.Enabled = false;
+                    btnOK.Font = new Font(btnOK.Font, FontStyle.Regular);
+                }
             }
             else
             {
                 lblWelcomingMessage.Text = "Welcome " + tbUsername.Text;
                 btnOK.Text = "Start New Game";
+                btnOK2Player.Text = "Start New 2 Player Game";
+
+                btnOK.Enabled = true;
+                btnOK2Player.Enabled = true;
+
             }
+
         }
 
         public void OpenFile(string fileName)
@@ -129,6 +187,8 @@ namespace FrozenWorld
             AboutPage aboutPage = new AboutPage();
             aboutPage.ShowDialog();
         }
+
+       
     }
 
 }

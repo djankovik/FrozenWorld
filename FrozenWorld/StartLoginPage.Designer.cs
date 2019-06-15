@@ -34,6 +34,7 @@
             this.btnViewScoreboard = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnOK2Player = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbUsername
@@ -74,7 +75,7 @@
             // 
             this.btnViewScoreboard.BackColor = System.Drawing.Color.Lavender;
             this.btnViewScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewScoreboard.Location = new System.Drawing.Point(21, 229);
+            this.btnViewScoreboard.Location = new System.Drawing.Point(21, 250);
             this.btnViewScoreboard.Name = "btnViewScoreboard";
             this.btnViewScoreboard.Size = new System.Drawing.Size(278, 46);
             this.btnViewScoreboard.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.btnAbout.BackColor = System.Drawing.Color.Lavender;
             this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Location = new System.Drawing.Point(21, 281);
+            this.btnAbout.Location = new System.Drawing.Point(21, 302);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(278, 39);
             this.btnAbout.TabIndex = 4;
@@ -106,11 +107,24 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username:";
             // 
+            // btnOK2Player
+            // 
+            this.btnOK2Player.BackColor = System.Drawing.Color.Lavender;
+            this.btnOK2Player.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK2Player.Location = new System.Drawing.Point(21, 199);
+            this.btnOK2Player.Name = "btnOK2Player";
+            this.btnOK2Player.Size = new System.Drawing.Size(278, 42);
+            this.btnOK2Player.TabIndex = 6;
+            this.btnOK2Player.Text = "Start New 2 Player Game";
+            this.btnOK2Player.UseVisualStyleBackColor = false;
+            this.btnOK2Player.Click += new System.EventHandler(this.BtnOK2Player_Click);
+            // 
             // StartLoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 353);
+            this.Controls.Add(this.btnOK2Player);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnViewScoreboard);
@@ -133,5 +147,6 @@
         private System.Windows.Forms.Button btnViewScoreboard;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnOK2Player;
     }
 }

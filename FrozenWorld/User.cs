@@ -14,12 +14,18 @@ namespace FrozenWorld
         public String UserName { get; set; }
         public Dictionary<int,int> LevelScores { get; set; }
 
+        public bool TwoPlayer { get; set; }
         public User(String UserName)
         {
             this.UserName = UserName;
             LevelScores = new Dictionary<int, int>();
+            TwoPlayer = false;
         }
 
+        public void make2Player()
+        {
+            TwoPlayer = true;
+        }
         public int getTotalPoints()
         {
             int total = 0;

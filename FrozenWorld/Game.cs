@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace FrozenWorld
 {
-    [Serializable]
     public class Game
     {
         public int LEVELID { get; set; }
