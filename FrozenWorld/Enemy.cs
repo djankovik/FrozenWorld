@@ -31,7 +31,8 @@ namespace FrozenWorld
 
         public static int TOTALFREEZETIME = 50;
         public int freezeTimeLeft { get; set; }
-
+        public bool isAdvancedEnemy { get; set; }
+        public bool isAngry { get; set; }
         public Image Image { get; set; }
 
         public Enemy(int x, int y, int leftLimit, int rightLimit)
@@ -42,11 +43,19 @@ namespace FrozenWorld
             this.rightLimit = rightLimit;
 
             isFrozen = false;
+            isAdvancedEnemy = false;
+            isAngry = false;
+
             Image = Resources.enemy;
             Direction = Enemy.DIRECTION.RIGHT;
             this.freezeTimeLeft = 0;
         }
-       
+       public void makeAdvancedEnemy()
+        {
+            isAdvancedEnemy = true;
+            isAngry = false;
+            Image = Resources.enemyAdvanced;
+        }
         public Rectangle getRectagle()
         {
             return new Rectangle(X, Y, Width, Height);
@@ -58,7 +67,7 @@ namespace FrozenWorld
 
         public void Draw(Graphics g)
         {
-            g.DrawImage(Image, X, Y, Width, Height);
+            g.DrawImage(Image,X,Y,Width,Height);
         }
 
         public void Freeze(Player player)
@@ -85,8 +94,14 @@ namespace FrozenWorld
                 {
                     isFrozen = false; //unfreeze
                     freezeTimeLeft = 0; //set freezetimeleft to 0
-                    Image = Resources.enemy; //change the image to unfrozen
-
+                    if (isAdvancedEnemy)
+                    {
+                        isAngry = true;
+                        Image = Resources.enemyAdvanced;
+                        return;
+                    }
+                    else
+                        Image = Resources.enemy; //change the image to unfrozen
                 }
             }
 

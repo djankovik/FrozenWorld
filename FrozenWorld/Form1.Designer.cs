@@ -98,6 +98,7 @@
             this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Frozen World";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

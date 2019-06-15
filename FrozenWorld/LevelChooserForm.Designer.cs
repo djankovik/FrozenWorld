@@ -923,6 +923,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "LevelChooserForm";
             this.Text = "LevelChooserForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

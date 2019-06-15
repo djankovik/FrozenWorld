@@ -51,5 +51,10 @@ namespace FrozenWorld
                 freezeImage();
             }            
         }
+        public void unfreeze()
+        {
+            this.isFrozen = false;
+            this.Image = Resources.platformBrick;
+        }
     }
 }

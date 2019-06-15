@@ -200,6 +200,24 @@ namespace FrozenWorld
             foreach (Enemy e in Enemies)
             {
                 e.timerTick();
+                if (e.isAngry && e.isAdvancedEnemy)
+                {
+                    e.isAngry = false;
+                    foreach(Platform p in Platforms)
+                    {
+                        if (e.getRectagleWithPadding(35, 35, 35, 35).IntersectsWith(p.getRectagle()))
+                        {
+                            p.unfreeze();
+                        }
+                    }
+                    foreach (Stairs s in Stairs)
+                    {
+                        if (e.getRectagleWithPadding(5, 5, 5, 5).IntersectsWith(s.getRectagle()))
+                        {
+                            s.unfreeze();
+                        }
+                    }
+                }
             }
         }
         public void FreezeFreezableBlocks()

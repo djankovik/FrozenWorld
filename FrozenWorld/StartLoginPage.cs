@@ -123,6 +123,12 @@ namespace FrozenWorld
         {
             Application.Exit();
         }
+
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            AboutPage aboutPage = new AboutPage();
+            aboutPage.ShowDialog();
+        }
     }
 
 }

@@ -21,7 +21,7 @@ namespace FrozenWorld
         }
         public static Game getLevel1()
         {
-            Game g = new Game(0,640,800,0);
+            Game g = new Game(0,640,900,0);
             g.BACKGROUNDIMAGE = Resources.DarkForest6;
             g.LEVELID = 1;
 
@@ -34,6 +34,7 @@ namespace FrozenWorld
             platforms.Add(new Platform(250, 560));
             platforms.Add(new Platform(300, 560));
             platforms.Add(new Platform(350, 560));
+
             platforms.Add(new Platform(400, 400));
             platforms.Add(new Platform(450, 400));
             platforms.Add(new Platform(500, 400));
@@ -53,6 +54,19 @@ namespace FrozenWorld
             platforms.Add(new Platform(650, 200));
             platforms.Add(new Platform(700, 200));
 
+            platforms.Add(new Platform(0, 120));
+            platforms.Add(new Platform(50, 120));
+            platforms.Add(new Platform(100, 120));
+            platforms.Add(new Platform(150, 120));
+            platforms.Add(new Platform(200, 120));
+
+            platforms.Add(new Platform(600, 560));
+            platforms.Add(new Platform(650, 560));
+            platforms.Add(new Platform(700, 560));
+            platforms.Add(new Platform(750, 560));
+            platforms.Add(new Platform(800, 560));
+            platforms.Add(new Platform(850, 560));
+
             g.Enemies.Add(new Enemy(400, 150, 400, 750));
 
             g.Platforms = platforms;
@@ -61,12 +75,15 @@ namespace FrozenWorld
 
             g.Enemies.Add(new Enemy(400, 350, 400, 560));
 
+            g.Enemies.Add(new Enemy(850, g.maxDown-80-Enemy.Height, 600, 900));
+
             g.Stairs.Add(new Stairs(500, 400));
             g.Stairs.Add(new Stairs(500, 370));
             g.Stairs.Add(new Stairs(500, 340));
             g.Stairs.Add(new Stairs(500, 310));
             g.Stairs.Add(new Stairs(500, 280));
             g.Stairs.Add(new Stairs(500, 250));
+            g.Stairs.Add(new Stairs(500, 220));
 
             g.Stairs.Add(new Stairs(20, 530));
             g.Stairs.Add(new Stairs(20, 500));
@@ -76,9 +93,30 @@ namespace FrozenWorld
             g.Stairs.Add(new Stairs(20, 380));
 
             g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
             g.Snowflakes.Add(new Snowflake(20,250));
             g.Snowflakes.Add(new Snowflake(50, 230));
             g.Snowflakes.Add(new Snowflake(70, 550));
+
+            g.Snowflakes.Add(new Snowflake(0, 70));
+            g.Snowflakes.Add(new Snowflake(50, 70));
+            g.Snowflakes.Add(new Snowflake(100, 70));
+            g.Snowflakes.Add(new Snowflake(150, 70));
+            g.Snowflakes.Add(new Snowflake(200, 70));
+
+            g.Snowflakes.Add(new Snowflake(350, 200));
+            g.Snowflakes.Add(new Snowflake(350, 250));
+            g.Snowflakes.Add(new Snowflake(350, 300));
+            g.Snowflakes.Add(new Snowflake(350, 350));
+            g.Snowflakes.Add(new Snowflake(350, 400));
+            g.Snowflakes.Add(new Snowflake(350, 450));
+            g.Snowflakes.Add(new Snowflake(350, 500));
+            g.Snowflakes.Add(new Snowflake(350, 650));
+
+            for(int i=g.maxUp + 200; i <= g.maxDown - 100; i += 50)
+            {
+                g.Snowflakes.Add(new Snowflake(850,i));
+            }
 
             g.TOTALSNOWFLAKES = g.Snowflakes.Count;
 
@@ -144,6 +182,7 @@ namespace FrozenWorld
                 g.Snowflakes.Add(new Snowflake(i, g.maxDown - 300));
                 g.Snowflakes.Add(new Snowflake(i + 150, g.maxDown - 400));
                 g.Snowflakes.Add(new Snowflake(i + 300, g.maxDown - 500));
+
             }
             for (int i = g.maxDown-600; i < g.maxDown - 300; i += Snowflake.Height+20)
             {
@@ -174,6 +213,7 @@ namespace FrozenWorld
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
                 g.Platforms.Add(new Platform(i, g.maxDown - 700));
 
+
                 g.Enemies.Add(new Enemy(4 * Platform.Width, g.maxDown - 300 - Enemy.Height, 3 * Platform.Width, 10 * Platform.Width));
                 g.Enemies.Add(new Enemy(7 * Platform.Width, g.maxDown - 500 - Enemy.Height, 3 * Platform.Width, 10 * Platform.Width));
                 g.Enemies.Add(new Enemy(8 * Platform.Width, g.maxDown - 700 - Enemy.Height, 3 * Platform.Width, 10 * Platform.Width));
@@ -189,13 +229,21 @@ namespace FrozenWorld
                 g.Enemies.Add(new Enemy(18 * Platform.Width, g.maxDown - 500 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
                 g.Enemies.Add(new Enemy(20 * Platform.Width, g.maxDown - 700 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
 
+                
             }
+            g.Enemies[0].makeAdvancedEnemy();
 
-
-            for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 50)
+            for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 30)
             {
                 g.Snowflakes.Add(new Snowflake(11 * Platform.Width, i));
+                if (i < g.maxDown - 500)
+                {
+                    g.Snowflakes.Add(new Snowflake(12 * Platform.Width+Platform.Width/2, i));
+                }
                 g.Snowflakes.Add(new Snowflake(14 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(2 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(1*Platform.Width, i+15));
+              
             }
 
             for (int i = g.maxDown - 700; i <= g.maxDown - 500; i += Stairs.Height)
@@ -221,5 +269,16 @@ namespace FrozenWorld
 
             return g;
         }
+
+        public static Game getLevel4()
+        {
+            Game g = new Game(0, 800, 800, 0);
+            g.LEVELID = 4;
+            
+
+            return g;
+        }
+
+
     }
 }

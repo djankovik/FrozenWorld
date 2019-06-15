@@ -54,6 +54,11 @@ namespace FrozenWorld
                 freezeImage();
             }            
         }
+        public void unfreeze()
+        {
+            this.isFrozen = false;
+            this.Image = Resources.stairBlock;
+        }
 
         public int getHeight() { return Height; }
     }

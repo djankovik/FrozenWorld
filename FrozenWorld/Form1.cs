@@ -22,7 +22,7 @@ namespace FrozenWorld
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             
             newGame(Game);
         }

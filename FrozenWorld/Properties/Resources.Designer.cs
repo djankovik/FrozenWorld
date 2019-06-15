@@ -103,6 +103,16 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemyAdvanced {
+            get {
+                object obj = ResourceManager.GetObject("enemyAdvanced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enemyFrozen {
             get {
                 object obj = ResourceManager.GetObject("enemyFrozen", resourceCulture);
