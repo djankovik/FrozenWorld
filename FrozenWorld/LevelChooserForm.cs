@@ -15,7 +15,8 @@ namespace FrozenWorld
     {
         public User currentUser;
         public List<int> levels;
-        public LevelChooserForm(User currentUser)
+
+       public LevelChooserForm(User currentUser)
         {
             InitializeComponent();
             this.currentUser = currentUser;
@@ -25,11 +26,12 @@ namespace FrozenWorld
         
         public void drawForm()
         {
+
             foreach (Control cntrl in Controls)
             {
                 if (cntrl is PictureBox)
                 {
-                    PictureBox pb = (PictureBox)cntrl;
+                   PictureBox pb = (PictureBox)cntrl;
                     int pbNr;
                     if (Int32.TryParse(pb.Name.Substring(10), out pbNr))
                     {
@@ -51,25 +53,25 @@ namespace FrozenWorld
             {
                 if (cntrl is Label)
                 {
+
                     Label lbl = (Label)cntrl;
                     int lblNr;
                     if (Int32.TryParse(lbl.Name.Substring(3), out lblNr))
                     {
                         if (levels.Contains(lblNr) || levels.Contains(lblNr - 1) || lblNr == 1)
                         {
-                            lbl.BackColor = Color.Transparent;
+                            lbl.BackColor = Color.Lavender;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
                         }
                         else
                         {
-                            lbl.BackColor = Color.Transparent;
+                            lbl.BackColor = Color.Lavender;
                             lbl.Text = "X";
                             lbl.Tag = "Locked";
                         }
                     }
                 }
-
             }
         }
 
