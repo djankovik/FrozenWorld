@@ -451,7 +451,7 @@ namespace FrozenWorld
 
                 foreach (Platform p in Platforms)
                 {
-                    if (Player1.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player1.isJumping)
+                    if (Player1.getRectagleWithPadding(-35, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player1.isJumping)
                     {
                         Player1.GRAVITY = 12;
                         Player1.Y = p.Y - Player.Height;

@@ -223,7 +223,6 @@ namespace FrozenWorld
         {
             foreach (Platform p in Platforms)
             {
-
                 p.Freeze(Player);
             }
             foreach (Stairs st in Stairs)
@@ -308,7 +307,7 @@ namespace FrozenWorld
             
                 foreach (Platform p in Platforms)
                 {
-                    if (Player.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player.isJumping)
+                    if (Player.getRectagleWithPadding(-35, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player.isJumping)
                     {
                         Player.GRAVITY = 12;
                         Player.Y = p.Y - Player.Height;
@@ -348,7 +347,7 @@ namespace FrozenWorld
                 }
             }
             collectSnowflakes();
-            interactWithEnemies();
+            //interactWithEnemies();
             Player.RehabTimeLeft--;
         }
     }

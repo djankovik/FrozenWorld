@@ -27,8 +27,8 @@ namespace FrozenWorld
         public int leftLimit { get; set; }
         public int rightLimit { get; set; }
 
-        public static int Width = 40;
-        public static int Height = 50;
+        public static int Width = 50;
+        public static int Height = 55;
 
         public Enemy.DIRECTION Direction { get; set; }
 
@@ -134,7 +134,7 @@ namespace FrozenWorld
         {
             if (!isFrozen)
             {
-                if (Math.Abs(player.Y+Player.Height-this.Y) <= 10        //if the player is on top of the enemy
+                if (Math.Abs(player.Y+Player.Height-this.Y) <= 16        //if the player is on top of the enemy
                     && ((player.X <= this.X && player.X+Player.Width >= this.X) //if the player is on the left side of enemy
                     || (this.X+Enemy.Width >= player.X && this.X<=player.X))) //if the player is on the right side of enemy
                 {
