@@ -140,11 +140,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 23);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 58);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "LEVELS";
             // 
             // lbl1
@@ -154,7 +154,7 @@
             this.lbl1.Location = new System.Drawing.Point(55, 140);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(39, 39);
-            this.lbl1.TabIndex = 36;
+            this.lbl1.TabIndex = 2;
             this.lbl1.Text = "10";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbl1.Click += new System.EventHandler(this.Lbl1_Click);
@@ -166,7 +166,7 @@
             this.lbl2.Location = new System.Drawing.Point(185, 140);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(37, 39);
-            this.lbl2.TabIndex = 37;
+            this.lbl2.TabIndex = 3;
             this.lbl2.Text = "2";
             this.lbl2.Click += new System.EventHandler(this.Lbl2_Click);
             // 
@@ -177,7 +177,7 @@
             this.lbl3.Location = new System.Drawing.Point(313, 140);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(37, 39);
-            this.lbl3.TabIndex = 38;
+            this.lbl3.TabIndex = 4;
             this.lbl3.Text = "3";
             this.lbl3.Click += new System.EventHandler(this.Lbl3_Click);
             // 
@@ -188,7 +188,7 @@
             this.lbl4.Location = new System.Drawing.Point(442, 140);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(37, 39);
-            this.lbl4.TabIndex = 39;
+            this.lbl4.TabIndex = 5;
             this.lbl4.Text = "4";
             this.lbl4.Click += new System.EventHandler(this.Lbl4_Click);
             // 
@@ -199,7 +199,7 @@
             this.lbl5.Location = new System.Drawing.Point(563, 140);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(37, 39);
-            this.lbl5.TabIndex = 40;
+            this.lbl5.TabIndex = 6;
             this.lbl5.Text = "5";
             this.lbl5.Click += new System.EventHandler(this.Lbl5_Click);
             // 
@@ -210,7 +210,7 @@
             this.lbl6.Location = new System.Drawing.Point(692, 140);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(37, 39);
-            this.lbl6.TabIndex = 41;
+            this.lbl6.TabIndex = 7;
             this.lbl6.Text = "1";
             this.lbl6.Click += new System.EventHandler(this.Lbl6_Click);
             // 
@@ -221,7 +221,7 @@
             this.lbl7.Location = new System.Drawing.Point(820, 140);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(37, 39);
-            this.lbl7.TabIndex = 42;
+            this.lbl7.TabIndex = 8;
             this.lbl7.Text = "1";
             this.lbl7.Click += new System.EventHandler(this.Lbl7_Click);
             // 
@@ -232,7 +232,7 @@
             this.lbl8.Location = new System.Drawing.Point(57, 260);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(37, 39);
-            this.lbl8.TabIndex = 43;
+            this.lbl8.TabIndex = 9;
             this.lbl8.Text = "1";
             this.lbl8.Click += new System.EventHandler(this.Lbl8_Click);
             // 
@@ -243,7 +243,7 @@
             this.lbl9.Location = new System.Drawing.Point(185, 260);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(37, 39);
-            this.lbl9.TabIndex = 44;
+            this.lbl9.TabIndex = 10;
             this.lbl9.Text = "1";
             this.lbl9.Click += new System.EventHandler(this.Lbl9_Click);
             // 
@@ -254,7 +254,7 @@
             this.lbl10.Location = new System.Drawing.Point(303, 260);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(57, 39);
-            this.lbl10.TabIndex = 45;
+            this.lbl10.TabIndex = 11;
             this.lbl10.Text = "10";
             this.lbl10.Click += new System.EventHandler(this.Lbl10_Click);
             // 
@@ -265,7 +265,7 @@
             this.lbl11.Location = new System.Drawing.Point(432, 260);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(57, 39);
-            this.lbl11.TabIndex = 46;
+            this.lbl11.TabIndex = 12;
             this.lbl11.Text = "10";
             this.lbl11.Click += new System.EventHandler(this.Lbl11_Click);
             // 
@@ -276,7 +276,7 @@
             this.lbl12.Location = new System.Drawing.Point(554, 260);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(57, 39);
-            this.lbl12.TabIndex = 47;
+            this.lbl12.TabIndex = 13;
             this.lbl12.Text = "10";
             this.lbl12.Click += new System.EventHandler(this.Lbl12_Click);
             // 
@@ -287,7 +287,7 @@
             this.lbl13.Location = new System.Drawing.Point(683, 260);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(57, 39);
-            this.lbl13.TabIndex = 48;
+            this.lbl13.TabIndex = 14;
             this.lbl13.Text = "10";
             this.lbl13.Click += new System.EventHandler(this.Lbl13_Click);
             // 
@@ -298,7 +298,7 @@
             this.lbl14.Location = new System.Drawing.Point(811, 260);
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(57, 39);
-            this.lbl14.TabIndex = 49;
+            this.lbl14.TabIndex = 15;
             this.lbl14.Text = "10";
             this.lbl14.Click += new System.EventHandler(this.Lbl14_Click);
             // 
@@ -309,7 +309,7 @@
             this.lbl15.Location = new System.Drawing.Point(48, 387);
             this.lbl15.Name = "lbl15";
             this.lbl15.Size = new System.Drawing.Size(57, 39);
-            this.lbl15.TabIndex = 50;
+            this.lbl15.TabIndex = 16;
             this.lbl15.Text = "10";
             this.lbl15.Click += new System.EventHandler(this.Lbl15_Click);
             // 
@@ -320,7 +320,7 @@
             this.lbl16.Location = new System.Drawing.Point(176, 387);
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(57, 39);
-            this.lbl16.TabIndex = 51;
+            this.lbl16.TabIndex = 17;
             this.lbl16.Text = "10";
             this.lbl16.Click += new System.EventHandler(this.Lbl16_Click);
             // 
@@ -331,7 +331,7 @@
             this.lbl17.Location = new System.Drawing.Point(304, 387);
             this.lbl17.Name = "lbl17";
             this.lbl17.Size = new System.Drawing.Size(57, 39);
-            this.lbl17.TabIndex = 52;
+            this.lbl17.TabIndex = 18;
             this.lbl17.Text = "10";
             this.lbl17.Click += new System.EventHandler(this.Lbl17_Click);
             // 
@@ -342,7 +342,7 @@
             this.lbl18.Location = new System.Drawing.Point(433, 387);
             this.lbl18.Name = "lbl18";
             this.lbl18.Size = new System.Drawing.Size(57, 39);
-            this.lbl18.TabIndex = 53;
+            this.lbl18.TabIndex = 19;
             this.lbl18.Text = "10";
             this.lbl18.Click += new System.EventHandler(this.Lbl18_Click);
             // 
@@ -353,7 +353,7 @@
             this.lbl19.Location = new System.Drawing.Point(554, 387);
             this.lbl19.Name = "lbl19";
             this.lbl19.Size = new System.Drawing.Size(57, 39);
-            this.lbl19.TabIndex = 54;
+            this.lbl19.TabIndex = 20;
             this.lbl19.Text = "10";
             this.lbl19.Click += new System.EventHandler(this.Lbl19_Click);
             // 
@@ -364,7 +364,7 @@
             this.lbl20.Location = new System.Drawing.Point(683, 387);
             this.lbl20.Name = "lbl20";
             this.lbl20.Size = new System.Drawing.Size(57, 39);
-            this.lbl20.TabIndex = 55;
+            this.lbl20.TabIndex = 21;
             this.lbl20.Text = "10";
             this.lbl20.Click += new System.EventHandler(this.Lbl20_Click);
             // 
@@ -375,7 +375,7 @@
             this.lbl21.Location = new System.Drawing.Point(811, 387);
             this.lbl21.Name = "lbl21";
             this.lbl21.Size = new System.Drawing.Size(57, 39);
-            this.lbl21.TabIndex = 56;
+            this.lbl21.TabIndex = 22;
             this.lbl21.Text = "10";
             this.lbl21.Click += new System.EventHandler(this.Lbl21_Click);
             // 
@@ -386,7 +386,7 @@
             this.lbl34.Location = new System.Drawing.Point(683, 632);
             this.lbl34.Name = "lbl34";
             this.lbl34.Size = new System.Drawing.Size(57, 39);
-            this.lbl34.TabIndex = 57;
+            this.lbl34.TabIndex = 35;
             this.lbl34.Text = "10";
             this.lbl34.Click += new System.EventHandler(this.Lbl34_Click);
             // 
@@ -397,7 +397,7 @@
             this.lbl22.Location = new System.Drawing.Point(48, 513);
             this.lbl22.Name = "lbl22";
             this.lbl22.Size = new System.Drawing.Size(57, 39);
-            this.lbl22.TabIndex = 57;
+            this.lbl22.TabIndex = 23;
             this.lbl22.Text = "10";
             this.lbl22.Click += new System.EventHandler(this.Lbl22_Click);
             // 
@@ -408,7 +408,7 @@
             this.lbl23.Location = new System.Drawing.Point(176, 513);
             this.lbl23.Name = "lbl23";
             this.lbl23.Size = new System.Drawing.Size(57, 39);
-            this.lbl23.TabIndex = 58;
+            this.lbl23.TabIndex = 24;
             this.lbl23.Text = "10";
             this.lbl23.Click += new System.EventHandler(this.Lbl23_Click);
             // 
@@ -419,7 +419,7 @@
             this.lbl33.Location = new System.Drawing.Point(554, 632);
             this.lbl33.Name = "lbl33";
             this.lbl33.Size = new System.Drawing.Size(57, 39);
-            this.lbl33.TabIndex = 59;
+            this.lbl33.TabIndex = 34;
             this.lbl33.Text = "10";
             this.lbl33.Click += new System.EventHandler(this.Lbl33_Click);
             // 
@@ -430,7 +430,7 @@
             this.lbl24.Location = new System.Drawing.Point(304, 513);
             this.lbl24.Name = "lbl24";
             this.lbl24.Size = new System.Drawing.Size(57, 39);
-            this.lbl24.TabIndex = 59;
+            this.lbl24.TabIndex = 25;
             this.lbl24.Text = "10";
             this.lbl24.Click += new System.EventHandler(this.Lbl24_Click);
             // 
@@ -441,7 +441,7 @@
             this.lbl25.Location = new System.Drawing.Point(433, 513);
             this.lbl25.Name = "lbl25";
             this.lbl25.Size = new System.Drawing.Size(57, 39);
-            this.lbl25.TabIndex = 60;
+            this.lbl25.TabIndex = 26;
             this.lbl25.Text = "10";
             this.lbl25.Click += new System.EventHandler(this.Lbl25_Click);
             // 
@@ -452,7 +452,7 @@
             this.lbl26.Location = new System.Drawing.Point(554, 513);
             this.lbl26.Name = "lbl26";
             this.lbl26.Size = new System.Drawing.Size(57, 39);
-            this.lbl26.TabIndex = 61;
+            this.lbl26.TabIndex = 27;
             this.lbl26.Text = "10";
             this.lbl26.Click += new System.EventHandler(this.Lbl26_Click);
             // 
@@ -463,7 +463,7 @@
             this.lbl27.Location = new System.Drawing.Point(683, 513);
             this.lbl27.Name = "lbl27";
             this.lbl27.Size = new System.Drawing.Size(57, 39);
-            this.lbl27.TabIndex = 62;
+            this.lbl27.TabIndex = 28;
             this.lbl27.Text = "10";
             this.lbl27.Click += new System.EventHandler(this.Lbl27_Click);
             // 
@@ -474,7 +474,7 @@
             this.lbl28.Location = new System.Drawing.Point(811, 513);
             this.lbl28.Name = "lbl28";
             this.lbl28.Size = new System.Drawing.Size(57, 39);
-            this.lbl28.TabIndex = 63;
+            this.lbl28.TabIndex = 29;
             this.lbl28.Text = "10";
             this.lbl28.Click += new System.EventHandler(this.Lbl28_Click);
             // 
@@ -485,7 +485,7 @@
             this.lbl29.Location = new System.Drawing.Point(48, 632);
             this.lbl29.Name = "lbl29";
             this.lbl29.Size = new System.Drawing.Size(57, 39);
-            this.lbl29.TabIndex = 64;
+            this.lbl29.TabIndex = 30;
             this.lbl29.Text = "10";
             this.lbl29.Click += new System.EventHandler(this.Lbl29_Click);
             // 
@@ -496,7 +496,7 @@
             this.lbl30.Location = new System.Drawing.Point(176, 632);
             this.lbl30.Name = "lbl30";
             this.lbl30.Size = new System.Drawing.Size(57, 39);
-            this.lbl30.TabIndex = 65;
+            this.lbl30.TabIndex = 31;
             this.lbl30.Text = "10";
             this.lbl30.Click += new System.EventHandler(this.Lbl30_Click);
             // 
@@ -507,7 +507,7 @@
             this.lbl31.Location = new System.Drawing.Point(304, 632);
             this.lbl31.Name = "lbl31";
             this.lbl31.Size = new System.Drawing.Size(57, 39);
-            this.lbl31.TabIndex = 66;
+            this.lbl31.TabIndex = 32;
             this.lbl31.Text = "10";
             this.lbl31.Click += new System.EventHandler(this.Lbl31_Click);
             // 
@@ -518,7 +518,7 @@
             this.lbl32.Location = new System.Drawing.Point(429, 632);
             this.lbl32.Name = "lbl32";
             this.lbl32.Size = new System.Drawing.Size(57, 39);
-            this.lbl32.TabIndex = 67;
+            this.lbl32.TabIndex = 33;
             this.lbl32.Text = "10";
             this.lbl32.Click += new System.EventHandler(this.Lbl32_Click);
             // 
@@ -529,7 +529,7 @@
             this.lbl35.Location = new System.Drawing.Point(811, 632);
             this.lbl35.Name = "lbl35";
             this.lbl35.Size = new System.Drawing.Size(57, 39);
-            this.lbl35.TabIndex = 68;
+            this.lbl35.TabIndex = 36;
             this.lbl35.Text = "10";
             this.lbl35.Click += new System.EventHandler(this.Lbl35_Click);
             // 
@@ -538,10 +538,10 @@
             this.btnSettings.BackColor = System.Drawing.Color.Black;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(726, 12);
+            this.btnSettings.Location = new System.Drawing.Point(726, 23);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(162, 69);
-            this.btnSettings.TabIndex = 69;
+            this.btnSettings.Size = new System.Drawing.Size(162, 58);
+            this.btnSettings.TabIndex = 1;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
@@ -941,7 +941,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "LevelChooserForm";
-            this.Text = "LevelChooserForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
