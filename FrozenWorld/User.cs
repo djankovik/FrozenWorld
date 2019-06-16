@@ -16,7 +16,8 @@ namespace FrozenWorld
         public String UserName { get; set; }
         public Dictionary<int,int> LevelScores { get; set; }
 
-        public Image Avatar { get; set; }
+        public Image AvatarPlayer1 { get; set; }
+        public Image AvatarPlayer2 { get; set; }
 
         public bool TwoPlayer { get; set; }
         public User(String UserName)
@@ -25,13 +26,13 @@ namespace FrozenWorld
             LevelScores = new Dictionary<int, int>();
             TwoPlayer = false;
 
-            Avatar = Resources.avatar1Girl;
+            AvatarPlayer1 = Resources.avatar1Girl;
         }
 
         public void make2Player()
         {
             TwoPlayer = true;
-            Avatar = Resources.avatar1Boy;
+            AvatarPlayer2 = Resources.avatar1Boy;
         }
         public int getTotalPoints()
         {
@@ -54,7 +55,5 @@ namespace FrozenWorld
             }
             LevelScores.Add(level, score);
         }
-        
-
     }
 }
