@@ -83,6 +83,8 @@ namespace FrozenWorld
             if (String.IsNullOrWhiteSpace(tbUsername.Text))
             {
                 lblWelcomingMessage.Text = "Welcome";
+                //btnOK.Enabled = false;
+                //btnOK2Player.Enabled = false;
                 return;
             }
             var files = Directory.GetFiles(PATH).Select(f => System.IO.Path.GetFileNameWithoutExtension(f)).ToArray();
@@ -188,13 +190,7 @@ namespace FrozenWorld
         {
             AboutPage aboutPage = new AboutPage();
             aboutPage.ShowDialog();
-        }
-
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            SettingsPage settings = new SettingsPage();
-            settings.ShowDialog();
-        }
+        }       
     }
 
 }

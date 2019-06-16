@@ -15,12 +15,12 @@ namespace FrozenWorld
         public User UserPlayingThisGame { get; set; }
 
         Game2Player game;
-        public Form1_2Player(Game2Player Game)
+        public Form1_2Player(Game2Player Game,User u)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-
+            UserPlayingThisGame = u;
             newGame(Game);
         }
 
@@ -37,6 +37,9 @@ namespace FrozenWorld
             tsspbPlayer2FrozenMeter.Value = 0;
             this.Text = "Level " + (game.LEVELID);
             this.BackgroundImage = game.BACKGROUNDIMAGE;
+
+            game.Player1.Image = UserPlayingThisGame.AvatarPlayer1;
+            game.Player2.Image = UserPlayingThisGame.AvatarPlayer2;
 
             timer1.Start();
 
@@ -98,55 +101,58 @@ namespace FrozenWorld
             tsslPlayer1Snowflakes.Text = string.Format("Snowflakes: {0}/{1}", game.collectedSnowflakesPlayer1, game.TOTALSNOWFLAKES);
             tsspbPlayer1FrozenMeter.Value = game.frozenItemsPlayer1 <= tsspbPlayer1FrozenMeter.Maximum? game.frozenItemsPlayer1: tsspbPlayer1FrozenMeter.Maximum;
             tsslPlayer1Lives.Text = string.Format("Lives left: {0}/{1}", game.Player1.LivesLeft >= 0 ? game.Player1.LivesLeft : 0, 5);
+            tsslPlayer1Snowflakes.Image = UserPlayingThisGame.AvatarPlayer1;
+
 
             tsslPlayer2Snowflakes.Text = string.Format("Snowflakes: {0}/{1}", game.collectedSnowflakesPlayer2, game.TOTALSNOWFLAKES);
             tsspbPlayer2FrozenMeter.Value = game.frozenItemsPlayer2 <= tsspbPlayer2FrozenMeter.Maximum ? game.frozenItemsPlayer2 : tsspbPlayer2FrozenMeter.Maximum;
             tsslPlayer2Lives.Text = string.Format("Lives left: {0}/{1}", game.Player2.LivesLeft >= 0 ? game.Player2.LivesLeft : 0, 5);
+            tsslPlayer2Snowflakes.Image = UserPlayingThisGame.AvatarPlayer2;
         }
 
         private void Form1_2Player_KeyDown(object sender, KeyEventArgs e)
         {
             //PLAYER1
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[2])
             {
                 game.Player1.isGoingLeft = true;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[3])
             {
                 game.Player1.isGoingRight = true;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[0])
             {
                 game.Player1.isGoingUp = true;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[1])
             {
                 game.Player1.isGoingDown = true;
             }
-            if (e.KeyCode == Keys.Space && !game.Player1.isJumping && game.isPlayer1OnJumpablePlatform())
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[4] && !game.Player1.isJumping && game.isPlayer1OnJumpablePlatform())
             {
                 game.Player1.isJumping = true;
             }
 
 
             //PLAYER2
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[2])
             {
                 game.Player2.isGoingLeft = true;
             }
-            if (e.KeyCode == Keys.D)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[3])
             {
                 game.Player2.isGoingRight = true;
             }
-            if (e.KeyCode == Keys.W)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[0])
             {
                 game.Player2.isGoingUp = true;
             }
-            if (e.KeyCode == Keys.S)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[1])
             {
                 game.Player2.isGoingDown = true;
             }
-            if (e.KeyCode == Keys.Tab && !game.Player2.isJumping && game.isPlayer2OnJumpablePlatform())
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[4] && !game.Player2.isJumping && game.isPlayer2OnJumpablePlatform())
             {
                 game.Player2.isJumping = true;
             }
@@ -157,45 +163,45 @@ namespace FrozenWorld
         private void Form1_2Player_KeyUp(object sender, KeyEventArgs e)
         {
             //PLAYER1
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[2])
             {
                 game.Player1.isGoingLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[3])
             {
                 game.Player1.isGoingRight = false;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[0])
             {
                 game.Player1.isGoingUp = false;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[1])
             {
                 game.Player1.isGoingDown = false;
             }
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[4])
             {
                 game.Player1.isJumping = false;
             }
 
             //PLAYER2
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[2])
             {
                 game.Player2.isGoingLeft = false;
             }
-            if (e.KeyCode == Keys.D)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[3])
             {
                 game.Player2.isGoingRight = false;
             }
-            if (e.KeyCode == Keys.W)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[0])
             {
                 game.Player2.isGoingUp = false;
             }
-            if (e.KeyCode == Keys.S)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[1])
             {
                 game.Player2.isGoingDown = false;
             }
-            if (e.KeyCode == Keys.Tab)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer2[4])
             {
                 game.Player2.isJumping = false;
             }

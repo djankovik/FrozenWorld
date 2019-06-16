@@ -82,16 +82,14 @@ namespace FrozenWorld
                 if (currentUser.TwoPlayer)
                 {
                     Game2Player g = DummyData.getLevel2Player(level);
-                    Form1_2Player formGame = new Form1_2Player(g);
-                    formGame.UserPlayingThisGame = this.currentUser;
+                    Form1_2Player formGame = new Form1_2Player(g, currentUser);
                     formGame.ShowDialog();
                     this.Close();
                 }
                 else
                 {
                     Game g = DummyData.getLevel(level);
-                    Form1 formGame = new Form1(g);
-                    formGame.UserPlayingThisGame = this.currentUser;
+                    Form1 formGame = new Form1(g, currentUser);
                     formGame.ShowDialog();
                     this.Close();
                 }
@@ -446,5 +444,13 @@ namespace FrozenWorld
         {
             levelClicked(35);
         }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            SettingsPage settings = new SettingsPage(currentUser);
+            settings.ShowDialog();
+                       
+        }
+        
     }
 }

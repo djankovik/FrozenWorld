@@ -18,12 +18,12 @@ namespace FrozenWorld
         public User UserPlayingThisGame { get; set; }
 
         Game game;
-        public Form1(Game Game)
+        public Form1(Game Game,User u)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            
+            UserPlayingThisGame = u;
             newGame(Game);
         }
 
@@ -36,6 +36,8 @@ namespace FrozenWorld
             tsspbFreezables.Value = 0;
             this.Text = "Level " +(game.LEVELID);
             this.BackgroundImage = game.BACKGROUNDIMAGE;
+
+            game.Player.Image = UserPlayingThisGame.AvatarPlayer1;
             timer1.Start();
 
         }
@@ -73,23 +75,23 @@ namespace FrozenWorld
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Left)
+            if(e.KeyCode == UserPlayingThisGame.ControlsPlayer1[2])
             {
                 game.Player.isGoingLeft = true;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[3])
             {
                 game.Player.isGoingRight = true;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[0])
             {
                 game.Player.isGoingUp = true;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[1])
             {
                 game.Player.isGoingDown = true;
             }
-            if (e.KeyCode == Keys.Space && !game.Player.isJumping && game.isPlayerOnJumpablePlatform())
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[4] && !game.Player.isJumping && game.isPlayerOnJumpablePlatform())
             {
                 game.Player.isJumping = true;
             }
@@ -99,23 +101,23 @@ namespace FrozenWorld
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[2])
             {
                 game.Player.isGoingLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[3])
             {
                 game.Player.isGoingRight = false;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[0])
             {
                 game.Player.isGoingUp = false;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[1])
             {
                 game.Player.isGoingDown = false;
             }
-            if (e.KeyCode == Keys.Space) 
+            if (e.KeyCode == UserPlayingThisGame.ControlsPlayer1[4]) 
             {
                 game.Player.isJumping = false;
             }
@@ -126,6 +128,7 @@ namespace FrozenWorld
         {
             statusStrip1.ForeColor = Color.White;
             tsslSnowflakes.Text = string.Format("Snowflakes: {0}/{1}",game.collectedSnowflakes,game.TOTALSNOWFLAKES);
+            tsslSnowflakes.Image = UserPlayingThisGame.AvatarPlayer1;
             tsspbFreezables.Value = game.getFrozenBlockNumber();
             tsslLivesLeft.Text = string.Format("Lives left: {0}/{1}", game.Player.LivesLeft>=0? game.Player.LivesLeft:0, 5);
         }

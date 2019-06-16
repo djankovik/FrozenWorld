@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,19 +56,10 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 469);
             this.statusStrip1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(831, 33);
+            this.statusStrip1.Size = new System.Drawing.Size(1310, 33);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.Paint += new System.Windows.Forms.PaintEventHandler(this.StatusStrip1_Paint);
-            // 
-            // tsslSnowflakes
-            // 
-            this.tsslSnowflakes.ForeColor = System.Drawing.Color.White;
-            this.tsslSnowflakes.Image = global::FrozenWorld.Properties.Resources.player;
-            this.tsslSnowflakes.Margin = new System.Windows.Forms.Padding(4, 3, 20, 2);
-            this.tsslSnowflakes.Name = "tsslSnowflakes";
-            this.tsslSnowflakes.Size = new System.Drawing.Size(220, 28);
-            this.tsslSnowflakes.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusLabel1
             // 
@@ -95,11 +86,20 @@
             this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);
             this.tsslLivesLeft.Text = "toolStripStatusLabel1";
             // 
+            // tsslSnowflakes
+            // 
+            this.tsslSnowflakes.ForeColor = System.Drawing.Color.White;
+            this.tsslSnowflakes.Image = global::FrozenWorld.Properties.Resources.player;
+            this.tsslSnowflakes.Margin = new System.Windows.Forms.Padding(4, 3, 20, 2);
+            this.tsslSnowflakes.Name = "tsslSnowflakes";
+            this.tsslSnowflakes.Size = new System.Drawing.Size(220, 28);
+            this.tsslSnowflakes.Text = "toolStripStatusLabel1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 502);
+            this.ClientSize = new System.Drawing.Size(1310, 502);
             this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,10 +120,10 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel tsslSnowflakes;
         private System.Windows.Forms.ToolStripProgressBar tsspbFreezables;
         private System.Windows.Forms.ToolStripStatusLabel tsslLivesLeft;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel tsslSnowflakes;
     }
 }
 

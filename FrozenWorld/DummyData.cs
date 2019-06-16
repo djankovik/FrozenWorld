@@ -80,7 +80,7 @@ namespace FrozenWorld
 
             g.Player1 = new Player(200, 200);
             g.Player2 = new Player(260, 200);
-            g.Player2.Image = Resources.avatar1Boy;
+            
 
             Enemy e = new Enemy(400, 350, 400, 560); e.makeAdvancedEnemy();
             g.Enemies.Add(e);

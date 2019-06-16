@@ -99,6 +99,7 @@
             this.lbl31 = new System.Windows.Forms.Label();
             this.lbl32 = new System.Windows.Forms.Label();
             this.lbl35 = new System.Windows.Forms.Label();
+            this.btnSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -148,10 +149,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(320, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 58);
+            this.label1.Size = new System.Drawing.Size(219, 58);
             this.label1.TabIndex = 1;
             this.label1.Text = "LEVELS";
             // 
@@ -847,11 +848,25 @@
             this.lbl35.Text = "1";
             this.lbl35.Click += new System.EventHandler(this.Lbl35_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Location = new System.Drawing.Point(726, 12);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(162, 69);
+            this.btnSettings.TabIndex = 69;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+            // 
             // LevelChooserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 720);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.lbl35);
             this.Controls.Add(this.lbl32);
             this.Controls.Add(this.lbl31);
@@ -1039,5 +1054,6 @@
         private System.Windows.Forms.Label lbl31;
         private System.Windows.Forms.Label lbl32;
         private System.Windows.Forms.Label lbl35;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

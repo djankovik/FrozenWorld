@@ -244,4 +244,16 @@
   <data name="stairsSimpleFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stairsSimpleFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="avatar2Boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar2Boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar2Girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar2Girl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar3Boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar3Boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar3Girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar3Girl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

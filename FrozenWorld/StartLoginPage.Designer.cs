@@ -35,7 +35,6 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK2Player = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbUsername
@@ -120,24 +119,11 @@
             this.btnOK2Player.UseVisualStyleBackColor = false;
             this.btnOK2Player.Click += new System.EventHandler(this.BtnOK2Player_Click);
             // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Lavender;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.Location = new System.Drawing.Point(491, 233);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(97, 39);
-            this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
-            // 
             // StartLoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 434);
-            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnOK2Player);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAbout);
@@ -162,6 +148,5 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOK2Player;
-        private System.Windows.Forms.Button btnSettings;
     }
 }
