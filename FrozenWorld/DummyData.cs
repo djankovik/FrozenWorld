@@ -17,6 +17,7 @@ namespace FrozenWorld
                 case 2: return getLevel2();
                 case 3: return getLevel3();
                 case 4: return getLevel4();
+                case 5: return getLevel5();
                 default: return FAKE1(level);
             }
         }
@@ -28,6 +29,7 @@ namespace FrozenWorld
                 case 2: return getLevel2_2Player();
                 case 3: return getLevel3_2Player();
                 case 4: return getLevel4_2Player();
+                case 5: return getLevel5_2Player();
                 default: return FAKE2(level);
             }           
         }
@@ -368,74 +370,123 @@ namespace FrozenWorld
         }
         public static Game2Player getLevel4_2Player()
         {
-            Game2Player g = new Game2Player(0, 600, 1000, 0);
+            Game2Player g = new Game2Player(0, 600, 800, 0);
             g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
             g.LEVELID = 4;
 
             for (int i = 0; i <= g.maxRight - Platform.Width; i += Platform.Width)
             {
-                g.Platforms.Add(new Platform(i, g.maxDown - 90));
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
             }
-            for (int i = 3 * Platform.Width; i < 10 * Platform.Width; i += Platform.Width)
+            for (int i = 2 * Platform.Width; i < 7 * Platform.Width; i += Platform.Width)
             {
                 g.Platforms.Add(new Platform(i, g.maxDown - 300));
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
             }
-            Enemy x = new Enemy(4 * Platform.Width, g.maxDown - 300 - Enemy.Height, 2 * Platform.Width, 10 * Platform.Width);
+            for (int i = 10 * Platform.Width; i < 15 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 300));
+                g.Platforms.Add(new Platform(i, g.maxDown - 500));
+            }
+            Enemy x = new Enemy(5 * Platform.Width, g.maxDown - 500 - Enemy.Height, 2 * Platform.Width, 7 * Platform.Width);
+            x.makeAdvancedEnemy();
+            g.Enemies.Add(new Enemy(6 * Platform.Width, g.maxDown - 300 - Enemy.Height, 2 * Platform.Width, 7 * Platform.Width));
+            g.Enemies.Add(x);
+
+            x = new Enemy(10 * Platform.Width, g.maxDown - 300 - Enemy.Height, 10 * Platform.Width, 15 * Platform.Width);
             x.makeAdvancedEnemy();
             g.Enemies.Add(x);
-            g.Enemies.Add(new Enemy(7 * Platform.Width, g.maxDown - 500 - Enemy.Height, 2 * Platform.Width, 10 * Platform.Width));
-            
+            //g.Enemies.Add(new Enemy(13 * Platform.Width, g.maxDown - 500 - Enemy.Height, 10 * Platform.Width, 15 * Platform.Width));
 
-            for (int i = 13 * Platform.Width; i < 20 * Platform.Width; i += Platform.Width)
-            {
-                g.Platforms.Add(new Platform(i, g.maxDown - 300));
-                g.Platforms.Add(new Platform(i, g.maxDown - 500));
-            }
-            Enemy e = new Enemy(16 * Platform.Width, g.maxDown - 300 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width);
-            e.makeAdvancedEnemy();
-            g.Enemies.Add(e);
-            g.Enemies.Add(new Enemy(18 * Platform.Width, g.maxDown - 500 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
-            
 
             for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 30)
             {
-                g.Snowflakes.Add(new Snowflake(11 * Platform.Width, i));
-                if (i < g.maxDown - 500)
-                {
-                    g.Snowflakes.Add(new Snowflake(12 * Platform.Width + Platform.Width / 2, i));
-                }
-                g.Snowflakes.Add(new Snowflake(14 * Platform.Width, i));
-                g.Snowflakes.Add(new Snowflake(2 * Platform.Width, i));
-                g.Snowflakes.Add(new Snowflake(1 * Platform.Width, i + 15));
+                g.Snowflakes.Add(new Snowflake(1 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(8 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(9 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(16 * Platform.Width, i));
 
             }
 
-            for (int i = g.maxDown - 700; i <= g.maxDown - 500; i += Stairs.Height)
-            {
-                //g.Stairs.Add(new Stairs(7 * Platform.Width, i));
-                //g.Stairs.Add(new Stairs(17 * Platform.Width, i));
-            }
             for (int i = g.maxDown - 500; i <= g.maxDown - 300; i += Stairs.Height)
             {
-                g.Stairs.Add(new Stairs(9 * Platform.Width, i));
-                g.Stairs.Add(new Stairs(22 * Platform.Width, i));
+                g.Stairs.Add(new Stairs(11 * Platform.Width, i));
             }
             for (int i = g.maxDown - 300; i <= g.maxDown - 100; i += Stairs.Height)
             {
                 g.Stairs.Add(new Stairs(5 * Platform.Width, i));
-                g.Stairs.Add(new Stairs(15 * Platform.Width, i));
+                g.Stairs.Add(new Stairs(14 * Platform.Width, i));
             }
 
             g.TOTALSNOWFLAKES = g.Snowflakes.Count;
             g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
 
             g.Player1 = new Player(200, g.maxDown - 200);
-            g.Player2 = new Player(500, g.maxDown - 200);
+            g.Player2 = new Player(300, g.maxDown - 200);
 
             return g;
         }
 
+        public static Game2Player getLevel5_2Player()
+        {
+
+            Game2Player g = new Game2Player(0, 600, 600, 0);
+            g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
+            g.LEVELID = 5;
+
+            for (int i = 0; i < 3 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+            g.Platforms.Add(new Platform(4 * Platform.Width, g.maxDown - 200));
+            g.Snowflakes.Add(new Snowflake(4 * Platform.Width + 10, g.maxDown - 240));
+
+            for (int i = 5 * Platform.Width; i < 8 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+            g.Platforms.Add(new Platform(9 * Platform.Width, g.maxDown - 400));
+            g.Platforms.Add(new Platform(8 * Platform.Width, g.maxDown - 200));
+            g.Snowflakes.Add(new Snowflake(9 * Platform.Width + 10, g.maxDown - 440));
+            g.Snowflakes.Add(new Snowflake(8 * Platform.Width + 10, g.maxDown - 240));
+
+            g.Enemies.Add(new Enemy(7 * Platform.Width, g.maxDown - 95 - Enemy.Height, 5 * Platform.Width, 8 * Platform.Width));
+
+            for (int i = 10 * Platform.Width; i < 12 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+
+
+            for (int i = 1 * Platform.Width; i < 6 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 500));
+            }
+            Enemy a = new Enemy(5 * Platform.Width, g.maxDown - 500 - Enemy.Height, 1 * Platform.Width, 6 * Platform.Width);
+            a.makeAdvancedEnemy();
+            g.Enemies.Add(a);
+
+            for (int i = g.maxDown - 500; i < g.maxDown - 280; i += Platform.Height)
+            {
+                g.Stairs.Add(new Stairs(2 * Platform.Width, i));
+                if (i > g.maxDown - 480 && i < g.maxDown - 300)
+                {
+                    g.Snowflakes.Add(new Snowflake(1 * Platform.Width, i));
+                    g.Snowflakes.Add(new Snowflake(5 * Platform.Width, i));
+                }
+            }
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            g.Player1 = new Player(50, g.maxDown - 200);
+            g.Player2 = new Player(500, g.maxDown - 200);
+
+            return g;
+        }
 
         public static Game getLevel1()
         {
@@ -709,56 +760,52 @@ namespace FrozenWorld
         }
         public static Game getLevel4()
         {
-            Game g = new Game(0, 600, 1200, 0);
+            Game g = new Game(0, 600, 800, 0);
             g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
             g.LEVELID = 4;
 
             for (int i = 0; i <= g.maxRight - Platform.Width; i += Platform.Width)
             {
-                g.Platforms.Add(new Platform(i, g.maxDown - 100));
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
             }
-            for (int i = 3 * Platform.Width; i < 10 * Platform.Width; i += Platform.Width)
+            for (int i = 2 * Platform.Width; i < 7 * Platform.Width; i += Platform.Width)
             {
                 g.Platforms.Add(new Platform(i, g.maxDown - 300));
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
             }
-
-            g.Enemies.Add(new Enemy(4 * Platform.Width, g.maxDown - 300 - Enemy.Height, 3 * Platform.Width, 10 * Platform.Width));
-            g.Enemies.Add(new Enemy(7 * Platform.Width, g.maxDown - 500 - Enemy.Height, 3 * Platform.Width, 10 * Platform.Width));
-           
-            for (int i = 15 * Platform.Width; i < 23 * Platform.Width; i += Platform.Width)
+            for (int i = 10 * Platform.Width; i < 15 * Platform.Width; i += Platform.Width)
             {
                 g.Platforms.Add(new Platform(i, g.maxDown - 300));
                 g.Platforms.Add(new Platform(i, g.maxDown - 500));
             }
-            Enemy e = new Enemy(16 * Platform.Width, g.maxDown - 300 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width);
-            e.makeAdvancedEnemy();
-            g.Enemies.Add(e);
-            g.Enemies.Add(new Enemy(18 * Platform.Width, g.maxDown - 500 - Enemy.Height, 15 * Platform.Width, 23 * Platform.Width));
+            Enemy x = new Enemy(5 * Platform.Width, g.maxDown - 500 - Enemy.Height, 2 * Platform.Width,7 * Platform.Width);
+            x.makeAdvancedEnemy();
+            g.Enemies.Add(new Enemy(6 * Platform.Width, g.maxDown - 300 - Enemy.Height, 2 * Platform.Width, 7 * Platform.Width));
+            g.Enemies.Add(x);           
+            
+            x= new Enemy(10 * Platform.Width, g.maxDown - 300 - Enemy.Height, 10 * Platform.Width, 15 * Platform.Width);
+            x.makeAdvancedEnemy();
+            g.Enemies.Add(x);
+            //g.Enemies.Add(new Enemy(13 * Platform.Width, g.maxDown - 500 - Enemy.Height, 10 * Platform.Width, 15 * Platform.Width));
             
 
             for (int i = g.maxUp + 40; i < g.maxDown - 200; i += Snowflake.Height + 30)
             {
-                g.Snowflakes.Add(new Snowflake(11 * Platform.Width, i));
-                if (i < g.maxDown - 500)
-                {
-                    g.Snowflakes.Add(new Snowflake(12 * Platform.Width+Platform.Width/2, i));
-                }
-                g.Snowflakes.Add(new Snowflake(14 * Platform.Width, i));
-                g.Snowflakes.Add(new Snowflake(2 * Platform.Width, i));
-                g.Snowflakes.Add(new Snowflake(1*Platform.Width, i+15));
-              
+                g.Snowflakes.Add(new Snowflake(1*Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(8 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(9 * Platform.Width, i));
+                g.Snowflakes.Add(new Snowflake(16 * Platform.Width, i));
+
             }
 
             for (int i = g.maxDown - 500; i <= g.maxDown - 300; i += Stairs.Height)
             {
-                g.Stairs.Add(new Stairs(9 * Platform.Width, i));
-                g.Stairs.Add(new Stairs(22 * Platform.Width, i));
+                g.Stairs.Add(new Stairs(11 * Platform.Width, i));                
             }
             for (int i = g.maxDown - 300; i <= g.maxDown - 100; i += Stairs.Height)
             {
                 g.Stairs.Add(new Stairs(5 * Platform.Width, i));
-                g.Stairs.Add(new Stairs(15 * Platform.Width, i));
+                g.Stairs.Add(new Stairs(14 * Platform.Width, i));
             }
 
             g.TOTALSNOWFLAKES = g.Snowflakes.Count;
@@ -769,7 +816,64 @@ namespace FrozenWorld
             return g;
         }
 
+        public static Game getLevel5()
+        {
+            Game g = new Game(0, 600, 600, 0);
+            g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
+            g.LEVELID = 5;
 
+            for (int i = 0; i < 3*Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+            g.Platforms.Add(new Platform(4 * Platform.Width, g.maxDown - 200));
+            g.Snowflakes.Add(new Snowflake(4 * Platform.Width+10, g.maxDown - 240));
+
+            for (int i = 5* Platform.Width; i < 8* Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+            g.Platforms.Add(new Platform(9 * Platform.Width, g.maxDown - 400));
+            g.Platforms.Add(new Platform(8 * Platform.Width, g.maxDown - 200));
+            g.Snowflakes.Add(new Snowflake(9 * Platform.Width+10, g.maxDown - 440));
+            g.Snowflakes.Add(new Snowflake(8 * Platform.Width+10, g.maxDown - 240));
+
+            g.Enemies.Add(new Enemy(7 * Platform.Width, g.maxDown - 95 - Enemy.Height, 5 * Platform.Width, 8 * Platform.Width));
+
+            for (int i = 10 * Platform.Width; i < 12 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 95));
+                g.Platforms.Add(new Platform(i, g.maxDown - 280));
+            }
+
+
+            for (int i = 1 * Platform.Width; i < 6 * Platform.Width; i += Platform.Width)
+            {
+                g.Platforms.Add(new Platform(i, g.maxDown - 500));                
+            }
+            Enemy a = new Enemy(5 * Platform.Width, g.maxDown - 500 - Enemy.Height, 1 * Platform.Width, 6 * Platform.Width);
+            a.makeAdvancedEnemy();
+            g.Enemies.Add(a);
+
+            for (int i = g.maxDown - 500; i < g.maxDown - 280; i += Platform.Height)
+            {
+                g.Stairs.Add(new Stairs(2*Platform.Width, i));
+                if (i > g.maxDown - 480 && i < g.maxDown - 300)
+                {
+                    g.Snowflakes.Add(new Snowflake(1 * Platform.Width, i));
+                    g.Snowflakes.Add(new Snowflake(5 * Platform.Width, i));
+                }
+            }
+            
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            g.Player = new Player(50, g.maxDown - 200);
+
+            return g;
+        }
 
     }
 }
