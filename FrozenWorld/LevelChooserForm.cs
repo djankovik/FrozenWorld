@@ -60,13 +60,14 @@ namespace FrozenWorld
                     {
                         if (levels.Contains(lblNr) || levels.Contains(lblNr - 1) || lblNr == 1)
                         {
-                            lbl.BackColor = Color.Lavender;
+                            lbl.BackgroundImage = Resources.UnlockedLevel;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
                         }
                         else
                         {
-                            lbl.BackColor = Color.Lavender;
+                            lbl.BackgroundImage = Resources.LockedLevel;
+                            lbl.ForeColor = Color.White;
                             lbl.Text = "X";
                             lbl.Tag = "Locked";
                         }

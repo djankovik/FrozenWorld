@@ -13,20 +13,82 @@ namespace FrozenWorld
         {
             switch (level)
             {
-                case 1: return getLevel1();
-                case 2: return getLevel2();
-                case 3: return getLevel3();
-                default: return getLevel1();
+                case 1: return test();
+                //case 2: return getLevel2();
+                //case 3: return getLevel3();
+                default: return FAKE1(level);
             }
         }
         public static Game2Player getLevel2Player(int level)
         {
             switch (level)
             {
-                case 1: return getLevel12Player();
-                default: return getLevel12Player();
+                case 1: return FAKE2(level);
+                default: return FAKE2(level);
             }           
         }
+        public static Game FAKE1(int level)
+        {
+            Game g = new Game(0, 500, 500, 0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+            g.LEVELID = level;
+
+            g.Platforms.Add(new Platform(200,g.maxDown-100));
+            g.Platforms.Add(new Platform(250, g.maxDown - 100));
+            g.Platforms.Add(new Platform(300, g.maxDown - 100));
+            g.Platforms.Add(new Platform(350, g.maxDown - 100));
+            g.Platforms.Add(new Platform(400, g.maxDown - 100));
+
+            g.Player = new Player(200, g.maxDown - 150 -Player.Height);
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            return g;
+        }
+        public static Game test()
+        {
+            Game g = new Game(0, 800,1000, 0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+            g.LEVELID = 1;
+
+            for (int i=0;i<=g.maxDown - 30;i+=30)
+            {
+                for (int j = 0; j <= g.maxRight - 50; j += 50)
+                {
+                    g.Platforms.Add(new Platform(j, i));
+                }                
+            }
+
+            g.Player = new Player(200, g.maxDown - 150 - Player.Height);
+            
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            return g;
+        }
+        public static Game2Player FAKE2(int level)
+        {
+            Game2Player g = new Game2Player(0, 500, 500, 0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+            g.LEVELID = level;
+
+            g.Platforms.Add(new Platform(200, g.maxDown - 100));
+            g.Platforms.Add(new Platform(250, g.maxDown - 100));
+            g.Platforms.Add(new Platform(300, g.maxDown - 100));
+            g.Platforms.Add(new Platform(350, g.maxDown - 100));
+            g.Platforms.Add(new Platform(400, g.maxDown - 100));
+
+            g.Player1 = new Player(200, g.maxDown - 150 - Player.Height);
+            g.Player2 = new Player(250, g.maxDown - 150 - Player.Height);
+
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+
+            return g;
+        }
+
         public static Game2Player getLevel12Player()
         {
             Game2Player g = new Game2Player(0, 640, 900, 0);

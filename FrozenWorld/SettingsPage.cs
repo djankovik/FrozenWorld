@@ -316,7 +316,9 @@ namespace FrozenWorld
                 user.AvatarPlayer1 = player1AVATAR;
                 StartLoginPage startPage = new StartLoginPage();
                 startPage.SaveFile(user);
-                //this.Close();
+
+                if(!this.user.TwoPlayer)
+                  this.Close();
             }
         }
 
