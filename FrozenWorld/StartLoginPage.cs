@@ -40,8 +40,8 @@ namespace FrozenWorld
 
             if (btnOK.Text == "Continue Game")
             {
-                if (User == null)
-                    OpenFile(userFile);
+                //if (User == null)
+                   // OpenFile(userFile);
             }
             else
             {
@@ -51,7 +51,8 @@ namespace FrozenWorld
 
             var levelChooserForm = new LevelChooserForm(User);
             levelChooserForm.Show();
-            SaveFile();
+            //tbUsername.Text = "";
+            //SaveFile();
             //Close();
         }
         private void BtnOK2Player_Click(object sender, EventArgs e)
@@ -63,8 +64,8 @@ namespace FrozenWorld
 
             if (btnOK2Player.Text == "Continue 2 Player Game")
             {
-                if (User == null)
-                    OpenFile(userFile);
+                //if (User == null)
+                    //OpenFile(userFile);
             }
             else
             {
@@ -75,7 +76,8 @@ namespace FrozenWorld
 
             var levelChooserForm = new LevelChooserForm(User);
             levelChooserForm.Show();
-            SaveFile();
+            
+            //SaveFile();
             //Close();
         }
         private void TbUsername_TextChanged(object sender, EventArgs e)
@@ -84,6 +86,8 @@ namespace FrozenWorld
             {
                 lblWelcomingMessage.Text = "Welcome";
                 //btnOK.Enabled = false;
+                btnOK.Text = "Start New Game";
+                btnOK2Player.Text = "Start New 2 Player Game";
                 //btnOK2Player.Enabled = false;
                 return;
             }
@@ -122,6 +126,7 @@ namespace FrozenWorld
                     btnOK.Enabled = false;
                     btnOK.Font = new Font(btnOK.Font, FontStyle.Regular);
                 }
+                User = checkUser;
             }
             else
             {
