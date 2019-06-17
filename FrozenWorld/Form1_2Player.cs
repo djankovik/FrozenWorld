@@ -66,13 +66,7 @@ namespace FrozenWorld
         private void Timer1_Tick_1(object sender, EventArgs e)
         {
             game.timerTick();
-            if (game.isPlayerOutOfBounds())
-            {
-                timer1.Stop();
-                MessageBox.Show("A player is out of bounds");
-                resetGame();
-            }
-            Invalidate(true);
+                    
             if (game.isGameWon())
             {
                 timer1.Stop();
@@ -81,12 +75,14 @@ namespace FrozenWorld
                 MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
                 nextLevel();
             }
-            if (game.isGameLost())
+            Invalidate(true);
+            if (game.isGameLost() || (game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0))
             {
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
                 resetGame();
             }
+            
             Invalidate(true);
         }
 
@@ -98,6 +94,7 @@ namespace FrozenWorld
         private void StatusStrip1_Paint_1(object sender, PaintEventArgs e)
         {
             statusStrip1.ForeColor = Color.White;
+
             tsslPlayer1Snowflakes.Text = string.Format("Snowflakes: {0}/{1}", game.collectedSnowflakesPlayer1, game.TOTALSNOWFLAKES);
             tsspbPlayer1FrozenMeter.Value = game.frozenItemsPlayer1 <= tsspbPlayer1FrozenMeter.Maximum? game.frozenItemsPlayer1: tsspbPlayer1FrozenMeter.Maximum;
             tsslPlayer1Lives.Text = string.Format("Lives left: {0}/{1}", game.Player1.LivesLeft >= 0 ? game.Player1.LivesLeft : 0, 5);
@@ -207,6 +204,12 @@ namespace FrozenWorld
             }
 
             Invalidate(true);
+        }
+
+        private void Form1_2Player_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LevelChooserForm levels = new LevelChooserForm(UserPlayingThisGame);
+            levels.ShowDialog();
         }
     }
 }

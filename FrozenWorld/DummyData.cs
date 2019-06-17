@@ -76,7 +76,7 @@ namespace FrozenWorld
         }
         public static Game2Player FAKE2(int level)
         {
-            Game2Player g = new Game2Player(0, 500, 500, 0);
+            Game2Player g = new Game2Player(0, 500, 1000, 0);
             g.BACKGROUNDIMAGE = Resources.DarkForest6;
             g.LEVELID = level;
 
@@ -426,7 +426,6 @@ namespace FrozenWorld
 
             return g;
         }
-
         public static Game2Player getLevel5_2Player()
         {
 
@@ -815,7 +814,6 @@ namespace FrozenWorld
 
             return g;
         }
-
         public static Game getLevel5()
         {
             Game g = new Game(0, 600, 600, 0);

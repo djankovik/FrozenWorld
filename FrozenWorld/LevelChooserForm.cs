@@ -84,15 +84,15 @@ namespace FrozenWorld
                 {
                     Game2Player g = DummyData.getLevel2Player(level);
                     Form1_2Player formGame = new Form1_2Player(g, currentUser);
-                    formGame.ShowDialog();
                     this.Close();
+                    formGame.ShowDialog();                    
                 }
                 else
                 {
                     Game g = DummyData.getLevel(level);
                     Form1 formGame = new Form1(g, currentUser);
-                    formGame.ShowDialog();
                     this.Close();
+                    formGame.ShowDialog();
                 }
             }
         }
@@ -449,9 +449,12 @@ namespace FrozenWorld
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             SettingsPage settings = new SettingsPage(currentUser);
-            settings.ShowDialog();
-                       
+            settings.ShowDialog();                       
         }
-        
+
+        private void LevelChooserForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

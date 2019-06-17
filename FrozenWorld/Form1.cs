@@ -148,5 +148,11 @@ namespace FrozenWorld
             Game g = DummyData.getLevel(this.game.LEVELID+1);
             newGame(g);
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LevelChooserForm levels= new LevelChooserForm(UserPlayingThisGame);
+            levels.ShowDialog();            
+        }
     }
 }

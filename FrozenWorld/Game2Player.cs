@@ -76,11 +76,18 @@ namespace FrozenWorld
                 sn.Draw(g);
             }
         }
-        public bool isPlayerOutOfBounds()
+        public void isPlayerOutOfBounds()
         {
-            if (Player1.Y > maxDown + 10 || Player2.Y > maxDown + 10) return true;
-
-            return false;
+            if (Player1.Y+Player.Height >= maxDown -30 && Player1.LivesLeft >0)
+            {
+                Player1.LivesLeft = -5;
+                
+            }
+            if (Player2.Y + Player.Height >= maxDown -30 && Player2.LivesLeft > 0)
+            {
+                Player2.LivesLeft = -5;                
+            }
+            
         }
         public bool isGameWon()
         {
@@ -97,7 +104,9 @@ namespace FrozenWorld
         }
         public bool isGameLost()
         {
-            if (Player1.LivesLeft <= 0 && Player2.LivesLeft<=0) return true;
+            if (Player1.LivesLeft <= 0 && Player2.LivesLeft <=0)
+                return true;
+
             return false;
         }
         public int getFrozenBlockNumber()
@@ -595,6 +604,8 @@ namespace FrozenWorld
             collectSnowflakesPlayer2();
             Player1.RehabTimeLeft--;
             Player2.RehabTimeLeft--;
+
+            isPlayerOutOfBounds();
         }
     }
 }

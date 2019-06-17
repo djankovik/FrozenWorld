@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslSnowflakes = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,15 @@
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.Paint += new System.Windows.Forms.PaintEventHandler(this.StatusStrip1_Paint);
             // 
+            // tsslSnowflakes
+            // 
+            this.tsslSnowflakes.ForeColor = System.Drawing.Color.White;
+            this.tsslSnowflakes.Image = global::FrozenWorld.Properties.Resources.player;
+            this.tsslSnowflakes.Margin = new System.Windows.Forms.Padding(4, 3, 20, 2);
+            this.tsslSnowflakes.Name = "tsslSnowflakes";
+            this.tsslSnowflakes.Size = new System.Drawing.Size(220, 28);
+            this.tsslSnowflakes.Text = "toolStripStatusLabel1";
+            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
@@ -86,15 +95,6 @@
             this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);
             this.tsslLivesLeft.Text = "toolStripStatusLabel1";
             // 
-            // tsslSnowflakes
-            // 
-            this.tsslSnowflakes.ForeColor = System.Drawing.Color.White;
-            this.tsslSnowflakes.Image = global::FrozenWorld.Properties.Resources.player;
-            this.tsslSnowflakes.Margin = new System.Windows.Forms.Padding(4, 3, 20, 2);
-            this.tsslSnowflakes.Name = "tsslSnowflakes";
-            this.tsslSnowflakes.Size = new System.Drawing.Size(220, 28);
-            this.tsslSnowflakes.Text = "toolStripStatusLabel1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -106,6 +106,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Frozen World";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
