@@ -293,5 +293,8 @@
   <ItemGroup>
     <None Include="Resources\enemySimple2LeftFrozen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowflake1_d2ebjF.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

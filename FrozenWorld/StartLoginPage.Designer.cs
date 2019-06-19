@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartLoginPage));
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.lblWelcomingMessage = new System.Windows.Forms.Label();
@@ -131,6 +132,7 @@
             this.Controls.Add(this.lblWelcomingMessage);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tbUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartLoginPage";
             this.Text = "Start Page";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartLoginPage_FormClosed);
