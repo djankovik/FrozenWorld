@@ -208,8 +208,10 @@ namespace FrozenWorld
 
         private void Form1_2Player_FormClosing(object sender, FormClosingEventArgs e)
         {
+            /*this.Hide();
             LevelChooserForm levels = new LevelChooserForm(UserPlayingThisGame);
             levels.ShowDialog();
+            this.Close();*/
         }
     }
 }

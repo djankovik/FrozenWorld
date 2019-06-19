@@ -263,6 +263,26 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemySimple2LeftFrozen {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple2LeftFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemySimple2RightFrozen {
+            get {
+                object obj = ResourceManager.GetObject("enemySimple2RightFrozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frozen_Snowflake_Transparent {
             get {
                 object obj = ResourceManager.GetObject("Frozen_Snowflake_Transparent", resourceCulture);

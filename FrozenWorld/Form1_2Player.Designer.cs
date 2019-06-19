@@ -131,7 +131,6 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1_2Player";
             this.Text = "Game 2 Player";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_2Player_FormClosing);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_2Player_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_2Player_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_2Player_KeyUp);

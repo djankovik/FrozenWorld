@@ -152,6 +152,7 @@ namespace FrozenWorld
                     User = (User)formatter.Deserialize(file);
             }
         }
+        
         public void SaveFile()
         {
             string fileName = User.UserName;

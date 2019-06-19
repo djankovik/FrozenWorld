@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,7 +28,7 @@ namespace FrozenWorld
         
         public void drawForm()
         {
-
+            levels = currentUser.LevelScores.Keys.ToList();
             foreach (Control cntrl in Controls)
             {
                 if (cntrl is PictureBox)
@@ -53,7 +55,6 @@ namespace FrozenWorld
             {
                 if (cntrl is Label)
                 {
-
                     Label lbl = (Label)cntrl;
                     int lblNr;
                     if (Int32.TryParse(lbl.Name.Substring(3), out lblNr))
@@ -61,6 +62,7 @@ namespace FrozenWorld
                         if (levels.Contains(lblNr) || levels.Contains(lblNr - 1) || lblNr == 1)
                         {
                             lbl.BackgroundImage = Resources.UnlockedLevel;
+                            lbl.ForeColor = Color.Black;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
                         }
@@ -84,18 +86,20 @@ namespace FrozenWorld
                 {
                     Game2Player g = DummyData.getLevel2Player(level);
                     Form1_2Player formGame = new Form1_2Player(g, currentUser);
-                    this.Close();
-                    formGame.ShowDialog();                    
+                    formGame.ShowDialog();
+                    
                 }
                 else
                 {
                     Game g = DummyData.getLevel(level);
                     Form1 formGame = new Form1(g, currentUser);
-                    this.Close();
                     formGame.ShowDialog();
+                    
                 }
+                this.drawForm();
             }
         }
+
         private void Lbl1_Click(object sender, EventArgs e)
         {
             levelClicked(1);

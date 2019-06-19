@@ -16,8 +16,8 @@ namespace FrozenWorld
         }
         public static Image EnemyLeft = Resources.enemySimple1Left;
         public static Image EnemyRight = Resources.enemySimple1Right;
-        public static Image EnemyLeftFrozen = Resources.enemySimple1LeftFrozen;
-        public static Image EnemyRightFrozen = Resources.enemySimple1RightFrozen;
+        public static Image EnemyLeftFrozen = Resources.enemySimple2LeftFrozen;
+        public static Image EnemyRightFrozen = Resources.enemySimple2RightFrozen;
         public static Image EnemyAdvanced = Resources.enemyAdvanced;
         public static Image EnemyAdvancedFrozen = Resources.enemyAdvancedFrozen;
         public static Image EnemyAdvancedAngry = Resources.enemyAdvancedAngry;
