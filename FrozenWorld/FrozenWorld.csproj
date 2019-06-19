@@ -296,5 +296,8 @@
   <ItemGroup>
     <None Include="Resources\snowflake1_d2ebjF.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

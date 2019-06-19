@@ -262,6 +262,9 @@
   <data name="enemySimple2RightFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enemySimple2RightFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Snowflake1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snowflake1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="snowflake1_d2ebjF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snowflake1_d2ebjF.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
