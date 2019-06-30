@@ -255,9 +255,6 @@
     <None Include="Resources\enemyAdvancedAngry.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\enemyAdvancedFrozen.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\enemyAdvanced.png" />
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +295,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Snowflake1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fwLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fwLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iceKingdom_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext329005819976912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fw_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fw_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fw_90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fw_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameplay_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hazards_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowflakes_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goodLuck_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemyAdvancedFrozen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

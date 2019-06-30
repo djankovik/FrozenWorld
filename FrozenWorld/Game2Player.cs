@@ -53,28 +53,29 @@ namespace FrozenWorld
 
         public void Draw(Graphics g)
         {
+            foreach (Snowflake sn in Snowflakes)
+            {
+                sn.Draw(g);
+            }
             foreach (Stairs st in Stairs)
             {
                 st.Draw(g);
-            }
-            if(Player1.LivesLeft > 0)
-                Player1.Draw(g);
-            if (Player2.LivesLeft > 0)
-                Player2.Draw(g);
-
-            foreach (Enemy e in Enemies)
-            {
-                e.Draw(g);
             }
             foreach (Platform p in Platforms)
             {
                 p.Draw(g);
             }
-
-            foreach (Snowflake sn in Snowflakes)
+            foreach (Enemy e in Enemies)
             {
-                sn.Draw(g);
+                e.Draw(g);
             }
+            if (Player1.LivesLeft > 0)
+                Player1.Draw(g);
+            if (Player2.LivesLeft > 0)
+                Player2.Draw(g);
+
+
+
         }
         public void isPlayerOutOfBounds()
         {

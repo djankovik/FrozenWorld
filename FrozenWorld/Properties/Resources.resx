@@ -202,9 +202,6 @@
   <data name="player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enemyAdvancedFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enemyAdvancedFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="avatar1Girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar1Girl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,5 +264,29 @@
   </data>
   <data name="snowflake1_d2ebjF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snowflake1_d2ebjF.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemyAdvancedFrozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemyAdvancedFrozen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fw_80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fw_80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fw_90" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fw_90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameplay_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gameplay_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goodLuck_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goodLuck_50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hazards_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hazards_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snowflakes_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snowflakes_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
