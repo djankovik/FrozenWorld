@@ -1,5 +1,6 @@
 # <img src="https://github.com/djankovik/FrozenWorld/blob/master/FrozenWorld/Resources/Snowflake1.jpg" alt="icon" width="25px"/> FrozenWorld 
-## by Dushica Jankovikj 161509
+### by Dushica Jankovikj 161509
+
 Frozen World е платформска игра. Оваа игра е заснована на играта [Jack Frost]( http://www.nitrome.com/games/jackfrost/#.XRno5-j_xPa) од Nitrome. Во мојата имплементација на играта – како и во оригиналната игра постои можност за single player и multi player игра.
 #### Gameplay
 Главната цел на играта е да се замрзнат сите платформи и скали. Секој левел започнува со црвени платформи и скали стратешки поставени на различни места на екранот. Играчот го контролира својот аватар и замрзнува блокови од играта така што оди/претрчува врз нив. Левелот е освоен и може да се продолжи на следниот кога секој видлив блок е замрзнат.
