@@ -18,6 +18,7 @@ namespace FrozenWorld
                 case 3: return getLevel3();
                 case 4: return getLevel4();
                 case 5: return getLevel5();
+                case 6: return getLevel6();
                 default: return getSomeLevel();
             }
         }
@@ -30,6 +31,7 @@ namespace FrozenWorld
                 case 3: return getLevel3_2Player();
                 case 4: return getLevel4_2Player();
                 case 5: return getLevel5_2Player();
+                case 6: return getLevel6_2Player();
                 default: return getSomeLevel_2Player();
             }           
         }
@@ -486,6 +488,71 @@ namespace FrozenWorld
 
             return g;
         }
+
+        public static Game2Player getLevel6_2Player()
+        {
+            Game2Player g = new Game2Player(0, 600, 730, 0);
+            g.BACKGROUNDIMAGE = Resources.DarkForest6;
+            g.LEVELID = 6;
+
+            //PLATFORMS
+
+            for (int i = 0; i <= g.maxRight - Platform.Width; i += 50)
+            {
+                if (i >= 50 && i <= 250)
+                {
+                    g.Snowflakes.Add(new Snowflake(i, g.maxDown - 480));
+                    g.Platforms.Add(new Platform(i, g.maxDown - 430));
+                }
+                if (i >= 300 && i <= 400) g.Platforms.Add(new Platform(i, g.maxDown - 270));
+                if (i >= 500 && i <= 650)
+                {
+                    g.Platforms.Add(new Platform(i, g.maxDown - 470));
+                }
+                if (i == 50 || i == 100 || i == 550 || i == 600) continue;
+                g.Platforms.Add(new Platform(i, g.maxDown - 90));
+
+            }
+            g.Platforms.Add(new Platform(50, g.maxDown - 200));
+            g.Platforms.Add(new Platform(100, g.maxDown - 310));
+            g.Platforms.Add(new Platform(550, g.maxDown - 310));
+            g.Platforms.Add(new Platform(600, g.maxDown - 200));
+            g.Platforms.Add(new Platform(650, g.maxDown - 410));
+
+            //ENEMIES
+            g.Enemies.Add(new Enemy(50, g.maxDown - 430 - Enemy.Height, 45, 310));
+            g.Enemies.Add(new Enemy(300, g.maxDown - 270 - Enemy.Height, 290, 460));
+            Enemy a = new Enemy(400, g.maxDown - 90 - Enemy.Height, 140, 560);
+            a.makeAdvancedEnemy();
+            g.Enemies.Add(a);
+            //STAIRS
+
+
+            //SNOWFLAKES
+            g.Snowflakes.Add(new Snowflake(60, g.maxDown - 250));
+            g.Snowflakes.Add(new Snowflake(110, g.maxDown - 360));
+            g.Snowflakes.Add(new Snowflake(560, g.maxDown - 360));
+            g.Snowflakes.Add(new Snowflake(610, g.maxDown - 250));
+            g.Snowflakes.Add(new Snowflake(660, g.maxDown - 440));
+
+            g.Snowflakes.Add(new Snowflake(500, g.maxDown - 510));
+            g.Snowflakes.Add(new Snowflake(540, g.maxDown - 510));
+            g.Snowflakes.Add(new Snowflake(580, g.maxDown - 510));
+            g.Snowflakes.Add(new Snowflake(620, g.maxDown - 510));
+            g.Snowflakes.Add(new Snowflake(660, g.maxDown - 510));
+
+            g.Snowflakes.Add(new Snowflake(520, g.maxDown - 540));
+            g.Snowflakes.Add(new Snowflake(560, g.maxDown - 540));
+            g.Snowflakes.Add(new Snowflake(600, g.maxDown - 540));
+            g.Snowflakes.Add(new Snowflake(640, g.maxDown - 540));
+
+
+            g.Player1 = new Player(200, 400);
+            g.Player2 = new Player(230, 400);
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            return g;
+        }
         public static Game2Player getSomeLevel_2Player()
         {
             Game2Player g = new Game2Player(0, 600, 730, 0);
@@ -939,11 +1006,11 @@ namespace FrozenWorld
             return g;
         }
 
-        public static Game getSomeLevel()
+        public static Game getLevel6()
         {
             Game g = new Game(0,600,730,0);
             g.BACKGROUNDIMAGE = Resources.DarkForest;
-            g.LEVELID = 1;
+            g.LEVELID = 6;
 
             //PLATFORMS
 
@@ -998,6 +1065,36 @@ namespace FrozenWorld
             
 
             g.Player = new Player(200, 200);
+            g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
+            g.TOTALSNOWFLAKES = g.Snowflakes.Count;
+            return g;
+        }
+
+        public static Game getSomeLevel()
+        {
+            Game g = new Game(0, 600, 1000, 0);
+            g.BACKGROUNDIMAGE = Resources.winterImageNightBG;
+            g.LEVELID = 1;
+
+            //PLATFORMS
+
+            for (int i = 0; i <= g.maxRight - Platform.Width; i += 50)
+            {
+                if (i % 150 == 0)
+                {
+                    g.Platforms.Add(new Platform(i, g.maxDown - 90));
+                }                
+
+            }
+            g.Platforms.Add(new Platform(0, g.maxDown - 430));
+            //ENEMIES
+
+            //STAIRS
+
+
+            //SNOWFLAKES
+
+            g.Player = new Player(0, 100);
             g.TOTALITEMSTOFREEZE = g.Stairs.Count + g.Platforms.Count;
             g.TOTALSNOWFLAKES = g.Snowflakes.Count;
             return g;
