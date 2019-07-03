@@ -18,13 +18,19 @@ namespace FrozenWorld
         public User UserPlayingThisGame { get; set; }
 
         Game game;
+
+        bool isPaused;
         public Form1(Game Game,User u)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             UserPlayingThisGame = u;
+
+            isPaused = false;
             newGame(Game);
+
+            pbPausePlay.Location = new Point(this.Width-70,10);
         }
 
         public void newGame(Game Game)
@@ -157,5 +163,20 @@ namespace FrozenWorld
             //this.Close();
         }
 
+        private void PbPausePlay_Click(object sender, EventArgs e)
+        {
+            if (isPaused)
+            {
+                pbPausePlay.Image = Resources.pause;
+                isPaused = false;
+                timer1.Start();
+            }
+            else
+            {
+                pbPausePlay.Image = Resources.play;
+                isPaused = true;
+                timer1.Stop();
+            }
+        }
     }
 }

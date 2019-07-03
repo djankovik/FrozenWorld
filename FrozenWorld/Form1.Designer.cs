@@ -35,7 +35,9 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pbPausePlay = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -95,11 +97,24 @@
             this.tsslLivesLeft.Size = new System.Drawing.Size(200, 28);
             this.tsslLivesLeft.Text = "toolStripStatusLabel1";
             // 
+            // pbPausePlay
+            // 
+            this.pbPausePlay.BackColor = System.Drawing.Color.Transparent;
+            this.pbPausePlay.Image = global::FrozenWorld.Properties.Resources.pause;
+            this.pbPausePlay.Location = new System.Drawing.Point(950, 22);
+            this.pbPausePlay.Name = "pbPausePlay";
+            this.pbPausePlay.Size = new System.Drawing.Size(65, 60);
+            this.pbPausePlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPausePlay.TabIndex = 1;
+            this.pbPausePlay.TabStop = false;
+            this.pbPausePlay.Click += new System.EventHandler(this.PbPausePlay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1310, 502);
+            this.Controls.Add(this.pbPausePlay);
             this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -112,6 +127,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +141,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslLivesLeft;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel tsslSnowflakes;
+        private System.Windows.Forms.PictureBox pbPausePlay;
     }
 }
 
