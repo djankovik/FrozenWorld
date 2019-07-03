@@ -40,7 +40,7 @@ namespace FrozenWorld
                            pb.SizeMode = PictureBoxSizeMode.StretchImage;
                             if (levels.Contains(pbNr) || levels.Contains(pbNr - 1) || pbNr == 1)
                             {
-                                pb.Image = Resources.WinterWhiteNature;
+                                pb.Image = Resources.ScoreBoardBG;
                                 pb.Tag = "Unlocked";
                             }
                             else
@@ -64,7 +64,7 @@ namespace FrozenWorld
                     {
                         if (levels.Contains(lblNr) || levels.Contains(lblNr - 1) || lblNr == 1)
                         {
-                            lbl.BackgroundImage = Resources.WinterWhiteNature;
+                            lbl.BackgroundImage = Resources.ScoreBoardBG;
                             lbl.ForeColor = Color.Black;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
