@@ -103,7 +103,7 @@
             this.pbPausePlay.Image = global::FrozenWorld.Properties.Resources.pause;
             this.pbPausePlay.Location = new System.Drawing.Point(950, 22);
             this.pbPausePlay.Name = "pbPausePlay";
-            this.pbPausePlay.Size = new System.Drawing.Size(65, 60);
+            this.pbPausePlay.Size = new System.Drawing.Size(57, 50);
             this.pbPausePlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPausePlay.TabIndex = 1;
             this.pbPausePlay.TabStop = false;

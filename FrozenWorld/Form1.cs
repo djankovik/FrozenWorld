@@ -62,10 +62,10 @@ namespace FrozenWorld
                 timer1.Stop();
                 UserPlayingThisGame.addLevelScore(game.LEVELID,game.calculateScore());
                 SaveFile();
-                MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
+                MessageBox.Show("Game WON!\nFrozen blocks: " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + "\nSNowflakes: "+game.collectedSnowflakes+" / " +game.TOTALSNOWFLAKES);
                 nextLevel();
             }
-            if (game.isGameLost())
+            if (game.Player.LivesLeft <=0)
             {
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
@@ -157,6 +157,7 @@ namespace FrozenWorld
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.timer1.Stop();
             //this.Hide();
             //LevelChooserForm levels = new LevelChooserForm(UserPlayingThisGame);
             //levels.ShowDialog();

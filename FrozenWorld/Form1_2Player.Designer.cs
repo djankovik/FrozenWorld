@@ -39,7 +39,9 @@
             this.tsspbPlayer2FrozenMeter = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslPlayer2Lives = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbPausePlay = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -123,11 +125,24 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
             // 
+            // pbPausePlay
+            // 
+            this.pbPausePlay.BackColor = System.Drawing.Color.Transparent;
+            this.pbPausePlay.Image = global::FrozenWorld.Properties.Resources.pause;
+            this.pbPausePlay.Location = new System.Drawing.Point(810, 140);
+            this.pbPausePlay.Name = "pbPausePlay";
+            this.pbPausePlay.Size = new System.Drawing.Size(58, 49);
+            this.pbPausePlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPausePlay.TabIndex = 2;
+            this.pbPausePlay.TabStop = false;
+            this.pbPausePlay.Click += new System.EventHandler(this.PbPausePlay_Click);
+            // 
             // Form1_2Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 536);
+            this.Controls.Add(this.pbPausePlay);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1_2Player";
             this.Text = "Game 2 Player";
@@ -136,6 +151,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_2Player_KeyUp);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +169,6 @@
         private System.Windows.Forms.ToolStripProgressBar tsspbPlayer2FrozenMeter;
         private System.Windows.Forms.ToolStripStatusLabel tsslPlayer2Lives;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pbPausePlay;
     }
 }

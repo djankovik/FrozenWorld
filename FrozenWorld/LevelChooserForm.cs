@@ -108,10 +108,11 @@ namespace FrozenWorld
             }
         }
 
-        private void Lbl1_Click(object sender, EventArgs e)
+        private void Lbl1_Click_1(object sender, EventArgs e)
         {
             levelClicked(1);
         }
+        
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             levelClicked(1);
@@ -468,5 +469,6 @@ namespace FrozenWorld
         {
            e.Graphics.DrawImage(Resources.Levels, new Rectangle(220, 10, 240, 90));
         }
+
     }
 }

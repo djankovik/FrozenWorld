@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrozenWorld.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +16,20 @@ namespace FrozenWorld
         public User UserPlayingThisGame { get; set; }
 
         Game2Player game;
+
+        bool isPaused;
         public Form1_2Player(Game2Player Game,User u)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             UserPlayingThisGame = u;
+
+            isPaused = false;
+
             newGame(Game);
+
+            pbPausePlay.Location = new Point(this.Width - 70, 10);
         }
 
         public void newGame(Game2Player Game)
@@ -72,11 +80,11 @@ namespace FrozenWorld
                 timer1.Stop();
                 UserPlayingThisGame.addLevelScore(game.LEVELID, game.calculateScore());
                 SaveFile();
-                MessageBox.Show("Game WON! " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + " frozen blocks.");
+                MessageBox.Show("Game WON!\nFrozen blocks: " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + "\nPlayer 1: "+game.collectedSnowflakesPlayer1 +" / " + game.TOTALSNOWFLAKES + " snowflakes\nPlayer 2: "+game.collectedSnowflakesPlayer2+" / "+game.TOTALSNOWFLAKES+" snowflakes");
                 nextLevel();
             }
             Invalidate(true);
-            if (game.isGameLost() || (game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0))
+            if ((game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0))
             {
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
@@ -208,10 +216,23 @@ namespace FrozenWorld
 
         private void Form1_2Player_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*this.Hide();
-            LevelChooserForm levels = new LevelChooserForm(UserPlayingThisGame);
-            levels.ShowDialog();
-            this.Close();*/
+            this.timer1.Stop();
+        }
+
+        private void PbPausePlay_Click(object sender, EventArgs e)
+        {
+            if (isPaused)
+            {
+                pbPausePlay.Image = Resources.pause;
+                isPaused = false;
+                timer1.Start();
+            }
+            else
+            {
+                pbPausePlay.Image = Resources.play;
+                isPaused = true;
+                timer1.Stop();
+            }
         }
     }
 }

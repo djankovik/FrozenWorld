@@ -857,6 +857,7 @@
             this.lbl1.TabIndex = 37;
             this.lbl1.Text = "2";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1.Click += new System.EventHandler(this.Lbl1_Click_1);
             // 
             // LevelChooserForm
             // 
