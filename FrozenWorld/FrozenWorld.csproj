@@ -342,13 +342,13 @@
     <None Include="Resources\Levels.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ScoreBoardBG.png" />
+    <None Include="Resources\WinterWhiteNature.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ForestNatureNight.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WinterWhiteNature.jpg" />
+    <None Include="Resources\ScoreBoardBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

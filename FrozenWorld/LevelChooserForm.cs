@@ -77,6 +77,7 @@ namespace FrozenWorld
                             lbl.ForeColor = Color.White;
                             lbl.Text = "X";
                             lbl.Tag = "Locked";
+                            lbl.Location = new Point(lbl.Location.X + 10, lbl.Location.Y);
                         }
                     }
                 }

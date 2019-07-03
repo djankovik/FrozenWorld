@@ -21,14 +21,10 @@ namespace FrozenWorld
         public List<Stairs> Stairs { get; set; }
         public List<Snowflake> Snowflakes { get; set; }
         public Player Player { get; set; }
-
-        public Image Image { get; set; }
-
         public int maxUp { get; set; }
         public int maxDown { get; set; }
         public int maxLeft { get; set; }
         public int maxRight { get; set; }
-
         public int collectedSnowflakes { get; set; }
         
         public Game(int maxUp,int maxDown, int maxRight, int maxLeft)
@@ -348,7 +344,6 @@ namespace FrozenWorld
                 }
             }
             collectSnowflakes();
-            //interactWithEnemies();
             Player.RehabTimeLeft--;
         }
     }
