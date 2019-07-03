@@ -55,33 +55,25 @@ Frozen World е платформска игра. Оваа игра е засно
 
 ## Screenshots and tutorial
 Log in Start Page
-<!--![Log in page](/Screenshots/LogInPage.png))-->
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/LogInPage.png" alt="alt text" width="400" height="300">
+![Log in page](/Screenshots/LogInPage.png)
 
 Level Chooser Page
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/LevelsPage.png" alt="alt text" width="400" height="300">
+![Levels page](/Screenshots/LevelsPage.png)
 
 Settings page for one player mode
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/Settings1Player.png" alt="alt text" width="400" height="300">
+![Levels page](/Screenshots/Settings1Player.png)
 
 Settings page for two player mode
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/Settings2Player.png" alt="alt text" width="400" height="300">
+![Setiings page](/Screenshots/Settings2Player.png)
 
 Game one player mode
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/Level1Player.png" alt="alt text" width="400" height="300">
+![Setiings page](/Screenshots/Level1Player.png)
 
 Game two player mode
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/Level2Player.png" alt="alt text" width="400" height="300">
+![Game page](/Screenshots/Level2Player.png)
 
 About page
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/AboutPage.png" alt="alt text" width="400" height="300">
+![Game page](/Screenshots/AboutPage.png)
 
 Scoreboard page
-
-<img src="https://github.com/djankovik/FrozenWorld/blob/master/Screenshots/ScoreboardPage.png" alt="alt text" width="400" height="300">
+![Scoreboard page](/Screenshots/ScoreboardPage.png)
