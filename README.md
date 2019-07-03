@@ -54,26 +54,34 @@ Frozen World е платформска игра. Оваа игра е засно
 ## Example class
 
 ## Screenshots and tutorial
+
 Log in Start Page
+
 ![Log in page](/Screenshots/LogInPage.png)
 
 Level Chooser Page
+
 ![Levels page](/Screenshots/LevelsPage.png)
 
 Settings page for one player mode
+
 ![Levels page](/Screenshots/Settings1Player.png)
 
 Settings page for two player mode
+
 ![Setiings page](/Screenshots/Settings2Player.png)
 
 Game one player mode
+
 ![Setiings page](/Screenshots/Level1Player.png)
 
 Game two player mode
 ![Game page](/Screenshots/Level2Player.png)
 
 About page
+
 ![Game page](/Screenshots/AboutPage.png)
 
 Scoreboard page
+
 ![Scoreboard page](/Screenshots/ScoreboardPage.png)
