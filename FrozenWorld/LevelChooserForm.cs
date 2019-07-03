@@ -23,7 +23,8 @@ namespace FrozenWorld
             InitializeComponent();
             this.currentUser = currentUser;
             levels = currentUser.LevelScores.Keys.ToList();
-            drawForm();            
+            drawForm();
+           
         }
         
         public void drawForm()
@@ -52,6 +53,7 @@ namespace FrozenWorld
                         
                         }
                 }
+                
             }
 
             foreach (Control cntrl in Controls)
@@ -461,7 +463,7 @@ namespace FrozenWorld
 
         private void LevelChooserForm_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Resources.Levels, new Rectangle(220, 10, 240, 90));
+           e.Graphics.DrawImage(Resources.Levels, new Rectangle(220, 10, 240, 90));
         }
     }
 }
