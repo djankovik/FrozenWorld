@@ -70,6 +70,7 @@ namespace FrozenWorld
                             lbl.ForeColor = Color.Black;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
+                            
                         }
                         else
                         {
@@ -77,6 +78,7 @@ namespace FrozenWorld
                             lbl.ForeColor = Color.White;
                             lbl.Text = "X";
                             lbl.Tag = "Locked";
+                            if(lblNr>10)
                             lbl.Location = new Point(lbl.Location.X + 10, lbl.Location.Y);
                         }
                     }

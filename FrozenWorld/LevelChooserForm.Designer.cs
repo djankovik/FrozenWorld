@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lbl1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
@@ -101,6 +100,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lbl1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
@@ -138,18 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl1
-            // 
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(50, 176);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(39, 39);
-            this.lbl1.TabIndex = 2;
-            this.lbl1.Text = "10";
-            this.lbl1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl1.Click += new System.EventHandler(this.Lbl1_Click);
-            // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
@@ -159,6 +147,7 @@
             this.lbl2.Size = new System.Drawing.Size(46, 51);
             this.lbl2.TabIndex = 3;
             this.lbl2.Text = "2";
+            this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl2.Click += new System.EventHandler(this.Lbl2_Click);
             // 
             // lbl3
@@ -858,12 +847,24 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(52, 176);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(46, 51);
+            this.lbl1.TabIndex = 37;
+            this.lbl1.Text = "2";
+            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LevelChooserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(946, 763);
+            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.lbl35);
             this.Controls.Add(this.lbl32);
@@ -899,7 +900,6 @@
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox33);
@@ -1017,7 +1017,6 @@
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox pictureBox35;
-        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
@@ -1054,5 +1053,6 @@
         private System.Windows.Forms.Label lbl35;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label lbl1;
     }
 }
