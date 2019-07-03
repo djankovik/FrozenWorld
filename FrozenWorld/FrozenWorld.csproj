@@ -204,9 +204,6 @@
     <None Include="Resources\LockedLevel.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ScoreBoardBG.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ScoreBoardBG2.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +334,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreBoardBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForestNatureNight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinterWhiteNature.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

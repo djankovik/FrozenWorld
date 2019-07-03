@@ -293,6 +293,16 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ForestNatureNight {
+            get {
+                object obj = ResourceManager.GetObject("ForestNatureNight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frozen_Snowflake_Transparent {
             get {
                 object obj = ResourceManager.GetObject("Frozen_Snowflake_Transparent", resourceCulture);
@@ -373,6 +383,16 @@ namespace FrozenWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Levels {
+            get {
+                object obj = ResourceManager.GetObject("Levels", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LockedLevel {
             get {
                 object obj = ResourceManager.GetObject("LockedLevel", resourceCulture);
@@ -446,6 +466,16 @@ namespace FrozenWorld.Properties {
         internal static System.Drawing.Bitmap player2 {
             get {
                 object obj = ResourceManager.GetObject("player2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scoreboard {
+            get {
+                object obj = ResourceManager.GetObject("scoreboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -626,6 +656,16 @@ namespace FrozenWorld.Properties {
         internal static System.Drawing.Bitmap winterPainting {
             get {
                 object obj = ResourceManager.GetObject("winterPainting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinterWhiteNature {
+            get {
+                object obj = ResourceManager.GetObject("WinterWhiteNature", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

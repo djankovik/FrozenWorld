@@ -33,21 +33,24 @@ namespace FrozenWorld
             {
                 if (cntrl is PictureBox)
                 {
-                   PictureBox pb = (PictureBox)cntrl;
-                    int pbNr;
-                    if (Int32.TryParse(pb.Name.Substring(10), out pbNr))
-                    {
-                        if (levels.Contains(pbNr) || levels.Contains(pbNr - 1) || pbNr == 1)
+                    PictureBox pb = (PictureBox)cntrl;
+                        int pbNr;
+                        if (Int32.TryParse(pb.Name.Substring(10), out pbNr))
                         {
-                            pb.Image = Resources.UnlockedLevel;
-                            pb.Tag = "Unlocked";
+                           pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                            if (levels.Contains(pbNr) || levels.Contains(pbNr - 1) || pbNr == 1)
+                            {
+                                pb.Image = Resources.WinterWhiteNature;
+                                pb.Tag = "Unlocked";
+                            }
+                            else
+                            {
+                                pb.Image = Resources.ForestNatureNight;
+                                pb.Tag = "Locked";
+                            }
+                            
+                        
                         }
-                        else
-                        {
-                            pb.Image = Resources.LockedLevel;
-                            pb.Tag = "Locked";
-                        }
-                    }                    
                 }
             }
 
@@ -61,14 +64,14 @@ namespace FrozenWorld
                     {
                         if (levels.Contains(lblNr) || levels.Contains(lblNr - 1) || lblNr == 1)
                         {
-                            lbl.BackgroundImage = Resources.UnlockedLevel;
+                            lbl.BackgroundImage = Resources.WinterWhiteNature;
                             lbl.ForeColor = Color.Black;
                             lbl.Text = lblNr.ToString();
                             lbl.Tag = "Unlocked";
                         }
                         else
                         {
-                            lbl.BackgroundImage = Resources.LockedLevel;
+                            lbl.BackgroundImage = Resources.ForestNatureNight;
                             lbl.ForeColor = Color.White;
                             lbl.Text = "X";
                             lbl.Tag = "Locked";
@@ -458,7 +461,7 @@ namespace FrozenWorld
 
         private void LevelChooserForm_Paint(object sender, PaintEventArgs e)
         {
-
+            e.Graphics.DrawImage(Resources.Levels, new Rectangle(220, 10, 240, 90));
         }
     }
 }
