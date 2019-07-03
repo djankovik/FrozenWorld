@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(582, 453);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ScoreboardForm";
-            this.Text = "ScoreboardForm";
+            this.Text = "Scoreboard";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ScoreboardForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
