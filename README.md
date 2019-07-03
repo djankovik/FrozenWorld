@@ -54,7 +54,344 @@ public readonly string PATH = @"%USERPROFILE%\Documents\FrozenWorldUserData";
 Формите `Form1.cs` и `Form1Player2.cs` се форми кои го претставуваат прозорецот каде што се игра играта. Во нив се исцртуваат сите елементи од играта, платформите, скалите, непријателите, снегулките и играчите. Во нив се регистрираат KeyUp i KeyDown настани со кои корисникот го контролира својот аватар и се вршат проверки за победа или загуба на определено ниво.
 
 
-## Example class
+## Имплементација на класата Game.cs
+
+Атрибутите на оваа класа се сите потребни податоци за еден левел.
+
+```csharp
+        public int LEVELID { get; set; }
+        public Image BACKGROUNDIMAGE { get; set; }
+        public int TOTALITEMSTOFREEZE { get; set; }
+        public int TOTALSNOWFLAKES { get; set; }
+        public List<Enemy> Enemies { get; set; }
+        public List<Platform> Platforms { get; set; }
+        public List<Stairs> Stairs { get; set; }
+        public List<Snowflake> Snowflakes { get; set; }
+        public Player Player { get; set; }
+        public int maxUp { get; set; }
+        public int maxDown { get; set; }
+        public int maxLeft { get; set; }
+        public int maxRight { get; set; }
+        public int collectedSnowflakes { get; set; }
+```
+
+За проверка на тоа дали играчот е надвор од границите на левелот - односно дали паднал во дупка се врши со функцијата `isPlayerOutOfBounds`.
+```csharp
+    public bool isPlayerOutOfBounds()
+        {
+            if (Player.Y > maxDown + 10) return true;
+            return false;
+        }
+```
+
+Проверка за тоа дали играта е загубена - односно дали сите играчи ги загубиле сите свои животи е имплементирано со функцијата `isGameWon`.
+```csharp
+        public bool isGameWon()
+        {
+            if (getFrozenBlockNumber() == TOTALITEMSTOFREEZE)
+            {
+                return true;
+            }
+            return false;
+        }
+```
+Пресметка на поените кои играчот ги добил по завршување на нивото се врши со функцијата `calculateScore`.
+```csharp
+        public int calculateScore()
+        {
+            return collectedSnowflakes * 100 + TOTALITEMSTOFREEZE;
+        }
+```
+        
+Итерација низ сите блокови и броење на сите кои се замрзнати од играчот е имплементирано со функцијата `getFrozenBlockNumber`.
+```csharp
+        public int getFrozenBlockNumber()
+        {
+            int frozenBlocks = 0;
+            foreach (Platform p in Platforms)
+            {
+                if (p.isFrozen) frozenBlocks++;
+            }
+            foreach (Stairs s in Stairs)
+            {
+                if (s.isFrozen) frozenBlocks++;
+            }
+            return frozenBlocks;
+        }
+```
+
+Собирање на снегулки зависно од позицијата на играчот е имплементирано со `collectSnowflakes`
+```csharp
+ public void collectSnowflakes()
+        {
+            for (int i = 0; i < Snowflakes.Count; i++)
+            {
+                if (Snowflakes[i].Collect(Player))
+                {
+                    collectedSnowflakes++;
+                    Snowflakes.RemoveAt(i);
+                    i--;
+                }
+            }
+        }
+```
+Замрзнувањето на блокови од страна на играчот е имплементирано со `FreezeFreezableBlocks`
+```csharp
+public void FreezeFreezableBlocks()
+        {
+            foreach (Platform p in Platforms)
+            {
+                p.Freeze(Player);
+            }
+            foreach (Stairs st in Stairs)
+            {
+                st.Freeze(Player);
+
+            }
+        }
+```
+
+Движењето на играчот е имплементирано со 4 функции.
+```csharp
+public void MovePlayerLeft()
+        {
+            Player.X -= Player.VELOCITY;
+
+            if (Player.isOnStairs)
+            {
+                foreach (Stairs stair in Stairs)
+                {
+                    if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
+                    {
+                        Player.isOnStairs = true; break;
+                    }
+                    else
+                    {
+                        Player.isOnStairs = false;
+                    }
+                }
+            }
+        }
+        public void MovePlayerRight()
+        {
+            Player.X += Player.VELOCITY;
+            if (Player.isOnStairs)
+            {
+                foreach (Stairs stair in Stairs)
+                {
+                    if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
+                    {
+                        Player.isOnStairs = true; break;
+                    }
+                    else
+                    {
+                        Player.isOnStairs = false;
+                    }
+                }
+            }
+        }
+        public void MovePlayerUp()
+        {
+            foreach (Stairs stair in Stairs)
+            {
+                if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
+                {
+                    Player.Y -= Player.VELOCITY;
+                    Player.isOnStairs = true; break;
+                }
+                else
+                {
+                    Player.isOnStairs = false;
+                }
+            }
+        }
+        public void MovePlayerDown()
+        {
+            foreach (Stairs stair in Stairs)
+            {
+                if ((Player.getRectagle().IntersectsWith(stair.getRectagle()) && Player.Y + Player.Height < stair.Y + stair.getHeight() + 1) || Player.Y + Player.Height == stair.Y)
+                {
+                    Player.Y += Player.VELOCITY;
+                    Player.isOnStairs = true; break;
+                }
+                else
+                {
+                    Player.isOnStairs = false;
+                }
+            }
+        }
+```
+
+Проверка за тоа дали играчот моментално се наоѓа врз платформа од која што може да отскокне е имплементирано со `isPlayerOnJumpablePlatform`.
+```csharp
+public bool isPlayerOnJumpablePlatform()
+        {
+           foreach (Platform p in Platforms)
+            {
+                if (Player.getRectagleWithPadding(-30,3,0,0).IntersectsWith(p.getRectagle())) return true;
+            }
+            foreach (Stairs s in Stairs)
+            {
+                if (Player.getRectagleWithPadding(-30, 3, 0, 0).IntersectsWith(s.getRectagle())) return true;
+            }
+            foreach(Enemy e in Enemies)
+            {
+                if (e.isFrozen) {
+                    if (Math.Abs(Player.Y + Player.Height - e.Y) <= 3        //if the player is on top of the enemy
+                        && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
+                        || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+```
+
+Интеракција со непријателите во зависно од позицијата на играчот e имплементирано со `interactWithEnemies` 
+
+```csharp
+        public void interactWithEnemies()
+        {
+            foreach (Enemy e in Enemies)
+            {
+                e.Freeze(Player);
+
+                if(!e.isFrozen && e.getRectagle().IntersectsWith(Player.getRectagleWithPadding(0, -3, 0, 0))){
+                    Player.reduceLives();
+                }
+            }
+        }
+```
+Движењето на непријателите е имплементирано со функцијата `MoveEnemies`
+```charp
+public void MoveEnemies()
+        {
+            foreach (Enemy e in Enemies)
+            {
+                e.timerTick();
+                if (e.isAngry && e.isAdvancedEnemy)
+                {
+                    e.isAngry = false;
+                    foreach(Platform p in Platforms)
+                    {
+                        if (e.getRectagleWithPadding(35, 35, 35, 35).IntersectsWith(p.getRectagle()))
+                        {
+                            p.unfreeze();
+                        }
+                    }
+                    foreach (Stairs s in Stairs)
+                    {
+                        if (e.getRectagleWithPadding(5, 5, 5, 5).IntersectsWith(s.getRectagle()))
+                        {
+                            s.unfreeze();
+                        }
+                    }
+                }
+            }
+        }
+```
+
+#### Timer Tick
+Најважниот метод е имплементацијата на timer_tick. Тука се повикуваат сите методи со кои се придвижува играчот, непријателите, се овозможува замрзнување на платформите и скалите итн.
+```csharp
+        public void timerTick()
+        {
+            MoveEnemies();
+            FreezeFreezableBlocks();
+            interactWithEnemies();
+
+            if (!Player.isOnStairs)
+            {
+                Player.Y += Player.JUMPSPEED;
+            }
+
+            if (Player.isJumping && Player.GRAVITY < 0)
+            {
+                Player.isJumping = false;
+            }
+
+            if (Player.isGoingLeft && Player.X > 1)
+            {
+                MovePlayerLeft();
+            }
+
+            if (Player.isGoingRight && Player.X+ Player.Width+Player.VELOCITY < this.maxRight)
+            {
+                MovePlayerRight();
+            }
+
+            if (Player.isGoingUp)
+            {
+                MovePlayerUp();
+            }
+
+            if (Player.isGoingDown)
+            {
+                MovePlayerDown();
+            }
+
+            if (Player.isJumping && !Player.isOnStairs)
+            {
+                Player.JUMPSPEED = -22;
+                Player.GRAVITY -= 3;
+            }
+            else if (Player.isOnStairs)
+            {
+                Player.JUMPSPEED = 22;
+                Player.GRAVITY -= 3;
+            }
+            else
+            {
+                bool flag = false;
+                Player.JUMPSPEED = 22;
+            
+                foreach (Platform p in Platforms)
+                {
+                    if (Player.getRectagleWithPadding(-35, 0, 0, 0).IntersectsWith(p.getRectagle()) && !Player.isJumping)
+                    {
+                        Player.GRAVITY = 12;
+                        Player.Y = p.Y - Player.Height;
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    foreach (Enemy e in Enemies)
+                    {
+                        if (e.isFrozen)
+                        {
+                            if (Math.Abs(Player.Y + Player.Height - e.Y) <= 15        //if the player is on top of the enemy
+                                && ((Player.X <= e.X && Player.X + Player.Width >= e.X) //if the player is on the left side of enemy
+                                || (e.X + Enemy.Width >= Player.X && e.X <= Player.X)))
+                            {
+                                Player.GRAVITY = 12;
+                                Player.Y = e.Y - Player.Height;
+                                flag = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (!flag)
+                {
+                    foreach (Stairs s in Stairs)
+                    {
+                        if (Player.getRectagleWithPadding(-20, 0, 0, 0).IntersectsWith(s.getRectagle()) && !Player.isJumping)
+                        {
+                            Player.GRAVITY = 12;
+                            Player.Y = s.Y - Player.Height;
+                            break;
+                        }
+                    }
+                }
+            }
+            collectSnowflakes();
+            Player.RehabTimeLeft--;
+        }
+```
 
 ## Screenshots and tutorial
 
