@@ -253,7 +253,7 @@ namespace FrozenWorld
             }
             return false;
         }
-        public void timerTick()
+        public void timerTick()//
         {
             MoveEnemies();
             FreezeFreezableBlocks();
