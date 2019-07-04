@@ -36,8 +36,10 @@
             this.tsspbFreezables = new System.Windows.Forms.ToolStripProgressBar();
             this.tsslLivesLeft = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbPausePlay = new System.Windows.Forms.PictureBox();
+            this.pbRestart = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRestart)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -103,17 +105,30 @@
             this.pbPausePlay.Image = global::FrozenWorld.Properties.Resources.pause;
             this.pbPausePlay.Location = new System.Drawing.Point(950, 22);
             this.pbPausePlay.Name = "pbPausePlay";
-            this.pbPausePlay.Size = new System.Drawing.Size(57, 50);
+            this.pbPausePlay.Size = new System.Drawing.Size(43, 39);
             this.pbPausePlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPausePlay.TabIndex = 1;
             this.pbPausePlay.TabStop = false;
             this.pbPausePlay.Click += new System.EventHandler(this.PbPausePlay_Click);
+            // 
+            // pbRestart
+            // 
+            this.pbRestart.BackColor = System.Drawing.Color.Transparent;
+            this.pbRestart.Image = global::FrozenWorld.Properties.Resources.restart;
+            this.pbRestart.Location = new System.Drawing.Point(887, 22);
+            this.pbRestart.Name = "pbRestart";
+            this.pbRestart.Size = new System.Drawing.Size(37, 39);
+            this.pbRestart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRestart.TabIndex = 2;
+            this.pbRestart.TabStop = false;
+            this.pbRestart.Click += new System.EventHandler(this.PbRestart_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1310, 502);
+            this.Controls.Add(this.pbRestart);
             this.Controls.Add(this.pbPausePlay);
             this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -128,6 +143,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRestart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +158,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel tsslSnowflakes;
         private System.Windows.Forms.PictureBox pbPausePlay;
+        private System.Windows.Forms.PictureBox pbRestart;
     }
 }
 

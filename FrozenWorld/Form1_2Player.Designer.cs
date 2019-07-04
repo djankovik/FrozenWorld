@@ -40,8 +40,10 @@
             this.tsslPlayer2Lives = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pbPausePlay = new System.Windows.Forms.PictureBox();
+            this.pbRestart = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRestart)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -129,19 +131,32 @@
             // 
             this.pbPausePlay.BackColor = System.Drawing.Color.Transparent;
             this.pbPausePlay.Image = global::FrozenWorld.Properties.Resources.pause;
-            this.pbPausePlay.Location = new System.Drawing.Point(810, 140);
+            this.pbPausePlay.Location = new System.Drawing.Point(810, 150);
             this.pbPausePlay.Name = "pbPausePlay";
-            this.pbPausePlay.Size = new System.Drawing.Size(58, 49);
+            this.pbPausePlay.Size = new System.Drawing.Size(43, 39);
             this.pbPausePlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPausePlay.TabIndex = 2;
             this.pbPausePlay.TabStop = false;
             this.pbPausePlay.Click += new System.EventHandler(this.PbPausePlay_Click);
+            // 
+            // pbRestart
+            // 
+            this.pbRestart.BackColor = System.Drawing.Color.Transparent;
+            this.pbRestart.Image = global::FrozenWorld.Properties.Resources.restart;
+            this.pbRestart.Location = new System.Drawing.Point(768, 150);
+            this.pbRestart.Name = "pbRestart";
+            this.pbRestart.Size = new System.Drawing.Size(36, 39);
+            this.pbRestart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRestart.TabIndex = 3;
+            this.pbRestart.TabStop = false;
+            this.pbRestart.Click += new System.EventHandler(this.PbRestart_Click);
             // 
             // Form1_2Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 536);
+            this.Controls.Add(this.pbRestart);
             this.Controls.Add(this.pbPausePlay);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1_2Player";
@@ -152,6 +167,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPausePlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRestart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +186,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslPlayer2Lives;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pbPausePlay;
+        private System.Windows.Forms.PictureBox pbRestart;
     }
 }

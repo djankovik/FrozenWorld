@@ -30,7 +30,8 @@ namespace FrozenWorld
             isPaused = false;
             newGame(Game);
 
-            pbPausePlay.Location = new Point(this.Width-70,10);
+            pbPausePlay.Location = new Point(this.Width-60,10);
+            pbRestart.Location = new Point(pbPausePlay.Location.X-pbRestart.Width-10,10);
         }
 
         public void newGame(Game Game)
@@ -178,6 +179,20 @@ namespace FrozenWorld
                 isPaused = true;
                 timer1.Stop();
             }
+        }
+
+        private void PbRestart_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to restart the game?", "Restart level", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                resetGame();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+               timer1.Start();
+            }           
         }
     }
 }
