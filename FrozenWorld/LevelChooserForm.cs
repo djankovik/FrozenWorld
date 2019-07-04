@@ -48,9 +48,7 @@ namespace FrozenWorld
                             {
                                 pb.Image = Resources.ForestNatureNight;
                                 pb.Tag = "Locked";
-                            }
-                            
-                        
+                            }                  
                         }
                 }
                 
@@ -258,207 +256,7 @@ namespace FrozenWorld
             levelClicked(15);
         }
 
-        private void Lbl16_Click(object sender, EventArgs e)
-        {
-            levelClicked(16);
-        }
-
-        private void PictureBox16_Click(object sender, EventArgs e)
-        {
-            levelClicked(16);
-        }
-
-        private void Lbl17_Click(object sender, EventArgs e)
-        {
-            levelClicked(17);
-        }
-
-        private void PictureBox17_Click(object sender, EventArgs e)
-        {
-            levelClicked(17);
-        }
-
-        private void Lbl18_Click(object sender, EventArgs e)
-        {
-            levelClicked(18);
-        }
-
-        private void PictureBox18_Click(object sender, EventArgs e)
-        {
-            levelClicked(18);
-        }
-
-        private void Lbl19_Click(object sender, EventArgs e)
-        {
-            levelClicked(19);
-        }
-
-        private void PictureBox19_Click(object sender, EventArgs e)
-        {
-            levelClicked(19);
-        }
-
-        private void PictureBox20_Click(object sender, EventArgs e)
-        {
-            levelClicked(20);
-        }
-
-        private void Lbl20_Click(object sender, EventArgs e)
-        {
-            levelClicked(20);
-        }
-
-        private void Lbl21_Click(object sender, EventArgs e)
-        {
-            levelClicked(21);
-        }
-
-        private void PictureBox21_Click(object sender, EventArgs e)
-        {
-            levelClicked(21);
-        }
-
-        private void Lbl22_Click(object sender, EventArgs e)
-        {
-            levelClicked(22);
-        }
-
-        private void PictureBox22_Click(object sender, EventArgs e)
-        {
-            levelClicked(22);
-        }
-
-        private void Lbl23_Click(object sender, EventArgs e)
-        {
-            levelClicked(23);
-        }
-
-        private void PictureBox23_Click(object sender, EventArgs e)
-        {
-            levelClicked(23);
-        }
-
-        private void Lbl24_Click(object sender, EventArgs e)
-        {
-            levelClicked(24);
-        }
-
-        private void PictureBox24_Click(object sender, EventArgs e)
-        {
-            levelClicked(24);
-        }
-
-        private void Lbl25_Click(object sender, EventArgs e)
-        {
-            levelClicked(25);
-        }
-
-        private void PictureBox25_Click(object sender, EventArgs e)
-        {
-            levelClicked(25);
-        }
-
-        private void Lbl26_Click(object sender, EventArgs e)
-        {
-            levelClicked(26);
-        }
-
-        private void PictureBox26_Click(object sender, EventArgs e)
-        {
-            levelClicked(26);
-        }
-
-        private void Lbl27_Click(object sender, EventArgs e)
-        {
-            levelClicked(27);
-        }
-
-        private void PictureBox27_Click(object sender, EventArgs e)
-        {
-            levelClicked(27);
-        }
-
-        private void Lbl28_Click(object sender, EventArgs e)
-        {
-            levelClicked(28);
-        }
-
-        private void PictureBox28_Click(object sender, EventArgs e)
-        {
-            levelClicked(28);
-        }
-
-        private void Lbl29_Click(object sender, EventArgs e)
-        {
-            levelClicked(29);
-        }
-
-        private void PictureBox29_Click(object sender, EventArgs e)
-        {
-            levelClicked(29);
-        }
-
-        private void Lbl30_Click(object sender, EventArgs e)
-        {
-            levelClicked(30);
-        }
-
-        private void PictureBox30_Click(object sender, EventArgs e)
-        {
-            levelClicked(30);
-        }
-
-        private void Lbl31_Click(object sender, EventArgs e)
-        {
-            levelClicked(31);
-        }
-
-        private void PictureBox31_Click(object sender, EventArgs e)
-        {
-            levelClicked(31);
-
-        }
-
-        private void Lbl32_Click(object sender, EventArgs e)
-        {
-            levelClicked(32);
-        }
-
-        private void PictureBox32_Click(object sender, EventArgs e)
-        {
-            levelClicked(32);
-        }
-
-        private void Lbl33_Click(object sender, EventArgs e)
-        {
-            levelClicked(33);
-        }
-
-        private void PictureBox33_Click(object sender, EventArgs e)
-        {
-            levelClicked(33);
-        }
-
-        private void Lbl34_Click(object sender, EventArgs e)
-        {
-            levelClicked(34);
-        }
-
-        private void PictureBox34_Click(object sender, EventArgs e)
-        {
-            levelClicked(34);
-        }
-
-        private void Lbl35_Click(object sender, EventArgs e)
-        {
-            levelClicked(35);
-        }
-
-        private void PictureBox35_Click(object sender, EventArgs e)
-        {
-            levelClicked(35);
-        }
-
+        
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             SettingsPage settings = new SettingsPage(currentUser);
@@ -467,7 +265,7 @@ namespace FrozenWorld
 
         private void LevelChooserForm_Paint(object sender, PaintEventArgs e)
         {
-           e.Graphics.DrawImage(Resources.Levels, new Rectangle(220, 10, 240, 90));
+           e.Graphics.DrawImage(Resources.Levels, new Rectangle(150, 15, 180, 80));
         }
 
     }

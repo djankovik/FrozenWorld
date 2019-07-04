@@ -43,47 +43,7 @@
             this.lbl13 = new System.Windows.Forms.Label();
             this.lbl14 = new System.Windows.Forms.Label();
             this.lbl15 = new System.Windows.Forms.Label();
-            this.lbl16 = new System.Windows.Forms.Label();
-            this.lbl17 = new System.Windows.Forms.Label();
-            this.lbl18 = new System.Windows.Forms.Label();
-            this.lbl19 = new System.Windows.Forms.Label();
-            this.lbl20 = new System.Windows.Forms.Label();
-            this.lbl21 = new System.Windows.Forms.Label();
-            this.lbl34 = new System.Windows.Forms.Label();
-            this.lbl22 = new System.Windows.Forms.Label();
-            this.lbl23 = new System.Windows.Forms.Label();
-            this.lbl33 = new System.Windows.Forms.Label();
-            this.lbl24 = new System.Windows.Forms.Label();
-            this.lbl25 = new System.Windows.Forms.Label();
-            this.lbl26 = new System.Windows.Forms.Label();
-            this.lbl27 = new System.Windows.Forms.Label();
-            this.lbl28 = new System.Windows.Forms.Label();
-            this.lbl29 = new System.Windows.Forms.Label();
-            this.lbl30 = new System.Windows.Forms.Label();
-            this.lbl31 = new System.Windows.Forms.Label();
-            this.lbl32 = new System.Windows.Forms.Label();
-            this.lbl35 = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -101,26 +61,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lbl1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -187,7 +127,7 @@
             // 
             this.lbl6.AutoSize = true;
             this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl6.Location = new System.Drawing.Point(712, 176);
+            this.lbl6.Location = new System.Drawing.Point(54, 302);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(46, 51);
             this.lbl6.TabIndex = 7;
@@ -198,7 +138,7 @@
             // 
             this.lbl7.AutoSize = true;
             this.lbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl7.Location = new System.Drawing.Point(849, 176);
+            this.lbl7.Location = new System.Drawing.Point(185, 302);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(46, 51);
             this.lbl7.TabIndex = 8;
@@ -209,7 +149,7 @@
             // 
             this.lbl8.AutoSize = true;
             this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl8.Location = new System.Drawing.Point(52, 296);
+            this.lbl8.Location = new System.Drawing.Point(315, 302);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(46, 51);
             this.lbl8.TabIndex = 9;
@@ -220,7 +160,7 @@
             // 
             this.lbl9.AutoSize = true;
             this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.Location = new System.Drawing.Point(185, 296);
+            this.lbl9.Location = new System.Drawing.Point(448, 302);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(46, 51);
             this.lbl9.TabIndex = 10;
@@ -231,7 +171,7 @@
             // 
             this.lbl10.AutoSize = true;
             this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl10.Location = new System.Drawing.Point(305, 296);
+            this.lbl10.Location = new System.Drawing.Point(568, 302);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(70, 51);
             this.lbl10.TabIndex = 11;
@@ -242,7 +182,7 @@
             // 
             this.lbl11.AutoSize = true;
             this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl11.Location = new System.Drawing.Point(438, 296);
+            this.lbl11.Location = new System.Drawing.Point(42, 422);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(70, 51);
             this.lbl11.TabIndex = 12;
@@ -253,7 +193,7 @@
             // 
             this.lbl12.AutoSize = true;
             this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl12.Location = new System.Drawing.Point(571, 296);
+            this.lbl12.Location = new System.Drawing.Point(175, 422);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(70, 51);
             this.lbl12.TabIndex = 13;
@@ -264,7 +204,7 @@
             // 
             this.lbl13.AutoSize = true;
             this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl13.Location = new System.Drawing.Point(703, 296);
+            this.lbl13.Location = new System.Drawing.Point(307, 422);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(70, 51);
             this.lbl13.TabIndex = 14;
@@ -275,7 +215,7 @@
             // 
             this.lbl14.AutoSize = true;
             this.lbl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl14.Location = new System.Drawing.Point(840, 296);
+            this.lbl14.Location = new System.Drawing.Point(444, 422);
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(70, 51);
             this.lbl14.TabIndex = 15;
@@ -285,240 +225,20 @@
             // lbl15
             // 
             this.lbl15.AutoSize = true;
-            this.lbl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl15.Location = new System.Drawing.Point(41, 429);
+            this.lbl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl15.Location = new System.Drawing.Point(568, 422);
             this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(72, 51);
+            this.lbl15.Size = new System.Drawing.Size(70, 51);
             this.lbl15.TabIndex = 16;
             this.lbl15.Text = "10";
             this.lbl15.Click += new System.EventHandler(this.Lbl15_Click);
-            // 
-            // lbl16
-            // 
-            this.lbl16.AutoSize = true;
-            this.lbl16.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl16.Location = new System.Drawing.Point(174, 429);
-            this.lbl16.Name = "lbl16";
-            this.lbl16.Size = new System.Drawing.Size(72, 51);
-            this.lbl16.TabIndex = 17;
-            this.lbl16.Text = "10";
-            this.lbl16.Click += new System.EventHandler(this.Lbl16_Click);
-            // 
-            // lbl17
-            // 
-            this.lbl17.AutoSize = true;
-            this.lbl17.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl17.Location = new System.Drawing.Point(304, 429);
-            this.lbl17.Name = "lbl17";
-            this.lbl17.Size = new System.Drawing.Size(72, 51);
-            this.lbl17.TabIndex = 18;
-            this.lbl17.Text = "10";
-            this.lbl17.Click += new System.EventHandler(this.Lbl17_Click);
-            // 
-            // lbl18
-            // 
-            this.lbl18.AutoSize = true;
-            this.lbl18.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl18.Location = new System.Drawing.Point(437, 429);
-            this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(72, 51);
-            this.lbl18.TabIndex = 19;
-            this.lbl18.Text = "10";
-            this.lbl18.Click += new System.EventHandler(this.Lbl18_Click);
-            // 
-            // lbl19
-            // 
-            this.lbl19.AutoSize = true;
-            this.lbl19.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl19.Location = new System.Drawing.Point(569, 429);
-            this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(72, 51);
-            this.lbl19.TabIndex = 20;
-            this.lbl19.Text = "10";
-            this.lbl19.Click += new System.EventHandler(this.Lbl19_Click);
-            // 
-            // lbl20
-            // 
-            this.lbl20.AutoSize = true;
-            this.lbl20.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl20.Location = new System.Drawing.Point(701, 429);
-            this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(72, 51);
-            this.lbl20.TabIndex = 21;
-            this.lbl20.Text = "10";
-            this.lbl20.Click += new System.EventHandler(this.Lbl20_Click);
-            // 
-            // lbl21
-            // 
-            this.lbl21.AutoSize = true;
-            this.lbl21.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl21.Location = new System.Drawing.Point(838, 429);
-            this.lbl21.Name = "lbl21";
-            this.lbl21.Size = new System.Drawing.Size(72, 51);
-            this.lbl21.TabIndex = 22;
-            this.lbl21.Text = "10";
-            this.lbl21.Click += new System.EventHandler(this.Lbl21_Click);
-            // 
-            // lbl34
-            // 
-            this.lbl34.AutoSize = true;
-            this.lbl34.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl34.Location = new System.Drawing.Point(701, 674);
-            this.lbl34.Name = "lbl34";
-            this.lbl34.Size = new System.Drawing.Size(72, 51);
-            this.lbl34.TabIndex = 35;
-            this.lbl34.Text = "10";
-            this.lbl34.Click += new System.EventHandler(this.Lbl34_Click);
-            // 
-            // lbl22
-            // 
-            this.lbl22.AutoSize = true;
-            this.lbl22.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl22.Location = new System.Drawing.Point(41, 555);
-            this.lbl22.Name = "lbl22";
-            this.lbl22.Size = new System.Drawing.Size(72, 51);
-            this.lbl22.TabIndex = 23;
-            this.lbl22.Text = "10";
-            this.lbl22.Click += new System.EventHandler(this.Lbl22_Click);
-            // 
-            // lbl23
-            // 
-            this.lbl23.AutoSize = true;
-            this.lbl23.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl23.Location = new System.Drawing.Point(174, 555);
-            this.lbl23.Name = "lbl23";
-            this.lbl23.Size = new System.Drawing.Size(72, 51);
-            this.lbl23.TabIndex = 24;
-            this.lbl23.Text = "10";
-            this.lbl23.Click += new System.EventHandler(this.Lbl23_Click);
-            // 
-            // lbl33
-            // 
-            this.lbl33.AutoSize = true;
-            this.lbl33.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl33.Location = new System.Drawing.Point(569, 674);
-            this.lbl33.Name = "lbl33";
-            this.lbl33.Size = new System.Drawing.Size(72, 51);
-            this.lbl33.TabIndex = 34;
-            this.lbl33.Text = "10";
-            this.lbl33.Click += new System.EventHandler(this.Lbl33_Click);
-            // 
-            // lbl24
-            // 
-            this.lbl24.AutoSize = true;
-            this.lbl24.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl24.Location = new System.Drawing.Point(304, 555);
-            this.lbl24.Name = "lbl24";
-            this.lbl24.Size = new System.Drawing.Size(72, 51);
-            this.lbl24.TabIndex = 25;
-            this.lbl24.Text = "10";
-            this.lbl24.Click += new System.EventHandler(this.Lbl24_Click);
-            // 
-            // lbl25
-            // 
-            this.lbl25.AutoSize = true;
-            this.lbl25.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl25.Location = new System.Drawing.Point(437, 555);
-            this.lbl25.Name = "lbl25";
-            this.lbl25.Size = new System.Drawing.Size(72, 51);
-            this.lbl25.TabIndex = 26;
-            this.lbl25.Text = "10";
-            this.lbl25.Click += new System.EventHandler(this.Lbl25_Click);
-            // 
-            // lbl26
-            // 
-            this.lbl26.AutoSize = true;
-            this.lbl26.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl26.Location = new System.Drawing.Point(569, 555);
-            this.lbl26.Name = "lbl26";
-            this.lbl26.Size = new System.Drawing.Size(72, 51);
-            this.lbl26.TabIndex = 27;
-            this.lbl26.Text = "10";
-            this.lbl26.Click += new System.EventHandler(this.Lbl26_Click);
-            // 
-            // lbl27
-            // 
-            this.lbl27.AutoSize = true;
-            this.lbl27.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl27.Location = new System.Drawing.Point(701, 555);
-            this.lbl27.Name = "lbl27";
-            this.lbl27.Size = new System.Drawing.Size(72, 51);
-            this.lbl27.TabIndex = 28;
-            this.lbl27.Text = "10";
-            this.lbl27.Click += new System.EventHandler(this.Lbl27_Click);
-            // 
-            // lbl28
-            // 
-            this.lbl28.AutoSize = true;
-            this.lbl28.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl28.Location = new System.Drawing.Point(838, 555);
-            this.lbl28.Name = "lbl28";
-            this.lbl28.Size = new System.Drawing.Size(72, 51);
-            this.lbl28.TabIndex = 29;
-            this.lbl28.Text = "10";
-            this.lbl28.Click += new System.EventHandler(this.Lbl28_Click);
-            // 
-            // lbl29
-            // 
-            this.lbl29.AutoSize = true;
-            this.lbl29.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl29.Location = new System.Drawing.Point(41, 674);
-            this.lbl29.Name = "lbl29";
-            this.lbl29.Size = new System.Drawing.Size(72, 51);
-            this.lbl29.TabIndex = 30;
-            this.lbl29.Text = "10";
-            this.lbl29.Click += new System.EventHandler(this.Lbl29_Click);
-            // 
-            // lbl30
-            // 
-            this.lbl30.AutoSize = true;
-            this.lbl30.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl30.Location = new System.Drawing.Point(174, 674);
-            this.lbl30.Name = "lbl30";
-            this.lbl30.Size = new System.Drawing.Size(72, 51);
-            this.lbl30.TabIndex = 31;
-            this.lbl30.Text = "10";
-            this.lbl30.Click += new System.EventHandler(this.Lbl30_Click);
-            // 
-            // lbl31
-            // 
-            this.lbl31.AutoSize = true;
-            this.lbl31.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl31.Location = new System.Drawing.Point(304, 674);
-            this.lbl31.Name = "lbl31";
-            this.lbl31.Size = new System.Drawing.Size(72, 51);
-            this.lbl31.TabIndex = 32;
-            this.lbl31.Text = "10";
-            this.lbl31.Click += new System.EventHandler(this.Lbl31_Click);
-            // 
-            // lbl32
-            // 
-            this.lbl32.AutoSize = true;
-            this.lbl32.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl32.Location = new System.Drawing.Point(433, 674);
-            this.lbl32.Name = "lbl32";
-            this.lbl32.Size = new System.Drawing.Size(72, 51);
-            this.lbl32.TabIndex = 33;
-            this.lbl32.Text = "10";
-            this.lbl32.Click += new System.EventHandler(this.Lbl32_Click);
-            // 
-            // lbl35
-            // 
-            this.lbl35.AutoSize = true;
-            this.lbl35.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl35.Location = new System.Drawing.Point(838, 674);
-            this.lbl35.Name = "lbl35";
-            this.lbl35.Size = new System.Drawing.Size(72, 51);
-            this.lbl35.TabIndex = 36;
-            this.lbl35.Text = "10";
-            this.lbl35.Click += new System.EventHandler(this.Lbl35_Click);
             // 
             // btnSettings
             // 
             this.btnSettings.BackColor = System.Drawing.Color.Black;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(760, 45);
+            this.btnSettings.Location = new System.Drawing.Point(490, 35);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(162, 58);
             this.btnSettings.TabIndex = 1;
@@ -526,189 +246,9 @@
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // pictureBox35
-            // 
-            this.pictureBox35.Location = new System.Drawing.Point(822, 643);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox35.TabIndex = 35;
-            this.pictureBox35.TabStop = false;
-            this.pictureBox35.Click += new System.EventHandler(this.PictureBox35_Click);
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Location = new System.Drawing.Point(688, 643);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox34.TabIndex = 34;
-            this.pictureBox34.TabStop = false;
-            this.pictureBox34.Click += new System.EventHandler(this.PictureBox34_Click);
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Location = new System.Drawing.Point(556, 643);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox33.TabIndex = 33;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Click += new System.EventHandler(this.PictureBox33_Click);
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Location = new System.Drawing.Point(420, 643);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox32.TabIndex = 32;
-            this.pictureBox32.TabStop = false;
-            this.pictureBox32.Click += new System.EventHandler(this.PictureBox32_Click);
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Location = new System.Drawing.Point(289, 643);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox31.TabIndex = 31;
-            this.pictureBox31.TabStop = false;
-            this.pictureBox31.Click += new System.EventHandler(this.PictureBox31_Click);
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.Location = new System.Drawing.Point(159, 643);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox30.TabIndex = 30;
-            this.pictureBox30.TabStop = false;
-            this.pictureBox30.Click += new System.EventHandler(this.PictureBox30_Click);
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Location = new System.Drawing.Point(25, 643);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox29.TabIndex = 29;
-            this.pictureBox29.TabStop = false;
-            this.pictureBox29.Click += new System.EventHandler(this.PictureBox29_Click);
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Location = new System.Drawing.Point(822, 522);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox28.TabIndex = 28;
-            this.pictureBox28.TabStop = false;
-            this.pictureBox28.Click += new System.EventHandler(this.PictureBox28_Click);
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Location = new System.Drawing.Point(688, 522);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox27.TabIndex = 27;
-            this.pictureBox27.TabStop = false;
-            this.pictureBox27.Click += new System.EventHandler(this.PictureBox27_Click);
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Location = new System.Drawing.Point(556, 522);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox26.TabIndex = 26;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Click += new System.EventHandler(this.PictureBox26_Click);
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Location = new System.Drawing.Point(420, 522);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox25.TabIndex = 25;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Click += new System.EventHandler(this.PictureBox25_Click);
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Location = new System.Drawing.Point(289, 522);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox24.TabIndex = 24;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Click += new System.EventHandler(this.PictureBox24_Click);
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Location = new System.Drawing.Point(159, 522);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox23.TabIndex = 23;
-            this.pictureBox23.TabStop = false;
-            this.pictureBox23.Click += new System.EventHandler(this.PictureBox23_Click);
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Location = new System.Drawing.Point(25, 522);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox22.TabIndex = 22;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Click += new System.EventHandler(this.PictureBox22_Click);
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Location = new System.Drawing.Point(822, 396);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox21.TabIndex = 21;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Click += new System.EventHandler(this.PictureBox21_Click);
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Location = new System.Drawing.Point(688, 396);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox20.TabIndex = 20;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.PictureBox20_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Location = new System.Drawing.Point(556, 396);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox19.TabIndex = 19;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.PictureBox19_Click);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Location = new System.Drawing.Point(420, 396);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox18.TabIndex = 18;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.PictureBox18_Click);
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Location = new System.Drawing.Point(289, 396);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox17.TabIndex = 17;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.PictureBox17_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Location = new System.Drawing.Point(159, 396);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox16.TabIndex = 16;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.PictureBox16_Click);
-            // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(25, 396);
+            this.pictureBox15.Location = new System.Drawing.Point(552, 394);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(100, 100);
             this.pictureBox15.TabIndex = 15;
@@ -717,7 +257,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(822, 268);
+            this.pictureBox14.Location = new System.Drawing.Point(426, 394);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(100, 100);
             this.pictureBox14.TabIndex = 14;
@@ -726,7 +266,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Location = new System.Drawing.Point(688, 268);
+            this.pictureBox13.Location = new System.Drawing.Point(292, 394);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(100, 100);
             this.pictureBox13.TabIndex = 13;
@@ -735,7 +275,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(556, 268);
+            this.pictureBox12.Location = new System.Drawing.Point(160, 394);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(100, 100);
             this.pictureBox12.TabIndex = 12;
@@ -744,7 +284,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(420, 268);
+            this.pictureBox11.Location = new System.Drawing.Point(24, 394);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(100, 100);
             this.pictureBox11.TabIndex = 11;
@@ -753,7 +293,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(289, 268);
+            this.pictureBox10.Location = new System.Drawing.Point(552, 274);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(100, 100);
             this.pictureBox10.TabIndex = 10;
@@ -762,7 +302,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(159, 268);
+            this.pictureBox9.Location = new System.Drawing.Point(422, 274);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(100, 100);
             this.pictureBox9.TabIndex = 9;
@@ -771,7 +311,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(822, 148);
+            this.pictureBox7.Location = new System.Drawing.Point(158, 274);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(100, 100);
             this.pictureBox7.TabIndex = 8;
@@ -780,7 +320,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(25, 268);
+            this.pictureBox8.Location = new System.Drawing.Point(288, 274);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(100, 100);
             this.pictureBox8.TabIndex = 7;
@@ -789,7 +329,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(688, 148);
+            this.pictureBox6.Location = new System.Drawing.Point(24, 274);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(100, 100);
             this.pictureBox6.TabIndex = 6;
@@ -864,29 +404,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(946, 763);
+            this.ClientSize = new System.Drawing.Size(684, 526);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.lbl35);
-            this.Controls.Add(this.lbl32);
-            this.Controls.Add(this.lbl31);
-            this.Controls.Add(this.lbl30);
-            this.Controls.Add(this.lbl29);
-            this.Controls.Add(this.lbl28);
-            this.Controls.Add(this.lbl27);
-            this.Controls.Add(this.lbl26);
-            this.Controls.Add(this.lbl25);
-            this.Controls.Add(this.lbl24);
-            this.Controls.Add(this.lbl33);
-            this.Controls.Add(this.lbl23);
-            this.Controls.Add(this.lbl22);
-            this.Controls.Add(this.lbl34);
-            this.Controls.Add(this.lbl21);
-            this.Controls.Add(this.lbl20);
-            this.Controls.Add(this.lbl19);
-            this.Controls.Add(this.lbl18);
-            this.Controls.Add(this.lbl17);
-            this.Controls.Add(this.lbl16);
             this.Controls.Add(this.lbl15);
             this.Controls.Add(this.lbl14);
             this.Controls.Add(this.lbl13);
@@ -901,26 +421,6 @@
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.pictureBox35);
-            this.Controls.Add(this.pictureBox34);
-            this.Controls.Add(this.pictureBox33);
-            this.Controls.Add(this.pictureBox32);
-            this.Controls.Add(this.pictureBox31);
-            this.Controls.Add(this.pictureBox30);
-            this.Controls.Add(this.pictureBox29);
-            this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
@@ -941,26 +441,6 @@
             this.Name = "LevelChooserForm";
             this.Text = "Levels";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LevelChooserForm_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -998,26 +478,6 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.PictureBox pictureBox26;
-        private System.Windows.Forms.PictureBox pictureBox27;
-        private System.Windows.Forms.PictureBox pictureBox28;
-        private System.Windows.Forms.PictureBox pictureBox29;
-        private System.Windows.Forms.PictureBox pictureBox30;
-        private System.Windows.Forms.PictureBox pictureBox31;
-        private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.PictureBox pictureBox33;
-        private System.Windows.Forms.PictureBox pictureBox34;
-        private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
@@ -1032,26 +492,6 @@
         private System.Windows.Forms.Label lbl13;
         private System.Windows.Forms.Label lbl14;
         private System.Windows.Forms.Label lbl15;
-        private System.Windows.Forms.Label lbl16;
-        private System.Windows.Forms.Label lbl17;
-        private System.Windows.Forms.Label lbl18;
-        private System.Windows.Forms.Label lbl19;
-        private System.Windows.Forms.Label lbl20;
-        private System.Windows.Forms.Label lbl21;
-        private System.Windows.Forms.Label lbl34;
-        private System.Windows.Forms.Label lbl22;
-        private System.Windows.Forms.Label lbl23;
-        private System.Windows.Forms.Label lbl33;
-        private System.Windows.Forms.Label lbl24;
-        private System.Windows.Forms.Label lbl25;
-        private System.Windows.Forms.Label lbl26;
-        private System.Windows.Forms.Label lbl27;
-        private System.Windows.Forms.Label lbl28;
-        private System.Windows.Forms.Label lbl29;
-        private System.Windows.Forms.Label lbl30;
-        private System.Windows.Forms.Label lbl31;
-        private System.Windows.Forms.Label lbl32;
-        private System.Windows.Forms.Label lbl35;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label lbl1;
