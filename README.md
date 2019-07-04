@@ -173,6 +173,8 @@ public void FreezeFreezableBlocks()
 ```
 
 Движењето на играчот е имплементирано со 4 функции.
+
+Движење во лево:
 ```csharp
 public void MovePlayerLeft()
         {
@@ -193,7 +195,10 @@ public void MovePlayerLeft()
                 }
             }
         }
-        public void MovePlayerRight()
+```
+Движење во десно:
+```csharp
+public void MovePlayerRight()
         {
             Player.X += Player.VELOCITY;
             if (Player.isOnStairs)
@@ -211,7 +216,10 @@ public void MovePlayerLeft()
                 }
             }
         }
-        public void MovePlayerUp()
+```
+Движење нагоре:
+```csharp
+public void MovePlayerUp()
         {
             foreach (Stairs stair in Stairs)
             {
@@ -226,7 +234,10 @@ public void MovePlayerLeft()
                 }
             }
         }
-        public void MovePlayerDown()
+```
+Движење надоле:
+```csharp
+public void MovePlayerDown()
         {
             foreach (Stairs stair in Stairs)
             {
