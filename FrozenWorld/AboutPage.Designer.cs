@@ -406,7 +406,7 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(0, 900);
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1062, 1055);
+            this.ClientSize = new System.Drawing.Size(1083, 1055);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
@@ -440,6 +440,7 @@
             this.Controls.Add(this.pbFrozenWorld);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AboutPage";
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pbFrozenWorld)).EndInit();

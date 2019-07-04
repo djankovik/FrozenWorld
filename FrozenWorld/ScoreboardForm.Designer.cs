@@ -48,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 453);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "ScoreboardForm";
             this.Text = "Scoreboard";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ScoreboardForm_Paint);

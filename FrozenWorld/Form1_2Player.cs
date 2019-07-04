@@ -29,8 +29,7 @@ namespace FrozenWorld
 
             newGame(Game);
 
-            pbPausePlay.Location = new Point(this.Width - 60, 10);
-            pbRestart.Location = new Point(pbPausePlay.Location.X - pbRestart.Width - 10, 10);
+            
         }
 
         public void newGame(Game2Player Game)
@@ -50,6 +49,9 @@ namespace FrozenWorld
             game.Player1.Image = UserPlayingThisGame.AvatarPlayer1;
             game.Player2.Image = UserPlayingThisGame.AvatarPlayer2;
 
+            pbPausePlay.Location = new Point(this.Width - 60, 10);
+            pbRestart.Location = new Point(pbPausePlay.Location.X - pbRestart.Width - 10, 10);
+            
             timer1.Start();
 
         }

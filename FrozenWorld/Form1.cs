@@ -30,8 +30,7 @@ namespace FrozenWorld
             isPaused = false;
             newGame(Game);
 
-            pbPausePlay.Location = new Point(this.Width-60,10);
-            pbRestart.Location = new Point(pbPausePlay.Location.X-pbRestart.Width-10,10);
+            
         }
 
         public void newGame(Game Game)
@@ -43,6 +42,9 @@ namespace FrozenWorld
             tsspbFreezables.Value = 0;
             this.Text = "Level " +(game.LEVELID);
             this.BackgroundImage = game.BACKGROUNDIMAGE;
+
+            pbPausePlay.Location = new Point(this.Width - 60, 10);
+            pbRestart.Location = new Point(pbPausePlay.Location.X - pbRestart.Width - 10, 10);
 
             game.Player.Image = UserPlayingThisGame.AvatarPlayer1;
             timer1.Start();

@@ -70,9 +70,8 @@
             // tsslPlayer1Snowflakes
             // 
             this.tsslPlayer1Snowflakes.ForeColor = System.Drawing.Color.White;
-            this.tsslPlayer1Snowflakes.Image = global::FrozenWorld.Properties.Resources.player;
             this.tsslPlayer1Snowflakes.Name = "tsslPlayer1Snowflakes";
-            this.tsslPlayer1Snowflakes.Size = new System.Drawing.Size(168, 23);
+            this.tsslPlayer1Snowflakes.Size = new System.Drawing.Size(148, 23);
             this.tsslPlayer1Snowflakes.Text = "Player1Snowflakes";
             // 
             // toolStripStatusLabel5
@@ -98,10 +97,9 @@
             // tsslPlayer2Snowflakes
             // 
             this.tsslPlayer2Snowflakes.ForeColor = System.Drawing.Color.White;
-            this.tsslPlayer2Snowflakes.Image = global::FrozenWorld.Properties.Resources.player2;
             this.tsslPlayer2Snowflakes.Margin = new System.Windows.Forms.Padding(10, 3, 0, 2);
             this.tsslPlayer2Snowflakes.Name = "tsslPlayer2Snowflakes";
-            this.tsslPlayer2Snowflakes.Size = new System.Drawing.Size(168, 23);
+            this.tsslPlayer2Snowflakes.Size = new System.Drawing.Size(148, 23);
             this.tsslPlayer2Snowflakes.Text = "Player2Snowflakes";
             // 
             // toolStripStatusLabel2
@@ -155,10 +153,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1186, 536);
             this.Controls.Add(this.pbRestart);
             this.Controls.Add(this.pbPausePlay);
             this.Controls.Add(this.statusStrip1);
+            this.MaximizeBox = false;
             this.Name = "Form1_2Player";
             this.Text = "Game 2 Player";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_2Player_Paint);

@@ -156,9 +156,6 @@
     <None Include="Resources\stairBlockFrozen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\player.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\enemy.png" />
   </ItemGroup>
   <ItemGroup>
@@ -223,9 +220,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iceStartpage2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\player2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avatar1Boy.png" />
@@ -358,6 +352,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
