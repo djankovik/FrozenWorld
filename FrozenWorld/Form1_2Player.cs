@@ -84,7 +84,17 @@ namespace FrozenWorld
                 UserPlayingThisGame.addLevelScore(game.LEVELID, game.calculateScore());
                 SaveFile();
                 MessageBox.Show("Game WON!\nFrozen blocks: " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + "\nPlayer 1: "+game.collectedSnowflakesPlayer1 +" / " + game.TOTALSNOWFLAKES + " snowflakes\nPlayer 2: "+game.collectedSnowflakesPlayer2+" / "+game.TOTALSNOWFLAKES+" snowflakes");
-                nextLevel();
+
+                if (this.game.LEVELID < 15)
+                {
+                    nextLevel();
+                }
+                else
+                {
+                    MessageBox.Show("CONGRATULATIONS!\nYou have finished the entire game.\nGame is going to restart from level 1 now.");
+                    nextLevel();
+                }
+
             }
             if (game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0)
             {
