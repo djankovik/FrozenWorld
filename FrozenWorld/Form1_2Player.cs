@@ -84,8 +84,7 @@ namespace FrozenWorld
                 MessageBox.Show("Game WON!\nFrozen blocks: " + game.TOTALITEMSTOFREEZE + " / " + game.TOTALITEMSTOFREEZE + "\nPlayer 1: "+game.collectedSnowflakesPlayer1 +" / " + game.TOTALSNOWFLAKES + " snowflakes\nPlayer 2: "+game.collectedSnowflakesPlayer2+" / "+game.TOTALSNOWFLAKES+" snowflakes");
                 nextLevel();
             }
-            Invalidate(true);
-            if ((game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0))
+            if (game.Player1.LivesLeft < 0 && game.Player2.LivesLeft < 0)
             {
                 timer1.Stop();
                 MessageBox.Show("Game LOST!");
