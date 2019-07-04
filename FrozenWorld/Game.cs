@@ -44,15 +44,15 @@ namespace FrozenWorld
 
         public void Draw(Graphics g)
         {
+            
+            foreach (Stairs st in Stairs)
+            {
+                st.Draw(g);
+            }
             foreach (Snowflake sn in Snowflakes)
             {
                 sn.Draw(g);
             }
-            foreach (Stairs st in Stairs)
-            {
-                st.Draw(g);
-            }            
-            
             foreach (Platform p in Platforms)
             {
                 p.Draw(g);
