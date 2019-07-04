@@ -144,7 +144,8 @@ namespace FrozenWorld
                 if (Player.getRectagle().IntersectsWith(stair.getRectagle()))
                 {
                     Player.Y -= Player.VELOCITY;
-                    Player.isOnStairs = true; break;
+                    Player.isOnStairs = true;
+                    break;
                 }
                 else
                 {
@@ -159,7 +160,8 @@ namespace FrozenWorld
                 if ((Player.getRectagle().IntersectsWith(stair.getRectagle()) && Player.Y + Player.Height < stair.Y + stair.getHeight() + 1) || Player.Y + Player.Height == stair.Y)
                 {
                     Player.Y += Player.VELOCITY;
-                    Player.isOnStairs = true; break;
+                    Player.isOnStairs = true;
+                    break;
                 }
                 else
                 {
