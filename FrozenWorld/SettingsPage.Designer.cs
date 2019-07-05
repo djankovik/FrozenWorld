@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbPlayer1 = new System.Windows.Forms.GroupBox();
+            this.btnSaveChangesPlayer1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtJump = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.pb2 = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.gbPlayer2 = new System.Windows.Forms.GroupBox();
+            this.btnSaveChangesPlayer2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtJumpP2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.pb4p2 = new System.Windows.Forms.PictureBox();
             this.pb2p2 = new System.Windows.Forms.PictureBox();
             this.pb1p2 = new System.Windows.Forms.PictureBox();
-            this.btnSaveChangesPlayer1 = new System.Windows.Forms.Button();
-            this.btnSaveChangesPlayer2 = new System.Windows.Forms.Button();
             this.gbPlayer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
@@ -115,6 +115,18 @@
             this.gbPlayer1.TabStop = false;
             this.gbPlayer1.Text = "Player 1";
             this.gbPlayer1.Paint += new System.Windows.Forms.PaintEventHandler(this.GbPlayer1_Paint);
+            // 
+            // btnSaveChangesPlayer1
+            // 
+            this.btnSaveChangesPlayer1.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnSaveChangesPlayer1.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveChangesPlayer1.Location = new System.Drawing.Point(684, 192);
+            this.btnSaveChangesPlayer1.Name = "btnSaveChangesPlayer1";
+            this.btnSaveChangesPlayer1.Size = new System.Drawing.Size(117, 56);
+            this.btnSaveChangesPlayer1.TabIndex = 18;
+            this.btnSaveChangesPlayer1.Text = "Save";
+            this.btnSaveChangesPlayer1.UseVisualStyleBackColor = false;
+            this.btnSaveChangesPlayer1.Click += new System.EventHandler(this.BtnSaveChangesPlayer1_Click);
             // 
             // label7
             // 
@@ -331,6 +343,18 @@
             this.gbPlayer2.Text = "Player 2";
             this.gbPlayer2.Paint += new System.Windows.Forms.PaintEventHandler(this.GbPlayer2_Paint);
             // 
+            // btnSaveChangesPlayer2
+            // 
+            this.btnSaveChangesPlayer2.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnSaveChangesPlayer2.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveChangesPlayer2.Location = new System.Drawing.Point(685, 186);
+            this.btnSaveChangesPlayer2.Name = "btnSaveChangesPlayer2";
+            this.btnSaveChangesPlayer2.Size = new System.Drawing.Size(117, 57);
+            this.btnSaveChangesPlayer2.TabIndex = 18;
+            this.btnSaveChangesPlayer2.Text = "Save";
+            this.btnSaveChangesPlayer2.UseVisualStyleBackColor = false;
+            this.btnSaveChangesPlayer2.Click += new System.EventHandler(this.BtnSaveChangesPlayer2_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -514,34 +538,9 @@
             this.pb1p2.TabStop = false;
             this.pb1p2.Click += new System.EventHandler(this.Pb1p2_Click);
             // 
-            // btnSaveChangesPlayer1
-            // 
-            this.btnSaveChangesPlayer1.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnSaveChangesPlayer1.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveChangesPlayer1.Location = new System.Drawing.Point(684, 192);
-            this.btnSaveChangesPlayer1.Name = "btnSaveChangesPlayer1";
-            this.btnSaveChangesPlayer1.Size = new System.Drawing.Size(117, 56);
-            this.btnSaveChangesPlayer1.TabIndex = 18;
-            this.btnSaveChangesPlayer1.Text = "Save";
-            this.btnSaveChangesPlayer1.UseVisualStyleBackColor = false;
-            this.btnSaveChangesPlayer1.Click += new System.EventHandler(this.BtnSaveChangesPlayer1_Click);
-            // 
-            // btnSaveChangesPlayer2
-            // 
-            this.btnSaveChangesPlayer2.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnSaveChangesPlayer2.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveChangesPlayer2.Location = new System.Drawing.Point(685, 186);
-            this.btnSaveChangesPlayer2.Name = "btnSaveChangesPlayer2";
-            this.btnSaveChangesPlayer2.Size = new System.Drawing.Size(117, 57);
-            this.btnSaveChangesPlayer2.TabIndex = 18;
-            this.btnSaveChangesPlayer2.Text = "Save";
-            this.btnSaveChangesPlayer2.UseVisualStyleBackColor = false;
-            this.btnSaveChangesPlayer2.Click += new System.EventHandler(this.BtnSaveChangesPlayer2_Click);
-            // 
             // SettingsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(856, 851);
             this.Controls.Add(this.gbPlayer2);
