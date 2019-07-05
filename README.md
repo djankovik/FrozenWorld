@@ -1,6 +1,6 @@
 # <img src="https://github.com/djankovik/FrozenWorld/blob/master/FrozenWorld/Resources/Snowflake1.jpg" alt="icon" width="25px"/> FrozenWorld 
 ###  Душица Јанковиќ 161509
-#### [Download the game - CLICK HERE](https://github.com/djankovik/FrozenWorld/releases)
+### [Download the game - CLICK HERE](https://github.com/djankovik/FrozenWorld/releases)
 
 ## Опис на играта
 
