@@ -425,7 +425,7 @@ public void MoveEnemies()
         }
 ```
 
-## Screenshots and tutorial
+## Screenshots
 
 #### Log in Start Page
 
