@@ -50,7 +50,7 @@
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.Black;
-            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslSnowflakes,
@@ -58,7 +58,6 @@
             this.tsspbFreezables,
             this.tsslLivesLeft});
             this.statusStrip1.Location = new System.Drawing.Point(0, 469);
-            this.statusStrip1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1310, 33);
             this.statusStrip1.TabIndex = 0;

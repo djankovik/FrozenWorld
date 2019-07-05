@@ -59,7 +59,7 @@ namespace FrozenWorld
                 player2AVATAR = AVATARS[1];
 
                 setUpControlsP2();
-                this.Height = gbPlayer1.Height+gbPlayer2.Height+60;
+                this.Height = gbPlayer1.Height+gbPlayer2.Height+75;
             }           
         }
 

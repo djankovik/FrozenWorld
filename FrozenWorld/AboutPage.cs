@@ -16,7 +16,7 @@ namespace FrozenWorld
         public AboutPage()
         {
             InitializeComponent();
-
+            this.Height = 670;
             pbFrozenWorld.Width = Resources.fw_80.Width;
             pbFrozenWorld.Height = Resources.fw_80.Height;
             pbFrozenWorld.BackgroundImage = Resources.fw_80;
@@ -37,6 +37,8 @@ namespace FrozenWorld
             pbSnowflakes.Width = Resources.snowflakes_40.Width;
             pbSnowflakes.Height = Resources.snowflakes_40.Height;
             pbSnowflakes.Image = Resources.snowflakes_40;
+
+            
 
         }
     }

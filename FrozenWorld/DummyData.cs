@@ -62,14 +62,14 @@ namespace FrozenWorld
             g.LEVELID = 1;
 
             List<Platform> platforms = new List<Platform>();
-            platforms.Add(new Platform(0, 560));
-            platforms.Add(new Platform(50, 560));
-            platforms.Add(new Platform(100, 560));
-            platforms.Add(new Platform(150, 560));
-            platforms.Add(new Platform(200, 560));
-            platforms.Add(new Platform(250, 560));
-            platforms.Add(new Platform(300, 560));
-            platforms.Add(new Platform(350, 560));
+            platforms.Add(new Platform(0, 545));
+            platforms.Add(new Platform(50, 545));
+            platforms.Add(new Platform(100, 545));
+            platforms.Add(new Platform(150, 545));
+            platforms.Add(new Platform(200, 545));
+            platforms.Add(new Platform(250, 545));
+            platforms.Add(new Platform(300, 545));
+            platforms.Add(new Platform(350, 545));
 
             platforms.Add(new Platform(400, 400));
             platforms.Add(new Platform(450, 400));
@@ -95,12 +95,12 @@ namespace FrozenWorld
             platforms.Add(new Platform(150, 120));
             platforms.Add(new Platform(200, 120));
 
-            platforms.Add(new Platform(600, 560));
-            platforms.Add(new Platform(650, 560));
-            platforms.Add(new Platform(700, 560));
-            platforms.Add(new Platform(750, 560));
-            platforms.Add(new Platform(800, 560));
-            platforms.Add(new Platform(850, 560));
+            platforms.Add(new Platform(600, 545));
+            platforms.Add(new Platform(650, 545));
+            platforms.Add(new Platform(700, 545));
+            platforms.Add(new Platform(750, 545));
+            platforms.Add(new Platform(800, 545));
+            platforms.Add(new Platform(850, 545));
 
             //Enemy x = new Enemy(100,120-Enemy.Height,0,250);
             //x.makeAdvancedEnemy();
@@ -114,7 +114,7 @@ namespace FrozenWorld
             g.Player2 = new Player(260, 200);
             
 
-            g.Enemies.Add(new Enemy(850, g.maxDown - 80 - Enemy.Height, 600, 900));
+            g.Enemies.Add(new Enemy(850, g.maxDown - 95 - Enemy.Height, 600, 900));
 
             g.Stairs.Add(new Stairs(500, 400));
             g.Stairs.Add(new Stairs(500, 370));
@@ -1295,14 +1295,14 @@ namespace FrozenWorld
             g.LEVELID = 1;
 
             List<Platform> platforms = new List<Platform>();
-            platforms.Add(new Platform(0, 560));
-            platforms.Add(new Platform(50, 560));
-            platforms.Add(new Platform(100, 560));
-            platforms.Add(new Platform(150, 560));
-            platforms.Add(new Platform(200, 560));
-            platforms.Add(new Platform(250, 560));
-            platforms.Add(new Platform(300, 560));
-            platforms.Add(new Platform(350, 560));
+            platforms.Add(new Platform(0, 545));
+            platforms.Add(new Platform(50, 545));
+            platforms.Add(new Platform(100, 545));
+            platforms.Add(new Platform(150, 545));
+            platforms.Add(new Platform(200, 545));
+            platforms.Add(new Platform(250, 545));
+            platforms.Add(new Platform(300, 545));
+            platforms.Add(new Platform(350, 545));
 
             platforms.Add(new Platform(400, 400));
             platforms.Add(new Platform(450, 400));
@@ -1313,7 +1313,6 @@ namespace FrozenWorld
             platforms.Add(new Platform(100, 375));
             platforms.Add(new Platform(150, 375));
             platforms.Add(new Platform(200, 375));
-
 
             platforms.Add(new Platform(400, 200));
             platforms.Add(new Platform(450, 200));
@@ -1329,12 +1328,12 @@ namespace FrozenWorld
             platforms.Add(new Platform(150, 120));
             platforms.Add(new Platform(200, 120));
 
-            platforms.Add(new Platform(600, 560));
-            platforms.Add(new Platform(650, 560));
-            platforms.Add(new Platform(700, 560));
-            platforms.Add(new Platform(750, 560));
-            platforms.Add(new Platform(800, 560));
-            platforms.Add(new Platform(850, 560));
+            platforms.Add(new Platform(600, 545));
+            platforms.Add(new Platform(650, 545));
+            platforms.Add(new Platform(700, 545));
+            platforms.Add(new Platform(750, 545));
+            platforms.Add(new Platform(800, 545));
+            platforms.Add(new Platform(850, 545));
 
             g.Enemies.Add(new Enemy(400, 145, 400, 750));
 
@@ -1346,7 +1345,7 @@ namespace FrozenWorld
 
             g.Player = new Player(200, 200);
 
-            g.Enemies.Add(new Enemy(850, g.maxDown-80-Enemy.Height, 600, 900));
+            g.Enemies.Add(new Enemy(850, g.maxDown-95-Enemy.Height, 600, 900));
 
             g.Stairs.Add(new Stairs(500, 400));
             g.Stairs.Add(new Stairs(500, 370));

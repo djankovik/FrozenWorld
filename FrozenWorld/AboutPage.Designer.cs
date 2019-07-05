@@ -60,6 +60,7 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFrozenWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGamePlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHazards)).BeginInit();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFrozenWorld
@@ -192,7 +194,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox6.Location = new System.Drawing.Point(770, 971);
+            this.pictureBox6.Location = new System.Drawing.Point(761, 968);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(57, 53);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -342,7 +344,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox16.Location = new System.Drawing.Point(843, 971);
+            this.pictureBox16.Location = new System.Drawing.Point(834, 968);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(57, 53);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +354,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox17.Location = new System.Drawing.Point(809, 912);
+            this.pictureBox17.Location = new System.Drawing.Point(800, 909);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(57, 53);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -362,7 +364,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox18.Location = new System.Drawing.Point(926, 971);
+            this.pictureBox18.Location = new System.Drawing.Point(917, 968);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(57, 53);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +374,7 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox19.Location = new System.Drawing.Point(889, 912);
+            this.pictureBox19.Location = new System.Drawing.Point(880, 909);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(57, 53);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +384,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = global::FrozenWorld.Properties.Resources.whiteSnowflakeTransparent1;
-            this.pictureBox20.Location = new System.Drawing.Point(843, 853);
+            this.pictureBox20.Location = new System.Drawing.Point(834, 850);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(57, 53);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -392,12 +394,21 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = global::FrozenWorld.Properties.Resources.goodLuck_50;
-            this.pictureBox21.Location = new System.Drawing.Point(185, 1001);
+            this.pictureBox21.Location = new System.Drawing.Point(442, 811);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(400, 130);
+            this.pictureBox21.Size = new System.Drawing.Size(194, 62);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 45;
             this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Location = new System.Drawing.Point(658, 999);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(57, 53);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 46;
+            this.pictureBox22.TabStop = false;
             // 
             // AboutPage
             // 
@@ -406,6 +417,7 @@
             this.AutoScrollMinSize = new System.Drawing.Size(0, 900);
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1083, 1055);
+            this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
@@ -467,6 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +518,6 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
     }
 }
